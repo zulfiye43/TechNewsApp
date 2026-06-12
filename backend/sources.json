@@ -1,0 +1,12 @@
+{
+  "hn_min_points": 80,
+  "rss": [
+    { "name": "Heise", "url": "https://www.heise.de/rss/heise-atom.xml" },
+    { "name": "The Verge", "url": "https://www.theverge.com/rss/index.xml" },
+    { "name": "TechCrunch", "url": "https://techcrunch.com/feed/" },
+    { "name": "9to5Mac", "url": "https://9to5mac.com/feed/" },
+    { "name": "Swift.org", "url": "https://www.swift.org/atom.xml" },
+    { "name": "Anthropic", "url": "https://www.anthropic.com/rss.xml" },
+    { "name": "OpenAI", "url": "https://openai.com/news/rss.xml" }
+  ]
+}

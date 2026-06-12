@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechDigest — Design-Prototyp</title>
+<style>
+  :root {
+    --bg: #0e1113;
+    --surface: #171b1e;
+    --surface2: #1f2429;
+    --border: #2a3036;
+    --text: #e8ebe6;
+    --text2: #8b948c;
+    --accent: #a3b18a;        /* Salbeigrün */
+    --accent-strong: #b5c49a;
+    --accent-dim: rgba(163,177,138,.14);
+    --danger: #c98a8a;
+  }
+  [data-theme="light"] {
+    --bg: #f2f3f0;
+    --surface: #ffffff;
+    --surface2: #e9ece6;
+    --border: #dde1d8;
+    --text: #23281f;
+    --text2: #6f7868;
+    --accent: #7d8f63;
+    --accent-strong: #67784f;
+    --accent-dim: rgba(125,143,99,.12);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    background: var(--bg);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+    color: var(--text);
+    display:flex; flex-direction:column; align-items:center; gap:16px;
+    min-height:100vh; padding:32px 16px;
+    transition: background .25s;
+  }
+  .toolbar { display:flex; gap:10px; align-items:center; color:var(--text2); font-size:13px; }
+  .toolbar button {
+    background:var(--surface); color:var(--text); border:1px solid var(--border);
+    border-radius:99px; padding:6px 16px; font-size:13px; cursor:pointer; font-family:inherit;
+  }
+  .toolbar button:hover { border-color: var(--accent); }
+
+  .phone {
+    width:393px; height:780px;            /* iPhone-Format */
+    background:var(--bg);
+    border:1px solid var(--border);
+    border-radius:48px;
+    display:flex; flex-direction:column;
+    overflow:hidden;
+    box-shadow: 0 24px 60px rgba(0,0,0,.45);
+    transition: background .25s;
+  }
+  .statusbar {
+    display:flex; justify-content:space-between; align-items:center;
+    padding:18px 28px 8px; font-size:13px; font-weight:600; color:var(--text2);
+  }
+  .gear { background:none; border:none; cursor:pointer; font-size:17px; color:var(--text2); }
+  .gear.active { color:var(--accent); }
+
+  .screen { flex:1; overflow-y:auto; padding:8px 20px 16px; scrollbar-width:none; }
+  .screen::-webkit-scrollbar { display:none; }
+
+  h1.title { font-size:30px; font-weight:800; letter-spacing:-.02em; padding:6px 0 2px; }
+  .date { font-size:13px; color:var(--text2); margin-bottom:14px; }
+
+  .greeting {
+    background:var(--accent-dim);
+    border:1px solid transparent;
+    border-radius:16px; padding:14px 16px;
+    font-size:14px; line-height:1.5; color:var(--text);
+    margin-bottom:18px;
+  }
+  .greeting b { color:var(--accent-strong); }
+
+  .sectionlabel {
+    font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--accent); margin:4px 0 10px;
+  }
+
+  .card {
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:18px; padding:14px 16px; margin-bottom:10px;
+    transition: border-color .15s;
+  }
+  .card:hover { border-color: var(--accent); cursor:pointer; }
+  .cardtop { display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; }
+  .meta { display:flex; gap:8px; align-items:center; font-size:11px; color:var(--text2); }
+  .badge {
+    font-weight:700; font-size:10px; letter-spacing:.06em;
+    color:var(--accent-strong); background:var(--accent-dim);
+    border-radius:6px; padding:3px 8px;
+  }
+  .headline { font-size:15px; font-weight:700; line-height:1.35; }
+  .summary { font-size:13px; color:var(--text2); line-height:1.5; margin-top:4px; }
+
+  .rank { font-size:24px; font-weight:800; color:var(--accent); width:30px; flex-shrink:0;
+          font-variant-numeric: tabular-nums; }
+  .toprow { display:flex; gap:12px; }
+
+  .bookmark { background:none; border:none; cursor:pointer; font-size:16px; color:var(--text2); }
+  .bookmark.saved { color:var(--accent); }
+
+  .chips { display:flex; gap:8px; margin-bottom:14px; }
+  .chip {
+    font-family:inherit; cursor:pointer; font-size:13px; font-weight:600;
+    padding:6px 16px; border-radius:99px;
+    background:var(--surface); color:var(--text); border:1px solid var(--border);
+  }
+  .chip.active { background:var(--accent); color:var(--bg); border-color:var(--accent); }
+
+  .player {
+    background:var(--surface); border:1px solid var(--border);
+    border-radius:22px; padding:24px; text-align:center; margin-bottom:18px;
+  }
+  .playbtn {
+    width:72px; height:72px; border-radius:50%;
+    background:var(--accent); color:var(--bg); border:none; font-size:26px;
+    cursor:pointer; margin-bottom:12px;
+  }
+  .progress { height:4px; background:var(--surface2); border-radius:2px; margin-top:18px; }
+  .progress > div { width:32%; height:100%; background:var(--accent); border-radius:2px; }
+
+  .row {
+    display:flex; justify-content:space-between; align-items:center;
+    background:var(--surface); border:1px solid var(--border);
+    border-radius:14px; padding:13px 16px; margin-bottom:8px; font-size:14px;
+  }
+  .row span:last-child { color:var(--text2); font-size:13px; }
+  .row:hover { border-color:var(--accent); cursor:pointer; }
+
+  .empty { text-align:center; color:var(--text2); font-size:14px; padding:60px 30px; line-height:1.6; }
+
+  .backbtn {
+    background:none; border:none; cursor:pointer; font-family:inherit;
+    color:var(--accent); font-size:15px; font-weight:600; padding:6px 0 14px;
+  }
+  .detailtext {
+    font-size:15px; line-height:1.65; color:var(--text);
+    margin-bottom:24px;
+  }
+  .primarybtn {
+    width:100%; font-family:inherit; cursor:pointer;
+    background:var(--accent); color:var(--bg); border:none;
+    border-radius:14px; padding:14px; font-size:15px; font-weight:700;
+    margin-bottom:8px;
+  }
+  .primarybtn:hover { background:var(--accent-strong); }
+  .secondarybtn {
+    width:100%; font-family:inherit; cursor:pointer;
+    background:var(--surface); color:var(--text); border:1px solid var(--border);
+    border-radius:14px; padding:13px; font-size:14px; font-weight:600;
+  }
+  .secondarybtn:hover { border-color:var(--accent); }
+
+  .tabbar {
+    display:flex; border-top:1px solid var(--border);
+    padding:8px 8px 22px; background:var(--bg); transition: background .25s;
+  }
+  .tab {
+    flex:1; background:none; border:none; cursor:pointer; font-family:inherit;
+    color:var(--text2); display:flex; flex-direction:column; align-items:center; gap:3px;
+    padding-top:6px;
+  }
+  .tab .icon { font-size:21px; }
+  .tab .label { font-size:10px; font-weight:600; }
+  .tab.active { color:var(--accent); }
+  .tab .count { font-size:9px; color:var(--accent); }
+</style>
+</head>
+<body>
+  <div class="toolbar">
+    <span>TechDigest · Design-Prototyp</span>
+    <button onclick="toggleTheme()">☀︎ / ☾ Modus wechseln</button>
+  </div>
+
+  <div class="phone">
+    <div class="statusbar">
+      <span>9:41</span>
+      <span style="letter-spacing:.04em">TechDigest</span>
+      <button class="gear" id="gear" onclick="setTab('settings')">⚙︎</button>
+    </div>
+    <div class="screen" id="screen"></div>
+    <div class="tabbar" id="tabbar"></div>
+  </div>
+
+<script>
+const state = {
+  theme: "dark",
+  tab: "heute",
+  filter: "Alle",
+  saved: new Set(["OpenCV 5 ist da"]),
+};
+
+const TOP3 = [
+  {n:1,t:"AI",h:"Claude Fable 5: neue Mythos-Modellklasse",s:"Anthropics erstes Modell oberhalb von Opus – die größte HN-Story der Woche.",src:"Hacker News",url:"https://www.anthropic.com/news/claude-fable-5-mythos-5",
+   d:"Anthropic hat mit Claude Fable 5 das erste Modell der neuen Claude-5-Familie vorgestellt – und gleich eine neue Modellklasse eingeführt: die Mythos-Stufe oberhalb von Opus. Fable 5 ist das leistungsstärkste frei verfügbare Modell, während Mythos 5 nur für geprüfte Organisationen zugänglich ist. Auf Hacker News sammelte die Ankündigung über 1.500 Punkte und 1.200 Kommentare – die größte Story der Woche. Für Entwicklerinnen interessant: Das Modell ist ab sofort über die API als „claude-fable-5“ verfügbar."},
+  {n:2,t:"iOS",h:"Apple verzichtet auf Siri-Rollout in der EU",s:"Ausnahme-Antrag abgelehnt – Apple Intelligence bleibt in Europa eingeschränkt.",src:"Reuters",url:"https://www.reuters.com/business/apple-failed-make-its-ai-tool-comply-eu-regulations-eu-commission-says-2026-06-09/",
+   d:"Apple bringt sein neues AI-Siri vorerst nicht nach Europa: Die EU-Kommission hat den Antrag auf eine Ausnahme von den DMA-Regeln abgelehnt, woraufhin Apple den Rollout in der EU gestrichen hat. Damit bleiben zentrale Apple-Intelligence-Features für europäische Nutzer und Entwicklerinnen weiter unzugänglich. Für App-Entwicklung heißt das konkret: Auf SiriKit- und App-Intents-Integrationen mit dem neuen Siri kannst du in der EU vorerst nicht bauen. Die Verhandlungen zwischen Apple und Brüssel laufen weiter."},
+  {n:3,t:"Tech",h:"Microsoft-Open-Source-Tools gehackt",s:"Supply-Chain-Angriff auf Passwörter von AI-Entwicklern.",src:"TechCrunch",url:"https://techcrunch.com/2026/06/08/microsofts-open-source-tools-were-hacked-to-steal-passwords-of-ai-developers/",
+   d:"Angreifer haben mehrere Open-Source-Tools von Microsoft kompromittiert, um gezielt Zugangsdaten von AI-Entwicklern abzugreifen. Der Supply-Chain-Angriff zeigt einmal mehr, wie attraktiv Entwickler-Maschinen mit API-Keys und Tokens als Ziel geworden sind. Praktische Konsequenz für dich: Dependencies pinnen, Lockfiles prüfen, API-Keys rotieren und Secrets nie im Klartext in Projekten ablegen. Microsoft hat die betroffenen Pakete inzwischen zurückgezogen."},
+];
+const FEED = [...TOP3,
+  {t:"AI",h:"OpenCV 5 ist da",s:"Erster Major-Release seit Jahren, besserer Deep-Learning-Support.",src:"OpenCV",url:"https://opencv.org/opencv-5/",
+   d:"Die Computer-Vision-Bibliothek OpenCV bekommt mit Version 5 ihren ersten Major-Release seit Jahren. Die API wurde modernisiert, der Deep-Learning-Support deutlich ausgebaut und alte Zöpfe wurden abgeschnitten. Wer Vision-Features in Apps baut – auch auf iOS via Core ML-Konvertierung – sollte sich die Migration Notes ansehen."},
+  {t:"iOS",h:"Stratechery: „The iPhone's Last Stand?“",s:"Verliert das iPhone im AI-Zeitalter seine zentrale Rolle?",src:"Stratechery",url:"https://stratechery.com/2026/the-iphones-last-stand/",
+   d:"Ben Thompson analysiert, ob das iPhone im AI-Zeitalter seine Rolle als zentrales Gerät verliert – während AI-native Hardware und Assistenten die Interaktion übernehmen. Seine These: Apples Stärke (Integration) könnte zur Schwäche werden, wenn die wichtigste Schnittstelle nicht mehr der Screen ist. Vieldiskutiert, lesenswert für alle, die im Apple-Ökosystem bauen."},
+  {t:"Tech",h:"FCC will Burner-Phones abschaffen",s:"Geplante Ausweispflicht für alle Mobilfunkkunden.",src:"404 Media",url:"https://www.404media.co/fcc-wants-to-kill-burner-phones-by-forcing-telecoms-to-get-all-customers-ids/",
+   d:"Die US-Telekomaufsicht FCC plant, Mobilfunkanbieter zur Identitätsprüfung aller Kunden zu verpflichten – das wäre faktisch das Ende anonymer Prepaid-Handys in den USA. Datenschützer warnen vor den Folgen für Journalisten, Aktivisten und Gewaltbetroffene. Die Debatte um anonyme Kommunikation ist damit neu entfacht."},
+  {t:"AI",h:"Paper: „Is Grep All You Need?“",s:"Warum simple Tools in Agenten-Setups aufwendige Suche schlagen.",src:"arXiv",url:"https://arxiv.org/abs/2605.15184",
+   d:"Ein neues arXiv-Paper untersucht, warum simple Werkzeuge wie grep in Agent-Harnesses oft aufwendige Embedding-Suche schlagen: Agenten können iterativ suchen, Zwischenergebnisse bewerten und Queries verfeinern – das kompensiert die Einfachheit des Tools. Spannend für alle, die mit Coding-Agents arbeiten oder eigene Agenten-Tools designen."},
+];
+const TABS = [
+  ["feed","☰","Feed"], ["heute","★","Heute"], ["saved","🔖","Gemerkt"], ["pod","▶","Podcast"],
+];
+
+const isSaved = h => state.saved.has(h);
+const esc = h => h.replace(/'/g,"\\'");
+
+const bookmark = h =>
+  `<button class="bookmark ${isSaved(h)?'saved':''}" onclick="event.stopPropagation();toggleSave('${esc(h)}')">${isSaved(h)?"🔖":"⌑"}</button>`;
+
+const card = i => `
+  <div class="card" onclick="openDetail('${esc(i.h)}')">
+    <div class="cardtop">
+      <div class="meta"><span class="badge">${i.t}</span><span>${i.src}</span></div>
+      ${bookmark(i.h)}
+    </div>
+    <div class="headline">${i.h}</div>
+    <div class="summary">${i.s}</div>
+  </div>`;
+
+const topCard = x => `
+  <div class="card" onclick="openDetail('${esc(x.h)}')">
+    <div class="toprow">
+      <div class="rank">${x.n}</div>
+      <div style="flex:1">
+        <div class="cardtop">
+          <div class="meta"><span class="badge">${x.t}</span><span>${x.src}</span></div>
+          ${bookmark(x.h)}
+        </div>
+        <div class="headline">${x.h}</div>
+        <div class="summary">${x.s}</div>
+      </div>
+    </div>
+  </div>`;
+
+const screens = {
+  heute: () => `
+    <h1 class="title">Heute</h1>
+    <div class="date">Freitag, 12. Juni 2026</div>
+    <div class="greeting">Guten Morgen, Manolya! Großer Tag für AI: <b>Claude Fable 5</b> ist da – und Apple legt sich beim Siri-Rollout mit der EU an.</div>
+    <div class="sectionlabel">Top 3 des Tages</div>
+    ${TOP3.map(topCard).join("")}`,
+
+  feed: () => {
+    const items = state.filter==="Alle" ? FEED : FEED.filter(i=>i.t===state.filter);
+    return `
+    <h1 class="title">Feed</h1>
+    <div class="date">${FEED.length} News heute</div>
+    <div class="chips">${["Alle","AI","iOS","Tech"].map(c=>
+      `<button class="chip ${state.filter===c?'active':''}" onclick="setFilter('${c}')">${c}</button>`).join("")}
+    </div>
+    ${items.map(card).join("")}`;
+  },
+
+  saved: () => {
+    const items = FEED.filter(i=>isSaved(i.h));
+    return `
+    <h1 class="title">Gemerkt</h1>
+    <div class="date">${items.length} gespeicherte News</div>
+    ${items.length ? items.map(card).join("")
+      : `<div class="empty">Noch nichts gemerkt.<br>Tippe das Lesezeichen 🔖 auf einer News in <b>Heute</b> oder <b>Feed</b>.</div>`}`;
+  },
+
+  pod: () => `
+    <h1 class="title">Podcast</h1>
+    <div class="date">Täglich frisch generiert</div>
+    <div class="player">
+      <button class="playbtn">▶</button>
+      <div style="font-weight:700;font-size:15px">Dein Digest · 12. Juni</div>
+      <div style="font-size:13px;color:var(--text2);margin-top:3px">3:40 Min · AI, iOS &amp; Tech</div>
+      <div class="progress"><div></div></div>
+    </div>
+    <div class="sectionlabel">Frühere Folgen</div>
+    ${["11. Juni · 3:55 Min","10. Juni · 3:20 Min","9. Juni · 4:05 Min"].map(x=>
+      `<div class="row"><span>${x}</span><span style="color:var(--accent)">▶</span></div>`).join("")}`,
+
+  detail: () => {
+    const i = FEED.find(x => x.h === state.detail);
+    if (!i) return "";
+    return `
+    <button class="backbtn" onclick="closeDetail()">‹ Zurück</button>
+    <div class="meta" style="margin-bottom:10px"><span class="badge">${i.t}</span><span>${i.src} · 12. Juni 2026</span></div>
+    <h1 class="title" style="font-size:24px;line-height:1.25;margin-bottom:14px">${i.h}</h1>
+    <div class="detailtext">${i.d}</div>
+    <button class="primarybtn" onclick="window.open('${i.url}','_blank')">Original lesen ↗</button>
+    <button class="secondarybtn" onclick="toggleSave('${esc(i.h)}')">${isSaved(i.h)?"🔖 Gemerkt – entfernen":"⌑ Für später merken"}</button>`;
+  },
+
+  settings: () => {
+    const row = (l,v) => `<div class="row"><span>${l}</span><span>${v} ›</span></div>`;
+    return `
+    <h1 class="title">Einstellungen</h1>
+    <div class="date">Digest &amp; Quellen anpassen</div>
+    <div class="sectionlabel">Digest</div>
+    ${row("Push-Zeit","06:30")+row("Anzahl News","9")+row("Podcast-Länge","ca. 4 Min")}
+    <div class="sectionlabel" style="margin-top:16px">Themen-Gewichtung</div>
+    ${row("AI","●●●○")+row("iOS / Apple","●●●○")+row("Allgemeine Tech-News","●●○○")}
+    <div class="sectionlabel" style="margin-top:16px">Quellen</div>
+    ${row("RSS-Feeds verwalten","7 aktiv")+row("Hacker News Schwelle","80 Punkte")}`;
+  },
+};
+
+function render() {
+  document.getElementById("screen").innerHTML = screens[state.tab]();
+  const activeTab = state.tab==="detail" ? state.prevTab : state.tab;
+  document.getElementById("tabbar").innerHTML = TABS.map(([id,icon,label]) => {
+    const cnt = id==="saved" && state.saved.size ? `<span class="count">${state.saved.size}</span>` : "";
+    return `<button class="tab ${activeTab===id?'active':''}" onclick="setTab('${id}')">
+      <span class="icon">${icon}</span><span class="label">${label} ${cnt}</span></button>`;
+  }).join("");
+  document.getElementById("gear").classList.toggle("active", state.tab==="settings");
+}
+
+function setTab(t){ state.tab=t; state.detail=null; render(); }
+function openDetail(h){ state.prevTab = state.tab; state.detail = h; state.tab = "detail"; render(); }
+function closeDetail(){ state.tab = state.prevTab || "heute"; state.detail = null; render(); }
+function setFilter(f){ state.filter=f; render(); }
+function toggleSave(h){ isSaved(h) ? state.saved.delete(h) : state.saved.add(h); render(); }
+function toggleTheme(){
+  state.theme = state.theme==="dark" ? "light" : "dark";
+  document.documentElement.dataset.theme = state.theme;
+}
+
+render();
+</script>
+</body>
+</html>

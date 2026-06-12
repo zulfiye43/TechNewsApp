@@ -1,0 +1,40 @@
+name: Täglicher Tech-Digest
+
+on:
+  schedule:
+    # 04:15 UTC = 06:15 deutscher Zeit (Sommerzeit). Cron läuft in UTC.
+    - cron: "15 4 * * *"
+  workflow_dispatch: {}   # manueller Start über den Actions-Tab
+
+permissions:
+  contents: write
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Abhängigkeiten installieren
+        working-directory: backend
+        run: pip install -r requirements.txt
+
+      - name: Digest + Podcast generieren
+        working-directory: backend
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          ELEVEN_MODEL: ${{ vars.ELEVEN_MODEL || 'eleven_flash_v2_5' }}
+        run: python digest_pipeline.py --audio
+
+      - name: Ergebnis committen
+        run: |
+          git config user.name "digest-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add backend/out
+          git commit -m "Digest $(date -u +%F)" || echo "Nichts zu committen"
+          git push

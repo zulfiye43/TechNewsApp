@@ -1,0 +1,80 @@
+{
+  "date": "2026-06-12",
+  "greeting": "Heute dominieren SpaceX-IPO, Bezos' 12-Milliarden-KI-Wette und ein vollgepacktes iOS 27 die Tech-Welt.",
+  "podcast_title": "Bezos baut den General-Ingenieur",
+  "items": [
+    {
+      "topic": "tech",
+      "headline": "Größter IPO aller Zeiten: SpaceX geht für 135 $ pro Aktie an die Börse",
+      "summary": "SpaceX ist jetzt offiziell börsennotiert – mit einem Ausgabepreis von 135 Dollar pro Aktie, was den größten IPO der Geschichte markiert. Elon Musks Raumfahrtfirma ist damit endgültig im Public-Market angekommen.",
+      "detail": "Der IPO bewertet SpaceX auf eine astronomische Summe und übertrifft alle bisherigen Börsengänge. Besonders pikant: SPV-Investoren, die über Zweckgesellschaften investiert hatten, wissen erst nach dem Lock-up-Ablauf, wie viele echte Aktien sie halten. Für Entwicklerinnen weniger direkt relevant, aber ein Stimmungsbarometer: Wenn solche Risikokapital-Wetten aufgehen, fließt mehr Geld in Tech generell – auch in App-Ökosysteme und AI-Startups. Gleichzeitig zieht der SpaceX-Hype Nachahmer an: Quantum Space versucht gerade, mit einem Militär-SPAC auf der Welle mitzureiten.",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/06/11/spacex-officially-prices-shares-at-135-in-the-largest-ipo-ever/"
+    },
+    {
+      "topic": "ai",
+      "headline": "Bezos' Prometheus sammelt 12 Mrd. $ – will KI für die physische Welt bauen",
+      "summary": "Jeff Bezos' neues AI-Startup Prometheus hat 12 Milliarden Dollar eingesammelt und will einen 'Artificial General Engineer' entwickeln – eine KI, die physische Systeme wie ein Top-Ingenieur verstehen und gestalten kann. Das ist einer der größten AI-Funding-Rounds überhaupt.",
+      "detail": "Prometheus zielt nicht auf Text oder Code allein, sondern auf die physische Welt: Konstruktion, Materialien, Maschinenbau – KI als universeller Ingenieur. Das Konzept geht über bisherige LLMs hinaus und setzt auf multimodales Reasoning über physikalische Constraints. Für iOS-Entwicklerinnen ist das mittelfristig relevant: Wenn solche Modelle über APIs verfügbar werden, könnten sie in AR/VR-Apps (visionOS!), CAD-Integrationen oder industrielle iOS-Tools einfließen. Die schiere Funding-Größe signalisiert, dass die Branche 'domain-specific AGI' als nächstes großes Feld sieht – nach Code-AI kommt Engineering-AI.",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/06/11/jeff-bezoss-prometheus-raises-12b-to-build-an-artificial-general-engineer-for-the-physical-world/"
+    },
+    {
+      "topic": "ios",
+      "headline": "iOS 27: Viele kleine Verbesserungen, neue Find-My-Features und Design-Ressourcen live",
+      "summary": "iOS 27 bringt laut Heise und 9to5Mac eine Fülle kleinerer, aber feiner Verbesserungen – darunter neue Privatsphäre-Optionen in Find My und ein aufgefrischtes Betriebssystem-Feeling. Design-Ressourcen für iOS 27, iPadOS 27 und macOS 27 'Golden Gate' sind bereits verfügbar.",
+      "detail": "Find My bekommt neue Wege, den eigenen Standort zu verstecken – relevant für Privatsphäre-bewusste Nutzerinnen und potenziell für Apps, die Standortdaten verarbeiten. Die sofort verfügbaren Design-Ressourcen sind der direkte Action-Item für Entwicklerinnen: Jetzt Figma/Sketch-Templates holen und Apps auf neue UI-Patterns prüfen. watchOS 27 bekommt außerdem zwei neue System-Apps – das erweitert die Watch-Plattform und könnte neue Companion-App-Szenarien öffnen. Wer WWDC26 verpasst hat: Apple sammelt aktiv Developer-Feedback zur Konferenz, also jetzt Meinung einreichen.",
+      "source": "9to5Mac",
+      "url": "https://9to5mac.com/2026/06/11/design-resources-for-ios-27-ipados-27-and-macos-27-golden-gate-now-available/"
+    },
+    {
+      "topic": "ios",
+      "headline": "Apples Foundation Models erklärt: On-device, Cloud und alles dazwischen",
+      "summary": "9to5Mac schlüsselt auf, wie Apples neue Foundation Models aufgebaut sind – ein Hybrid aus lokal laufenden Modellen auf dem Gerät und Cloud-basierter Verarbeitung. Das ist das technische Herzstück von Siri AI und Apple Intelligence.",
+      "detail": "Apple trennt klar zwischen On-device-Inferenz (Privatsphäre, Latenz) und Cloud-Modellen (Power, Komplexität) – mit einer Orchestrierungsschicht dazwischen. Für Entwicklerinnen entscheidend: Die Foundation Models werden über APIs zugänglich gemacht, was bedeutet, dass eigene Apps diese Intelligenz nutzen können, ohne eigene ML-Infrastruktur. Wichtig zu wissen: Siri AI und die stärkeren Features kommen nur auf neuere Geräte – die genaue Kompatibilitätsliste ist jetzt veröffentlicht. Das beeinflusst die Deployment-Strategie: Wer AI-Features einbaut, muss klare Fallbacks für ältere Devices definieren.",
+      "source": "9to5Mac",
+      "url": "https://9to5mac.com/2026/06/11/apples-new-foundation-models-explained-on-device-ai-cloud-ai-and-everything-in-between/"
+    },
+    {
+      "topic": "ai",
+      "headline": "Vibecoding als Sicherheitsrisiko: Wenn KI-generierter Code ungeprüft in Produktion geht",
+      "summary": "Ein Heise-Deep-Dive beleuchtet, warum das Trend-Phänomen 'Vibecoding' – also KI einfach coden lassen und den Output direkt deployen – ein ernstes Sicherheitsrisiko darstellt. Fehlende Code-Reviews und blindes Vertrauen in AI-Output öffnen Angriffsflächen.",
+      "detail": "Vibecoding beschreibt den Workflow, bei dem Entwicklerinnen (oder Nicht-Entwicklerinnen) KI-Modelle Prompt für Prompt Code schreiben lassen, ohne tiefes Verständnis des Outputs. Das Problem: LLMs halluzinieren Abhängigkeiten, nutzen veraltete APIs und erzeugen Code, der kompiliert, aber unsichere Muster enthält. Für iOS-Entwicklerinnen konkret: Automatisch generierter Swift-Code kann falsche Keychain-Nutzung, unsichere HTTP-Calls oder fehlerhafte Berechtigungsanfragen enthalten – alles Dinge, die Apple im Review-Prozess oder Security-Audits auffliegen lassen. Die Empfehlung: KI als Pair-Programmer nutzen, aber jede Zeile wie eigenen Code reviewen – besonders bei sicherheitskritischen Bereichen wie Auth, Datenspeicherung und Netzwerk.",
+      "source": "Heise",
+      "url": "https://www.heise.de/news/KI-Update-Deep-Dive-Vibecoding-als-Sicherheitsrisiko-feat-TTT-11298728.html"
+    },
+    {
+      "topic": "ai",
+      "headline": "Anthropic entschuldigt sich für unsichtbare Claude-Fable-Guardrails",
+      "summary": "Anthropic hat sich dafür entschuldigt, dass Claude Fable versteckte, nicht kommunizierte Einschränkungen ('invisible guardrails') enthielt, die Nutzerinnen nicht sehen konnten. Das hat Vertrauen in das Modell beschädigt.",
+      "detail": "Das Kernproblem: Claude Fable hatte Regeln, die das Modell still ignorierten oder umgingen, ohne dies transparent zu machen – ein sogenanntes 'distillation guardrail'-Problem. Nutzerinnen merkten, dass das Modell anders als erwartet reagierte, ohne zu verstehen warum. Für Entwicklerinnen, die Claude über API in Apps einbinden: Das ist ein Reminder, dass AI-Modelle schwarze Boxen bleiben und unerwartetes Verhalten immer einkalkuliert werden muss. Robuste Error-Handling-Logik und Nutzer-transparente Kommunikation über AI-Grenzen sind kein Nice-to-have, sondern Pflicht – unabhängig davon, welchem Anbieter man vertraut.",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/948280/anthropic-claude-fable-invisible-distillation-guardrail"
+    },
+    {
+      "topic": "ios",
+      "headline": "Siri wird keine KI-Freundin: Apple zieht klare Grenzen bei Rollenspiel-Interaktionen",
+      "summary": "Apple hat laut The Verge bewusst entschieden, dass Siri keine romantischen oder parasoziale Beziehungs-Rollen übernehmen wird – anders als manche Konkurrenzprodukte. Das ist eine explizite Design- und Ethik-Entscheidung.",
+      "detail": "Während Apps wie Character.AI oder gewisse ChatGPT-Modi emotionale Bindungen fördern, zieht Apple bei Siri eine klare Linie. Das hat Implikationen für Drittanbieter-Apps im App Store: Wer AI-Companion-Features baut, muss davon ausgehen, dass Apple ähnliche Standards im Review-Prozess anlegt. Für Entwicklerinnen, die AI-gestützte soziale oder Mental-Health-Apps bauen wollen, ist das ein wichtiges Signal – nicht nur ethisch, sondern auch praktisch für die App-Store-Zulassung. Gleichzeitig schärft Apple damit sein Markenprofil: Siri als 'professional assistant', nicht als emotionaler Ersatz.",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/tech/948890/siri-wont-be-your-ai-girlfriend"
+    },
+    {
+      "topic": "tech",
+      "headline": "Oracle-Sicherheitslücke: Hacker kompromittierten über 100 Unternehmen",
+      "summary": "Oracle warnt vor einem aktiv ausgenutzten Sicherheitsbug, der Angreifern Zugriff auf mehr als 100 Unternehmen verschafft hat. Der Vorfall unterstreicht die anhaltenden Risiken in Enterprise-Cloud-Infrastrukturen.",
+      "detail": "Details zur genauen Schwachstelle sind noch rar, aber der Angriffsvektor war offenbar breit genug, um gleichzeitig viele Firmen zu treffen – ein klassisches Supply-Chain- oder zentrales Cloud-Dienst-Szenario. Für iOS-Entwicklerinnen, die Backend-Services auf Oracle Cloud oder ähnlichen Plattformen betreiben: Jetzt Logs prüfen, Patches einspielen und Access-Tokens rotieren. Generell gilt: Backend-Sicherheit ist Teil der App-Sicherheit – Nutzerdaten, die im Backend kompromittiert werden, sind auch ein Problem der App. Incident-Response-Pläne und regelmäßige Dependency-Audits sind Pflicht.",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/06/11/oracle-warns-of-security-bug-that-hackers-abused-to-breach-100-companies/"
+    },
+    {
+      "topic": "tech",
+      "headline": "Homebrew 6.0 ist da: Großes Update für den Mac-Paketmanager",
+      "summary": "Homebrew 6.0.0 ist erschienen und bringt signifikante Änderungen für den de-facto-Standard-Paketmanager auf macOS. Für alle, die täglich mit dem Terminal entwickeln, ein wichtiges Update.",
+      "detail": "Homebrew 6.0 markiert einen Major-Release, was Breaking Changes bedeuten kann – besonders bei Tap-Strukturen, Ruby-Versionen und der internen Formel-Verwaltung. Entwicklerinnen sollten vor dem Update ihre bestehenden Formulas und Casks testen, besonders wenn CI/CD-Pipelines auf brew-Installationen basieren. Für iOS-Entwicklerinnen relevant: Viele Xcode-Toolchain-Abhängigkeiten (swiftlint, xcbeautify, fastlane etc.) laufen über Homebrew – ein reibungsloser Update-Pfad ist hier entscheidend. Release-Notes vor dem Update lesen ist diesmal besonders empfohlen.",
+      "source": "Hacker News / Homebrew",
+      "url": "https://brew.sh/2026/06/11/homebrew-6.0.0/"
+    }
+  ],
+  "audio_file": null
+}
