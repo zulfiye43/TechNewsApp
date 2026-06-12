@@ -66,10 +66,21 @@ final class SpeechManager: NSObject, ObservableObject, AVSpeechSynthesizerDelega
     @Published var duration: Double = 0
     @Published var playbackRate: Float = 1.0
 
-    private let synth = AVSpeechSynthesizer()
+    private var synth = AVSpeechSynthesizer()
     private var player: AVPlayer?
     private var timeObserver: Any?
     private var currentURL: URL?
+
+    // Sprachmodus: Position im Text (UTF-16-Einheiten) mitverfolgen
+    private var speechText = ""
+    private var speechBaseOffset = 0
+    private var speechCharIndex = 0
+    private weak var currentUtterance: AVSpeechUtterance?
+    private var usingSpeech = false
+    private var speechTimer: Timer?
+
+    /// Geschätzte Sprechgeschwindigkeit (Zeichen/Sekunde) bei 1×.
+    private let charsPerSecond: Double = 15.0
 
     override init() {
         super.init()
@@ -80,22 +91,32 @@ final class SpeechManager: NSObject, ObservableObject, AVSpeechSynthesizerDelega
 
     func toggle(digest: Digest, audioURL: URL?) {
         if let url = audioURL {
+            usingSpeech = false
             toggleAudio(url: url)
         } else {
+            usingSpeech = true
             toggleSpeech(digest: digest)
         }
     }
 
     func stop() {
         teardown()
+        stopSpeechTimer()
+        currentUtterance = nil
         synth.stopSpeaking(at: .immediate)
+        speechCharIndex = 0
         isPlaying = false
     }
 
     func seek(to time: Double) {
         let clamped = max(0, min(time, duration))
-        player?.seek(to: CMTime(seconds: clamped, preferredTimescale: 600))
-        currentTime = clamped
+        if usingSpeech {
+            let offset = Int(clamped * effectiveCharsPerSecond())
+            speakFrom(offset: min(offset, max(textLength() - 1, 0)))
+        } else {
+            player?.seek(to: CMTime(seconds: clamped, preferredTimescale: 600))
+            currentTime = clamped
+        }
     }
 
     func skip(_ seconds: Double) {
@@ -105,12 +126,19 @@ final class SpeechManager: NSObject, ObservableObject, AVSpeechSynthesizerDelega
     func cycleRate() {
         let rates: [Float] = [1.0, 1.5, 2.0]
         playbackRate = rates[((rates.firstIndex(of: playbackRate) ?? 0) + 1) % rates.count]
-        if isPlaying { player?.rate = playbackRate }
+        if usingSpeech {
+            if isPlaying { speakFrom(offset: speechCharIndex) }
+        } else if isPlaying {
+            player?.rate = playbackRate
+        }
     }
 
-    // MARK: Audio (lokal gebündelt oder von GitHub gestreamt)
+    // MARK: MP3
 
     private func toggleAudio(url: URL) {
+        stopSpeechTimer()
+        currentUtterance = nil
+        synth.stopSpeaking(at: .immediate)
         if let player, currentURL == url {
             if isPlaying {
                 player.pause()
@@ -165,28 +193,96 @@ final class SpeechManager: NSObject, ObservableObject, AVSpeechSynthesizerDelega
         player?.pause()
         player = nil
         currentURL = nil
-        currentTime = 0
-        duration = 0
+        if !usingSpeech {
+            currentTime = 0
+            duration = 0
+        }
     }
 
-    // MARK: Fallback Systemstimme
+    // MARK: Systemstimme mit Spulen/Tempo
+
+    private func textLength() -> Int {
+        (speechText as NSString).length
+    }
+
+    /// Zeitachse bewusst tempo-unabhängig (1×-Basis): so bleiben Regler
+    /// und Dauer beim Tempo-Wechsel stabil, nur die Stimme wird schneller.
+    private func effectiveCharsPerSecond() -> Double {
+        charsPerSecond
+    }
+
+    private func updateSpeechDuration() {
+        duration = Double(textLength()) / effectiveCharsPerSecond()
+    }
 
     private func toggleSpeech(digest: Digest) {
         if synth.isSpeaking && !synth.isPaused {
             synth.pauseSpeaking(at: .word)
             isPlaying = false
-        } else if synth.isPaused {
+            stopSpeechTimer()
+            return
+        }
+        if synth.isPaused {
             synth.continueSpeaking()
             isPlaying = true
-        } else {
-            try? AVAudioSession.sharedInstance().setCategory(.playback, mode: .spokenAudio)
-            try? AVAudioSession.sharedInstance().setActive(true)
-            let utterance = AVSpeechUtterance(string: script(for: digest))
-            utterance.voice = Self.bestVoice()
-            utterance.rate = 0.5
-            synth.speak(utterance)
-            isPlaying = true
+            startSpeechTimer()
+            return
         }
+        speechText = script(for: digest)
+        updateSpeechDuration()
+        speakFrom(offset: 0)
+    }
+
+    private func speakFrom(offset: Int) {
+        let ns = speechText as NSString
+        guard ns.length > 0 else { return }
+        let clamped = max(0, min(offset, ns.length - 1))
+        let remainder = ns.substring(from: clamped)
+        guard !remainder.isEmpty else {
+            isPlaying = false
+            speechCharIndex = 0
+            currentTime = 0
+            return
+        }
+
+        // Frische Synthesizer-Instanz: der zuverlässigste Weg, einen
+        // laufenden Sprecher sofort neu zu positionieren.
+        currentUtterance = nil
+        synth.stopSpeaking(at: .immediate)
+        synth = AVSpeechSynthesizer()
+        synth.delegate = self
+
+        try? AVAudioSession.sharedInstance().setCategory(.playback, mode: .spokenAudio)
+        try? AVAudioSession.sharedInstance().setActive(true)
+
+        speechBaseOffset = clamped
+        speechCharIndex = clamped
+        currentTime = Double(clamped) / effectiveCharsPerSecond()
+
+        let utterance = AVSpeechUtterance(string: remainder)
+        utterance.voice = Self.bestVoice()
+        // 1x -> 0.5 (normal), 1.5x -> ~0.59, 2x -> ~0.68 (deutlich schneller)
+        utterance.rate = min(0.5 + (playbackRate - 1.0) * 0.18, 0.68)
+        currentUtterance = utterance
+        synth.speak(utterance)
+        isPlaying = true
+        startSpeechTimer()
+    }
+
+    private func startSpeechTimer() {
+        speechTimer?.invalidate()
+        speechTimer = Timer.scheduledTimer(withTimeInterval: 0.25, repeats: true) { [weak self] _ in
+            guard let self, self.usingSpeech, self.isPlaying else { return }
+            // Fortschritt interpolieren; Wort-Callbacks korrigieren bei Bedarf
+            self.currentTime = min(self.currentTime + 0.25 * Double(self.playbackRate),
+                                   self.duration)
+            self.speechCharIndex = Int(self.currentTime * self.charsPerSecond)
+        }
+    }
+
+    private func stopSpeechTimer() {
+        speechTimer?.invalidate()
+        speechTimer = nil
     }
 
     static func bestVoice() -> AVSpeechSynthesisVoice? {
@@ -202,20 +298,46 @@ final class SpeechManager: NSObject, ObservableObject, AVSpeechSynthesizerDelega
     }
 
     private func script(for digest: Digest) -> String {
-        var text = "Dein Tech-Digest. \(digest.greeting) "
+        // Bevorzugt das von Claude geschriebene Podcast-Skript –
+        // die rohe News-Liste ist nur der allerletzte Fallback.
+        if let script = digest.podcastScript, !script.isEmpty {
+            return script
+        }
+        var text = "\(digest.greeting) "
         for (index, item) in digest.items.enumerated() {
             text += "Nachricht \(index + 1): \(item.headline). \(item.summary) "
         }
-        text += "Das war dein Digest für heute. Bis morgen!"
         return text
     }
 
+    // MARK: AVSpeechSynthesizerDelegate (nur aktuelle Utterance zählt)
+
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer,
+                           willSpeakRangeOfSpeechString characterRange: NSRange,
+                           utterance: AVSpeechUtterance) {
+        guard utterance === currentUtterance else { return }
+        DispatchQueue.main.async {
+            self.speechCharIndex = self.speechBaseOffset + characterRange.location
+            self.currentTime = Double(self.speechCharIndex) / self.effectiveCharsPerSecond()
+        }
+    }
+
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
-        DispatchQueue.main.async { self.isPlaying = false }
+        guard utterance === currentUtterance else { return }
+        DispatchQueue.main.async {
+            self.stopSpeechTimer()
+            self.isPlaying = false
+            self.speechCharIndex = 0
+            self.speechBaseOffset = 0
+            self.currentTime = 0
+        }
     }
 
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didCancel utterance: AVSpeechUtterance) {
-        DispatchQueue.main.async { self.isPlaying = false }
+        guard utterance === currentUtterance else { return }
+        DispatchQueue.main.async {
+            self.isPlaying = false
+        }
     }
 }
 
@@ -409,6 +531,8 @@ struct SavedTab: View {
 struct PodcastTab: View {
     @EnvironmentObject var store: DigestStore
     @EnvironmentObject var speech: SpeechManager
+    @State private var scrubValue: Double = 0
+    @State private var isScrubbing = false
 
     var body: some View {
         NavigationStack {
@@ -422,73 +546,70 @@ struct PodcastTab: View {
                             .font(.caption)
                             .foregroundStyle(.secondary)
 
-                        if store.audioURL != nil {
-                            // Fortschritt + Spulen
-                            VStack(spacing: 4) {
-                                Slider(
-                                    value: Binding(
-                                        get: { speech.currentTime },
-                                        set: { speech.seek(to: $0) }
-                                    ),
-                                    in: 0...max(speech.duration, 1)
-                                )
-                                .tint(.sage)
-                                HStack {
-                                    Text(timeString(speech.currentTime))
-                                    Spacer()
-                                    Text(timeString(speech.duration))
+                        // Fortschritt + Spulen (MP3 exakt, Systemstimme geschätzt)
+                        VStack(spacing: 4) {
+                            Slider(
+                                value: Binding(
+                                    get: { isScrubbing ? scrubValue : speech.currentTime },
+                                    set: { scrubValue = $0 }
+                                ),
+                                in: 0...max(speech.duration, 1),
+                                onEditingChanged: { editing in
+                                    if editing {
+                                        scrubValue = speech.currentTime
+                                        isScrubbing = true
+                                    } else {
+                                        isScrubbing = false
+                                        speech.seek(to: scrubValue)
+                                    }
                                 }
-                                .font(.caption2.monospacedDigit())
-                                .foregroundStyle(.secondary)
+                            )
+                            .tint(.sage)
+                            .disabled(speech.duration <= 0)
+                            HStack {
+                                Text(timeString(speech.currentTime))
+                                Spacer()
+                                Text(timeString(speech.duration))
                             }
+                            .font(.caption2.monospacedDigit())
+                            .foregroundStyle(.secondary)
+                        }
 
-                            // Steuerung: -10s / Play / +10s / Tempo
-                            HStack(spacing: 28) {
-                                Button { speech.skip(-10) } label: {
-                                    Image(systemName: "gobackward.10").font(.title2)
-                                }
-                                Button {
-                                    Haptics.light(); if let digest = store.digest { speech.toggle(digest: digest, audioURL: store.audioURL) }
-                                } label: {
-                                    Image(systemName: speech.isPlaying ? "pause.fill" : "play.fill")
-                                        .font(.title)
-                                        .foregroundStyle(Color.bgMain)
-                                        .frame(width: 68, height: 68)
-                                        .background(Color.sage, in: Circle())
-                                }
-                                Button { speech.skip(10) } label: {
-                                    Image(systemName: "goforward.10").font(.title2)
-                                }
-                                Button { speech.cycleRate() } label: {
-                                    Text(rateLabel)
-                                        .font(.footnote.weight(.bold))
-                                        .frame(width: 44, height: 30)
-                                        .background(Color.surface, in: Capsule())
-                                        .overlay(Capsule().stroke(Color.cardBorder))
-                                }
+                        HStack(spacing: 28) {
+                            Button { speech.skip(-10) } label: {
+                                Image(systemName: "gobackward.10").font(.title2)
                             }
-                            .foregroundStyle(Color.primary)
-
-                            Text("Gesprochen von Bella (ElevenLabs)")
-                                .font(.caption)
-                                .foregroundStyle(.secondary)
-                        } else {
+                            .disabled(speech.duration <= 0)
                             Button {
                                 Haptics.light(); if let digest = store.digest { speech.toggle(digest: digest, audioURL: store.audioURL) }
                             } label: {
                                 Image(systemName: speech.isPlaying ? "pause.fill" : "play.fill")
                                     .font(.title)
                                     .foregroundStyle(Color.bgMain)
-                                    .frame(width: 72, height: 72)
+                                    .frame(width: 68, height: 68)
                                     .background(Color.sage, in: Circle())
                             }
                             .disabled(store.digest == nil)
-
-                            Text("Noch keine digest.mp3 im Projekt. Führe die Pipeline mit --audio aus und ziehe out/digest.mp3 in Xcode – dann übernimmt Bella.")
-                                .font(.caption)
-                                .foregroundStyle(.secondary)
-                                .multilineTextAlignment(.center)
+                            Button { speech.skip(10) } label: {
+                                Image(systemName: "goforward.10").font(.title2)
+                            }
+                            .disabled(speech.duration <= 0)
+                            Button { speech.cycleRate() } label: {
+                                Text(rateLabel)
+                                    .font(.footnote.weight(.bold))
+                                    .frame(width: 44, height: 30)
+                                    .background(Color.surface, in: Capsule())
+                                    .overlay(Capsule().stroke(Color.cardBorder))
+                            }
                         }
+                        .foregroundStyle(Color.primary)
+
+                        Text(store.audioURL != nil
+                             ? "Gesprochen von Bella (ElevenLabs)"
+                             : "Systemstimme – Bella übernimmt wieder, sobald ElevenLabs-Credits da sind")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                            .multilineTextAlignment(.center)
                     }
                     .padding(24)
                     .frame(maxWidth: .infinity)

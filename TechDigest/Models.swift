@@ -5,12 +5,14 @@ struct Digest: Codable {
     let date: String
     let greeting: String
     let podcastTitle: String?
+    let podcastScript: String?
     let items: [DigestItem]
     let audioFile: String?
 
     enum CodingKeys: String, CodingKey {
         case date, greeting, items
         case podcastTitle = "podcast_title"
+        case podcastScript = "podcast_script"
         case audioFile = "audio_file"
     }
 }

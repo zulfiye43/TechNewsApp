@@ -114,6 +114,27 @@ dein Tech-Update" o.ä.)
 
 {lang_instruction}
 
+STIL-VORBILD – triff genau diesen Ton (Themen sind natürlich die heutigen):
+---
+Hi, schön, dass du dabei bist – hier ist dein Tech-Update.
+Fangen wir groß an: SpaceX ist jetzt börsennotiert. 135 Dollar pro Aktie, \
+und damit der größte IPO in der Geschichte der US-Kapitalmärkte. Elon Musk \
+schreibt also mal eben Börsengeschichte – typisch untertrieben. Was das \
+bedeutet? Starlink und Co. werden zunehmend zur Infrastruktur für \
+Connectivity und Edge-Computing.
+[...]
+Und eine offizielle Design-Entscheidung, die mich wirklich schmunzeln \
+lässt: Siri wird nicht deine KI-Freundin. Steht so drin. Ernst gemeint.
+[...]
+Und Homebrew 6.0 ist draußen – Major-Release bedeutet mögliche Breaking \
+Changes, also bitte erst in einer Testumgebung updaten, bevor die \
+CI-Pipeline weinend zusammenbricht.
+Das war dein Tech-Update – bis zum nächsten Mal.
+---
+Merkmale des Vorbilds: starker Einstieg ("Fangen wir groß an"), nach jeder \
+News eine Einordnung ("Was das bedeutet?"), trockener Humor, konkrete \
+Handlungsempfehlungen für Entwicklerinnen, knackiger Abschied.
+
 Antworte nur mit dem Sprechtext.
 
 {digest}"""
@@ -231,14 +252,16 @@ def find_voice_id(name: str) -> str:
              f"Tipp: Bella in der ElevenLabs Voice Library zu 'My Voices' hinzufügen.")
 
 
-def build_audio(digest: dict, out_path: Path, lang: str = "de") -> None:
+def build_script(digest: dict, lang: str = "de") -> str:
     script = claude(PODCAST_PROMPT.format(
         digest=json.dumps(digest, ensure_ascii=False),
         lang_instruction=LANG_INSTRUCTION.get(lang, LANG_INSTRUCTION["de"])))
     words = len(script.split())
-    print(f"Podcast-Skript: {words} Wörter (~{words / 145:.1f} Min)")
-    (out_path.with_suffix(".txt")).write_text(script, encoding="utf-8")
+    print(f"Podcast-Skript ({lang}): {words} Wörter (~{words / 145:.1f} Min)")
+    return script
 
+
+def build_audio(script: str, out_path: Path) -> None:
     voice_id = find_voice_id(ELEVEN_VOICE_NAME)
     r = requests.post(
         f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}",
@@ -280,6 +303,12 @@ def main() -> int:
         digest = build_digest(items, lang=lang)
         out_json = OUT_DIR / f"digest_{lang}.json"
 
+        # Podcast-Skript immer erzeugen und einbetten: so liest auch die
+        # System-Fallback-Stimme in der App den unterhaltsamen Text vor.
+        script = build_script(digest, lang=lang)
+        digest["podcast_script"] = script
+        (OUT_DIR / f"digest_{lang}.txt").write_text(script, encoding="utf-8")
+
         # JSON sofort schreiben – ein Audio-Fehler soll den Digest nicht kosten
         digest["audio_file"] = None
         out_json.write_text(json.dumps(digest, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -288,7 +317,7 @@ def main() -> int:
         if args.audio:
             try:
                 audio_path = OUT_DIR / f"digest_{lang}.mp3"
-                build_audio(digest, audio_path, lang=lang)
+                build_audio(script, audio_path)
                 digest["audio_file"] = audio_path.name
                 out_json.write_text(json.dumps(digest, ensure_ascii=False, indent=2), encoding="utf-8")
                 print(f"Audio ({lang}): {audio_path}")
