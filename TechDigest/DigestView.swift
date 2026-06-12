@@ -605,8 +605,8 @@ struct PodcastTab: View {
                         .foregroundStyle(Color.primary)
 
                         Text(store.audioURL != nil
-                             ? "Gesprochen von Bella (ElevenLabs)"
-                             : "Systemstimme – Bella übernimmt wieder, sobald ElevenLabs-Credits da sind")
+                             ? "Täglich frisch generierte Folge"
+                             : "Systemstimme (Offline-Modus)")
                             .font(.caption)
                             .foregroundStyle(.secondary)
                             .multilineTextAlignment(.center)

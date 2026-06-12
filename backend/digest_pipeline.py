@@ -41,6 +41,15 @@ LANG_INSTRUCTION = {
 }
 CLAUDE_MODEL = "claude-sonnet-4-6"
 
+# TTS-Provider: "edge" (gratis, Microsoft-Neuralstimmen) oder "elevenlabs"
+TTS_PROVIDER = os.environ.get("TTS_PROVIDER", "edge")
+
+# Edge-TTS (kostenlos, kein Account nötig)
+EDGE_VOICES = {
+    "de": "de-DE-SeraphinaMultilingualNeural",   # warm, natürlich
+    "en": "en-US-AvaMultilingualNeural",
+}
+
 # ElevenLabs
 ELEVEN_VOICE_NAME = "Bella"              # professional, bright, warm
 # eleven_multilingual_v2 = beste Qualität (1 Credit/Zeichen)
@@ -261,7 +270,29 @@ def build_script(digest: dict, lang: str = "de") -> str:
     return script
 
 
-def build_audio(script: str, out_path: Path) -> None:
+def build_audio(script: str, out_path: Path, lang: str = "de") -> None:
+    if TTS_PROVIDER == "elevenlabs":
+        build_audio_elevenlabs(script, out_path)
+    else:
+        build_audio_edge(script, out_path, lang)
+
+
+def build_audio_edge(script: str, out_path: Path, lang: str) -> None:
+    """Kostenlos: Microsoft-Edge-Neuralstimmen via edge-tts."""
+    import asyncio
+
+    import edge_tts
+
+    voice = EDGE_VOICES.get(lang, EDGE_VOICES["de"])
+
+    async def _generate() -> None:
+        communicate = edge_tts.Communicate(script, voice, rate="+4%")
+        await communicate.save(str(out_path))
+
+    asyncio.run(_generate())
+
+
+def build_audio_elevenlabs(script: str, out_path: Path) -> None:
     voice_id = find_voice_id(ELEVEN_VOICE_NAME)
     r = requests.post(
         f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}",
@@ -317,7 +348,7 @@ def main() -> int:
         if args.audio:
             try:
                 audio_path = OUT_DIR / f"digest_{lang}.mp3"
-                build_audio(script, audio_path)
+                build_audio(script, audio_path, lang=lang)
                 digest["audio_file"] = audio_path.name
                 out_json.write_text(json.dumps(digest, ensure_ascii=False, indent=2), encoding="utf-8")
                 print(f"Audio ({lang}): {audio_path}")

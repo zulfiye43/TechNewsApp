@@ -30,6 +30,7 @@ jobs:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           ELEVEN_MODEL: ${{ vars.ELEVEN_MODEL || 'eleven_flash_v2_5' }}
           DIGEST_LANGS: ${{ vars.DIGEST_LANGS || 'de' }}
+          TTS_PROVIDER: ${{ vars.TTS_PROVIDER || 'edge' }}
         run: python digest_pipeline.py --audio
 
       - name: Ergebnis committen
