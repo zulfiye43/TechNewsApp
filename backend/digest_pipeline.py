@@ -32,6 +32,13 @@ OUT_DIR = Path(__file__).parent / "out"
 MAX_ITEMS_PER_SOURCE = 15
 MAX_AGE_HOURS = 30
 DIGEST_ITEM_COUNT = 9
+# Kommagetrennt, z.B. "de,en". Achtung: jede Sprache kostet eigene
+# Claude- und ElevenLabs-Credits (eigener Podcast pro Sprache!).
+LANGUAGES = [l.strip() for l in os.environ.get("DIGEST_LANGS", "de").split(",")]
+LANG_INSTRUCTION = {
+    "de": "Schreibe ALLES auf Deutsch.",
+    "en": "Write EVERYTHING in English (headlines, summaries, details, greeting, podcast title).",
+}
 CLAUDE_MODEL = "claude-sonnet-4-6"
 
 # ElevenLabs
@@ -64,6 +71,8 @@ sind die Top-News des Tages. Schreibe pro Story:
 
 Achtung JSON-Validität: Innerhalb der Texte KEINE doppelten \
 Anführungszeichen verwenden – nutze »…« oder ‚…' für Zitate/Titel.
+
+{lang_instruction}
 
 Antworte NUR mit validem JSON in genau diesem Format:
 {{
@@ -102,6 +111,8 @@ man weiß nicht, wann gehört wird ("Schön, dass du da bist", "Hi, hier ist \
 dein Tech-Update" o.ä.)
 - Direkte Ansprache ("du"), kurze gesprochene Sätze
 - Keine Regieanweisungen, keine Aufzählungszeichen, kein Jingle-Text
+
+{lang_instruction}
 
 Antworte nur mit dem Sprechtext.
 
@@ -173,10 +184,11 @@ def claude(prompt: str, max_tokens: int = 6000) -> str:
     return msg.content[0].text
 
 
-def build_digest(items: list[dict]) -> dict:
+def build_digest(items: list[dict], lang: str = "de") -> dict:
     listing = "\n".join(f"- {i['title']} ({i['source']}) {i['url']}" for i in items)
     raw = claude(DIGEST_PROMPT.format(
-        items=listing, count=DIGEST_ITEM_COUNT, today=date.today().isoformat()
+        items=listing, count=DIGEST_ITEM_COUNT, today=date.today().isoformat(),
+        lang_instruction=LANG_INSTRUCTION.get(lang, LANG_INSTRUCTION["de"]),
     ))
     raw = re.sub(r"^```(json)?|```$", "", raw.strip(), flags=re.MULTILINE).strip()
     try:
@@ -219,9 +231,10 @@ def find_voice_id(name: str) -> str:
              f"Tipp: Bella in der ElevenLabs Voice Library zu 'My Voices' hinzufügen.")
 
 
-def build_audio(digest: dict, out_path: Path) -> None:
+def build_audio(digest: dict, out_path: Path, lang: str = "de") -> None:
     script = claude(PODCAST_PROMPT.format(
-        digest=json.dumps(digest, ensure_ascii=False)))
+        digest=json.dumps(digest, ensure_ascii=False),
+        lang_instruction=LANG_INSTRUCTION.get(lang, LANG_INSTRUCTION["de"])))
     words = len(script.split())
     print(f"Podcast-Skript: {words} Wörter (~{words / 145:.1f} Min)")
     (out_path.with_suffix(".txt")).write_text(script, encoding="utf-8")
@@ -262,21 +275,30 @@ def main() -> int:
     items = dedupe(items)
     print(f"{len(items)} Stories gesammelt")
 
-    digest = build_digest(items)
     OUT_DIR.mkdir(exist_ok=True)
-    out_json = OUT_DIR / "digest.json"
+    for lang in LANGUAGES:
+        digest = build_digest(items, lang=lang)
+        out_json = OUT_DIR / f"digest_{lang}.json"
 
-    # JSON sofort schreiben – ein Audio-Fehler soll den Digest nicht kosten
-    digest["audio_file"] = None
-    out_json.write_text(json.dumps(digest, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"Digest: {out_json}")
-
-    if args.audio:
-        audio_path = OUT_DIR / "digest.mp3"
-        build_audio(digest, audio_path)
-        digest["audio_file"] = audio_path.name
+        # JSON sofort schreiben – ein Audio-Fehler soll den Digest nicht kosten
+        digest["audio_file"] = None
         out_json.write_text(json.dumps(digest, ensure_ascii=False, indent=2), encoding="utf-8")
-        print(f"Audio: {audio_path}")
+        print(f"Digest ({lang}): {out_json}")
+
+        if args.audio:
+            audio_path = OUT_DIR / f"digest_{lang}.mp3"
+            build_audio(digest, audio_path, lang=lang)
+            digest["audio_file"] = audio_path.name
+            out_json.write_text(json.dumps(digest, ensure_ascii=False, indent=2), encoding="utf-8")
+            print(f"Audio ({lang}): {audio_path}")
+
+        # Abwärtskompatibilität: deutsche Version zusätzlich als digest.json/.mp3
+        if lang == "de":
+            (OUT_DIR / "digest.json").write_text(
+                json.dumps(digest, ensure_ascii=False, indent=2), encoding="utf-8")
+            mp3 = OUT_DIR / "digest_de.mp3"
+            if mp3.exists():
+                (OUT_DIR / "digest.mp3").write_bytes(mp3.read_bytes())
     return 0
 
 

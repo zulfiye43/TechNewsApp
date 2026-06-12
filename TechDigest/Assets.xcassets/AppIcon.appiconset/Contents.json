@@ -76,6 +76,11 @@
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "512x512"
+    },
+    {
+      "filename" : "LogoTechNews.png",
+      "idiom" : "universal",
+      "scale" : "1x"
     }
   ],
   "info" : {

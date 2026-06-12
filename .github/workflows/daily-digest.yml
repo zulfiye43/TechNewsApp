@@ -29,6 +29,7 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           ELEVEN_MODEL: ${{ vars.ELEVEN_MODEL || 'eleven_flash_v2_5' }}
+          DIGEST_LANGS: ${{ vars.DIGEST_LANGS || 'de' }}
         run: python digest_pipeline.py --audio
 
       - name: Ergebnis committen

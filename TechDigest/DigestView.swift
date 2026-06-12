@@ -44,6 +44,20 @@ struct PressableCardStyle: ButtonStyle {
     }
 }
 
+/// Datum folgt der gewählten App-Sprache, nicht der Geräte-Locale.
+enum AppDate {
+    static func formatted(_ isoDate: String) -> String {
+        let parser = DateFormatter()
+        parser.dateFormat = "yyyy-MM-dd"
+        guard let date = parser.date(from: isoDate) else { return isoDate }
+        let lang = UserDefaults.standard.string(forKey: "language") ?? "de"
+        let out = DateFormatter()
+        out.locale = Locale(identifier: lang == "en" ? "en_US" : "de_DE")
+        out.dateStyle = .full
+        return out.string(from: date)
+    }
+}
+
 // MARK: - Player (MP3 von ElevenLabs, Fallback Systemstimme)
 
 final class SpeechManager: NSObject, ObservableObject, AVSpeechSynthesizerDelegate {
@@ -168,22 +182,23 @@ final class SpeechManager: NSObject, ObservableObject, AVSpeechSynthesizerDelega
             try? AVAudioSession.sharedInstance().setCategory(.playback, mode: .spokenAudio)
             try? AVAudioSession.sharedInstance().setActive(true)
             let utterance = AVSpeechUtterance(string: script(for: digest))
-            utterance.voice = Self.bestGermanVoice()
+            utterance.voice = Self.bestVoice()
             utterance.rate = 0.5
             synth.speak(utterance)
             isPlaying = true
         }
     }
 
-    static func bestGermanVoice() -> AVSpeechSynthesisVoice? {
-        let german = AVSpeechSynthesisVoice.speechVoices().filter { $0.language.hasPrefix("de") }
-        if #available(iOS 16.0, *), let premium = german.first(where: { $0.quality == .premium }) {
+    static func bestVoice() -> AVSpeechSynthesisVoice? {
+        let lang = UserDefaults.standard.string(forKey: "language") ?? "de"
+        let matching = AVSpeechSynthesisVoice.speechVoices().filter { $0.language.hasPrefix(lang) }
+        if #available(iOS 16.0, *), let premium = matching.first(where: { $0.quality == .premium }) {
             return premium
         }
-        if let enhanced = german.first(where: { $0.quality == .enhanced }) {
+        if let enhanced = matching.first(where: { $0.quality == .enhanced }) {
             return enhanced
         }
-        return AVSpeechSynthesisVoice(language: "de-DE")
+        return AVSpeechSynthesisVoice(language: lang == "en" ? "en-US" : "de-DE")
     }
 
     private func script(for digest: Digest) -> String {
@@ -291,10 +306,7 @@ struct HeuteTab: View {
     }
 
     private func formatted(_ isoDate: String) -> String {
-        let parser = DateFormatter()
-        parser.dateFormat = "yyyy-MM-dd"
-        guard let date = parser.date(from: isoDate) else { return isoDate }
-        return date.formatted(date: .complete, time: .omitted)
+        AppDate.formatted(isoDate)
     }
 }
 
@@ -304,7 +316,6 @@ struct FeedTab: View {
     @EnvironmentObject var store: DigestStore
     @State private var filter: DigestItem.Topic?
     @State private var showSettings = false
-    @State private var isRefreshing = false
 
     var body: some View {
         NavigationStack {
@@ -326,19 +337,6 @@ struct FeedTab: View {
             .navigationTitle("Feed")
             .navigationDestination(for: DigestItem.self) { DetailView(item: $0) }
             .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
-                    Button {
-                        Task {
-                            isRefreshing = true
-                            await store.load()
-                            isRefreshing = false
-                        }
-                    } label: {
-                        if isRefreshing { ProgressView() }
-                        else { Image(systemName: "arrow.clockwise") }
-                    }
-                    .accessibilityLabel("Aktualisieren")
-                }
                 ToolbarItem(placement: .topBarTrailing) {
                     Button { showSettings = true } label: { Image(systemName: "gearshape") }
                 }
@@ -420,7 +418,7 @@ struct PodcastTab: View {
                         Text(store.digest?.podcastTitle ?? "Dein Digest")
                             .font(.headline)
                             .multilineTextAlignment(.center)
-                        Text(store.digest?.date ?? "…")
+                        Text(store.digest.map { AppDate.formatted($0.date) } ?? "…")
                             .font(.caption)
                             .foregroundStyle(.secondary)
 
@@ -513,6 +511,7 @@ struct PodcastTab: View {
     }
 
     private func timeString(_ t: Double) -> String {
+        guard speech.duration > 0 else { return "–:–" }
         let s = Int(t.rounded())
         return String(format: "%d:%02d", s / 60, s % 60)
     }
@@ -601,6 +600,9 @@ struct SettingsView: View {
     @AppStorage("weightIOS") private var weightIOS = 3
     @AppStorage("weightTech") private var weightTech = 2
     @AppStorage("appearance") private var appearance = "system"
+    @AppStorage("language") private var language = "de"
+    @EnvironmentObject var store: DigestStore
+    @EnvironmentObject var speech: SpeechManager
 
     private var pushTime: Binding<Date> {
         Binding(
@@ -632,6 +634,18 @@ struct SettingsView: View {
                     WeightRow(label: "AI", value: $weightAI)
                     WeightRow(label: "iOS / Apple", value: $weightIOS)
                     WeightRow(label: "Allgemeine Tech-News", value: $weightTech)
+                }
+
+                Section("Sprache") {
+                    Picker("Digest & Podcast", selection: $language) {
+                        Text("Deutsch").tag("de")
+                        Text("English").tag("en")
+                    }
+                    .pickerStyle(.segmented)
+                    .onChange(of: language) {
+                        speech.stop()
+                        Task { await store.load() }
+                    }
                 }
 
                 Section("Darstellung") {

@@ -54,10 +54,14 @@ final class DigestStore: ObservableObject {
         Bundle.main.url(forResource: "digest", withExtension: "mp3")
     }
 
+    var language: String {
+        UserDefaults.standard.string(forKey: "language") ?? "de"
+    }
+
     func load() async {
         if let base = Self.remoteBase {
             do {
-                var request = URLRequest(url: base.appendingPathComponent("digest.json"))
+                var request = URLRequest(url: base.appendingPathComponent("digest_\(language).json"))
                 request.cachePolicy = .reloadIgnoringLocalCacheData
                 let (data, _) = try await URLSession.shared.data(for: request)
                 let decoded = try JSONDecoder().decode(Digest.self, from: data)
