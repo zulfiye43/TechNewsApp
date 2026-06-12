@@ -286,11 +286,16 @@ def main() -> int:
         print(f"Digest ({lang}): {out_json}")
 
         if args.audio:
-            audio_path = OUT_DIR / f"digest_{lang}.mp3"
-            build_audio(digest, audio_path, lang=lang)
-            digest["audio_file"] = audio_path.name
-            out_json.write_text(json.dumps(digest, ensure_ascii=False, indent=2), encoding="utf-8")
-            print(f"Audio ({lang}): {audio_path}")
+            try:
+                audio_path = OUT_DIR / f"digest_{lang}.mp3"
+                build_audio(digest, audio_path, lang=lang)
+                digest["audio_file"] = audio_path.name
+                out_json.write_text(json.dumps(digest, ensure_ascii=False, indent=2), encoding="utf-8")
+                print(f"Audio ({lang}): {audio_path}")
+            except SystemExit as e:    # Audio-Fehler darf den Digest nicht kosten
+                print(f"WARN Audio ({lang}) fehlgeschlagen: {e}", file=sys.stderr)
+            except Exception as e:
+                print(f"WARN Audio ({lang}) fehlgeschlagen: {e}", file=sys.stderr)
 
         # Abwärtskompatibilität: deutsche Version zusätzlich als digest.json/.mp3
         if lang == "de":

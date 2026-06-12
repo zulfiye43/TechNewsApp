@@ -66,7 +66,7 @@ final class DigestStore: ObservableObject {
                 let (data, _) = try await URLSession.shared.data(for: request)
                 let decoded = try JSONDecoder().decode(Digest.self, from: data)
                 digest = decoded
-                audioURL = decoded.audioFile.map { base.appendingPathComponent($0) } ?? bundledMP3
+                audioURL = decoded.audioFile.map { base.appendingPathComponent($0) }
                 errorMessage = nil
                 return
             } catch {
