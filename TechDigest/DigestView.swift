@@ -715,7 +715,7 @@ struct DetailView: View {
 struct SettingsView: View {
     @Environment(\.dismiss) private var dismiss
 
-    @AppStorage("pushMinutes") private var pushMinutes = 390          // 06:30
+    @AppStorage("pushMinutes") private var pushMinutes = 720          // 12:00
     @AppStorage("newsCount") private var newsCount = 9
     @AppStorage("weightAI") private var weightAI = 3
     @AppStorage("weightIOS") private var weightIOS = 3
@@ -745,6 +745,9 @@ struct SettingsView: View {
                 Section("Digest") {
                     DatePicker(selection: pushTime, displayedComponents: .hourAndMinute) {
                         Label("Push-Zeit", systemImage: "bell.badge")
+                    }
+                    .onChange(of: pushMinutes) { _, newVal in
+                        NotificationScheduler.schedule(pushMinutes: newVal)
                     }
                     Stepper(value: $newsCount, in: 5...15) {
                         Label("Anzahl News: \(newsCount)", systemImage: "list.number")
