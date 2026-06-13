@@ -1,81 +1,81 @@
 {
-  "date": "2026-06-12",
-  "greeting": "Heute ist ein historischer Tag: SpaceX geht an die Börse, Elon Musk wird Billionär, iOS 27 Beta läuft – und Siri soll plötzlich gut sein.",
-  "podcast_title": "SpaceX, iOS 27 und der erste Billionär",
+  "date": "2026-06-13",
+  "greeting": "Heute dreht sich alles um Claude-Zwangsabschaltung, iOS 27 in der Beta und Elon Musks Billionen-Meilenstein.",
+  "podcast_title": "Claude verboten – was steckt dahinter?",
   "items": [
     {
+      "topic": "ai",
+      "headline": "US-Regierung zwingt Anthropic zur Abschaltung von Claude Fable 5 und Mythos 5",
+      "summary": "Die US-Regierung hat Anthropic per Direktive angewiesen, den Zugang zu ihren zwei mächtigsten Modellen sofort zu sperren. Anthropic hat sich gefügt – und damit einen Präzedenzfall für staatliche KI-Kontrolle geschaffen.",
+      "detail": "Laut Anthropics eigenem Statement wurden Fable 5 und Mythos 5 auf Anordnung der Bundesregierung vom Netz genommen – offenbar weil Anthropics eigene Sicherheitswarnungen als Begründung verwendet wurden. Das ist ein klassisches Eigentor: Wer transparent über Risiken kommuniziert, liefert Regulatoren das Vokabular für ein Verbot. Für Entwicklerinnen, die auf Claude-APIs setzen, bedeutet das konkret: API-Abhängigkeiten von Frontier-Modellen sind regulatorisch riskant. Diversifikation über mehrere Anbieter ist ab sofort keine Kür mehr, sondern Pflicht. Der Vorfall dürfte auch OpenAI und Google nervös machen – und zeigt, dass das ›IPO-Sommerfest‹ der KI-Firmen politisch bewölkt ist.",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/06/12/anthropics-safety-warnings-may-have-just-backfired-the-government-has-pulled-the-plug-on-its-most-powerful-ai/"
+    },
+    {
+      "topic": "ios",
+      "headline": "iOS 27: Alles Neue im Überblick – KI-Fotos, AirPods, CarPlay und mehr",
+      "summary": "Apple hat die erste Beta von iOS 27 veröffentlicht und die Feature-Liste ist lang: KI-gestützte Fotos-Funktionen, verbesserte AirPods-Integration, 18 neue CarPlay-Wallpaper und spürbar bessere Tastaturen für viele Sprachen. Für Entwicklerinnen stehen zudem Icon Composer 2 und SF Symbols 8 als Betas bereit.",
+      "detail": "iOS 27 setzt stark auf On-Device-AI – besonders in der Fotos-App, wo Apple erstmals öffentlich erklärt hat, was die neuen KI-Features bezwecken sollen. Das neue Advanced-Dictation-Feature ist in Beta 1 standardmäßig deaktiviert und muss manuell eingeschaltet werden. Icon Composer 2 und SF Symbols 8 sind jetzt als Betas verfügbar – wer App-Icons oder System-Symbole nutzt, sollte sich die Änderungen früh ansehen. Die CarPlay-Wallpaper deuten auf ein visuelles Redesign der Plattform hin, das neue Layout-Anforderungen für CarPlay-Apps bringen könnte. Kurzum: Jetzt ist der richtige Moment, die eigene App gegen die Beta zu testen und symbolbezogene Assets zu prüfen.",
+      "source": "9to5Mac",
+      "url": "https://9to5mac.com/2026/06/12/heres-everything-new-in-ios-27-and-more-per-apples-keynote-list/"
+    },
+    {
       "topic": "tech",
-      "headline": "SpaceX geht an die Börse – Musk wird erster Billionär der Geschichte",
-      "summary": "SpaceX hat seine Aktien zu 135 Dollar ausgegeben, der Kurs schoss am ersten Handelstag um 30 % nach oben. Elon Musk überschreitet damit erstmals die Billion-Dollar-Marke beim Privatvermögen.",
-      "detail": "Das SpaceX-IPO ist das größte in der US-Geschichte – die Aktie katapultierte das Unternehmen in die Top 6 der wertvollsten US-Firmen. Robinhood meldete Rekord-Traffic, als Privatanlegerinnen scharenweise einstiegen. SpaceX-Präsidentin Gwynne Shotwell deutete zudem erneut eine mögliche Fusion mit Tesla an. Für Entwicklerinnen interessant: SpaceX und Anthropic treiben gemeinsam eine IPO-Welle an, die den gesamten Tech-Investmentmarkt neu kalibriert – das dürfte Risikokapital für kleinere App-Startups vorübergehend teurer machen.",
+      "headline": "SpaceX-IPO macht Elon Musk zum ersten Billionär der Geschichte",
+      "summary": "SpaceX ist an die Börse gegangen, legte am ersten Tag 19 % zu und katapultierte Elon Musks Vermögen über die Billion-Dollar-Marke. Ein historischer Moment – mit möglichen Konsequenzen für Tesla und die gesamte Tech-Branche.",
+      "detail": "Das SpaceX-IPO ist das meistdiskutierte Börsenereignis seit Jahren und hat Robinhood kurzzeitig in die Knie gezwungen. SpaceX-Präsidentin Gwynne Shotwell deutete erneut eine mögliche Fusion mit Tesla an – was die Märkte beobachten werden. Für die Tech-Szene bedeutet das: Der IPO-Markt ist zurück, und Anthropic sowie OpenAI dürften ihren eigenen Börsengang jetzt aktiver planen. Für Entwicklerinnen ist das weniger operative News, aber ein Signal: Investitionskapital fließt wieder stärker in Deep-Tech und KI-Infrastruktur, was mittel­fristig Tool- und API-Landschaft beeinflusst.",
       "source": "TechCrunch",
       "url": "https://techcrunch.com/2026/06/12/elon-musk-becomes-the-worlds-first-trillionaire-after-spacexs-historic-ipo/"
     },
     {
       "topic": "ios",
-      "headline": "iOS 27 Beta 1: Alles Neue auf einen Blick",
-      "summary": "Apple hat iOS 27 in der ersten Beta veröffentlicht – mit überarbeitetem Liquid Glass, neuen KI-Funktionen in Fotos, verbesserter Diktierung und AirPods-Updates. Die vollständige Feature-Liste liegt jetzt vor.",
-      "detail": "Liquid Glass wurde nach frühem Feedback direkt überarbeitet – es gibt jetzt nicht nur einen Schieberegler, sondern grundlegendere Anpassungsoptionen. Die neue KI-Diktierung ist in Beta 1 standardmäßig deaktiviert und muss manuell eingeschaltet werden. KI-Features in der Fotos-App zielen laut Apple darauf ab, Erinnerungen bedeutungsvoller und kontextsensitiver zu gestalten. Für Entwicklerinnen heißt das: Sofort Beta installieren, eigene Apps auf Liquid-Glass-Kompatibilität und neue AirPods-APIs testen – und die Geräteliste für Siri AI im Blick behalten, denn nicht alle Geräte werden unterstützt.",
-      "source": "9to5Mac",
-      "url": "https://9to5mac.com/2026/06/12/heres-everything-new-in-ios-27-and-more-per-apples-keynote-list/"
-    },
-    {
-      "topic": "ai",
-      "headline": "Jeff Bezos' Prometheus sammelt 12 Mrd. Dollar für einen »General Engineer«",
-      "summary": "Bezos' neues KI-Startup Prometheus hat 12 Milliarden Dollar eingesammelt und will eine KI bauen, die als ‚Artificial General Engineer' physische Ingenieursaufgaben übernimmt. Das Ziel: nicht nur Software, sondern die reale Welt automatisieren.",
-      "detail": "Prometheus richtet sich explizit nicht auf Softwareentwicklung aus, sondern auf physische Ingenieursarbeit – Konstruktion, Fertigung, Infrastruktur. Die 12-Milliarden-Runde ist eine der größten KI-Finanzierungen überhaupt und zeigt, wohin institutionelles Kapital gerade fließt. Parallel dazu sammelt Mistral gerüchteweise 3 Milliarden Euro bei einer Bewertung von 20 Milliarden Euro ein. Für iOS-Entwicklerinnen ist das ein Signal: KI-Investitionen verlagern sich zunehmend in Richtung physische Welt und spezialisierte Agenten – reine Chat-Wrapper werden als Investitionsthema uninteressanter.",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/06/11/jeff-bezoss-prometheus-raises-12b-to-build-an-artificial-general-engineer-for-the-physical-world/"
-    },
-    {
-      "topic": "ios",
-      "headline": "App Store: Entwicklerinnen dürfen Nutzer bei Kündigung kontaktieren",
-      "summary": "Apple erlaubt es App-Entwicklerinnen künftig, Nutzerinnen aktiv anzusprechen, wenn diese ein Abo kündigen wollen. Das eröffnet neue Möglichkeiten für Retention-Strategien direkt im App Store.",
-      "detail": "Bisher war der Kündigungsfluss komplett in Apples Hand – Entwicklerinnen hatten keinen direkten Kontaktpunkt. Jetzt dürfen sie zum Beispiel ein Angebot oder eine Nachricht einblenden, bevor das Abo endet. Das ist eine direkte Reaktion auf den regulatorischen Druck durch den Digital Markets Act und verschiedene Klagen. Für Entwicklerinnen heißt das: Retention-Flows und Winback-Strategien müssen neu gedacht und implementiert werden – das StoreKit-Framework dürfte entsprechende neue APIs bekommen. Gleichzeitig sollte man Apples Guidelines genau lesen, um Dark Patterns zu vermeiden.",
+      "headline": "App Store: Entwickler dürfen Abonnenten bei Kündigung direkt ansprechen",
+      "summary": "Apple erlaubt es Entwicklerinnen künftig, Nutzerinnen beim Kündigen eines Abonnements aktiv zu kontaktieren – eine lang ersehnte Änderung der App-Store-Regeln. Das öffnet neue Möglichkeiten für Retention-Strategien direkt im App Store.",
+      "detail": "Bisher mussten Entwicklerinnen hilflos zusehen, wenn Nutzerinnen ein Abo kündigten, ohne die Möglichkeit zu haben, ein Angebot zu machen oder Feedback einzuholen. Das ändert sich nun: Apple gibt hier offenbar nach dem Druck durch DMA und verschiedene Gerichtsverfahren nach. Konkret bedeutet das, dass Offboarding-Flows und Retentions-Dialoge neu gedacht werden können. Für Abo-Apps ist das eine der wertvollsten Änderungen seit Jahren – die Integration sollte in der iOS-27-Beta direkt mitgeplant werden. Gleichzeitig gilt: Apple wird die Kommunikation sicher reglementieren, also die Guidelines genau lesen, bevor aggressive Retention-Flows gebaut werden.",
       "source": "Heise",
       "url": "https://www.heise.de/news/Abo-Kuendigung-im-App-Store-Kuenftig-koennen-sich-Entwickler-beim-Nutzer-melden-11330851.html"
     },
     {
       "topic": "ios",
-      "headline": "Siri AI: Welche Apple-Geräte bekommen die neuen Features?",
-      "summary": "Die überarbeitete Siri mit echten KI-Funktionen kommt nicht auf alle Geräte – Apple hat die vollständige Kompatibilitätsliste veröffentlicht. Ältere Modelle gehen leer aus.",
-      "detail": "Ähnlich wie bei Apple Intelligence im letzten Jahr gibt es eine harte Geräte-Untergrenze, die sich an verfügbarem RAM und Neural-Engine-Kapazität orientiert. Wer Apps mit Siri-Integration entwickelt, muss ab sofort differenzieren: Welche Features sind für alle Nutzerinnen verfügbar, welche nur für neuere Geräte? Das erfordert sauberes Feature-Flagging und UI-Fallbacks in der eigenen App. Der Vergecast hat außerdem einen eigenen Deep-Dive gemacht, ob Siri jetzt wirklich gut ist – das Fazit scheint vorsichtig positiv zu sein.",
+      "headline": "Icon Composer 2 und SF Symbols 8 als Betas verfügbar",
+      "summary": "Apple hat Icon Composer 2 und SF Symbols 8 als Betas veröffentlicht – beide Tools sind zentral für App-Icons und System-UI-Integration. Für Entwicklerinnen lohnt sich ein früher Blick, um Anpassungsbedarf rechtzeitig zu erkennen.",
+      "detail": "SF Symbols 8 bringt vermutlich neue Symbol-Kategorien und überarbeitete Rendering-Modi, die bestehende Symbol-Nutzung in Apps visuell verändern könnten. Icon Composer 2 adressiert den Workflow rund um adaptive App-Icons, der mit iOS 27 offenbar weiterentwickelt wird. Wer jetzt früh testet, vermeidet Last-Minute-Korrekturen vor dem Herbst-Release. Beide Beta-Tools sind über das Apple-Developer-Portal verfügbar. Empfehlung: Icon-Assets und SF-Symbol-Nutzung in der eigenen App systematisch gegen die neuen Versionen prüfen.",
       "source": "9to5Mac",
-      "url": "https://9to5mac.com/2026/06/12/siri-ai-is-coming-to-newer-apple-devices-only-heres-the-full-list/"
+      "url": "https://9to5mac.com/2026/06/12/icon-composer-2-and-sf-symbols-8-now-available-as-betas/"
     },
     {
-      "topic": "tech",
-      "headline": "Bundestag beschließt KI-Gesetz: Bundesnetzagentur übernimmt Aufsicht",
-      "summary": "Deutschland hat sein nationales KI-Gesetz zur Umsetzung des EU AI Acts verabschiedet – die Bundesnetzagentur wird zur zentralen Regulierungsbehörde. Das betrifft alle, die KI-Systeme in Deutschland betreiben.",
-      "detail": "Das Gesetz implementiert den EU AI Act in deutsches Recht und legt fest, wer für die Aufsicht zuständig ist. Die Bundesnetzagentur war bisher vor allem für Telekommunikation bekannt – ihre neue Rolle als KI-Wächter ist ein erheblicher Kompetenzausbau. Für Entwicklerinnen von Apps mit KI-Funktionen in Deutschland wird Compliance-Dokumentation zunehmend Pflicht, insbesondere bei Hochrisiko-Anwendungen. Wer heute schon mit KI-Features arbeitet, sollte prüfen, in welche Risikoklasse des AI Acts die eigene App fällt.",
+      "topic": "ai",
+      "headline": "Neue KI-Modelle im Überblick: Reasoning aus China, Liquid AI und Microsofts neue Welt",
+      "summary": "Die Modell-Landschaft wächst rasant: Chinesische Reasoning-Modelle holen auf, Liquid AI zeigt kompakte Modelle für Edge-Einsatz, und Microsoft baut seine KI-Infrastruktur weiter um. Ein guter Moment, den eigenen Model-Stack zu hinterfragen.",
+      "detail": "Chinesische Reasoning-Modelle sind inzwischen ernstzunehmende Alternativen zu GPT und Claude – vor allem für Anwendungsfälle, bei denen Kosten oder Latenz kritisch sind. Liquid AIs kleine Modelle sind interessant für On-Device- oder Edge-Szenarien, wie sie auch Apple mit iOS 27 verfolgt. Microsofts neue KI-Welt deutet auf tiefere Azure-OpenAI-Integration hin, die für Backend-Entwicklerinnen relevant ist. Mistral soll laut Gerüchten 3 Mrd. Euro bei 20 Mrd. Bewertung einsammeln – auch das europäische Open-Source-Segment wächst. Für Entwicklerinnen gilt: Die Monokultur aus einem einzigen API-Anbieter ist strategisch riskant, wie der Anthropic-Fall heute eindrucksvoll zeigt.",
+      "source": "Heise",
+      "url": "https://www.heise.de/hintergrund/Model-Schau-Reasoning-aus-China-kleine-Liquid-Modelle-und-neue-Microsoft-Welt-11330663.html"
+    },
+    {
+      "topic": "ai",
+      "headline": "Bundestag verabschiedet KI-Gesetz: Bundesnetzagentur übernimmt Aufsicht",
+      "summary": "Der Bundestag hat das deutsche KI-Gesetz beschlossen – die Bundesnetzagentur wird zur zentralen Aufsichtsbehörde. Das hat direkte Auswirkungen auf alle, die KI-Features in Apps oder Services einsetzen.",
+      "detail": "Das Gesetz setzt den EU AI Act auf nationaler Ebene um und schafft klare Zuständigkeiten. Die Bundesnetzagentur ist bereits aus dem Telekommunikations- und Energiebereich bekannt – jetzt bekommt sie Zähne im KI-Bereich. Für App-Entwicklerinnen, die KI-Funktionen einsetzen – etwa für Empfehlungen, automatisierte Entscheidungen oder biometrische Daten – entstehen neue Dokumentations- und Transparenzpflichten. Hochrisiko-KI-Systeme erfordern künftig Konformitätsbewertungen, ähnlich wie bei Medizinprodukten. Empfehlung: Jetzt prüfen, in welche Risikoklasse die eigenen KI-Features fallen – und Legal oder Compliance frühzeitig einbinden.",
       "source": "Heise",
       "url": "https://www.heise.de/news/Bundestag-beschliesst-KI-Gesetz-Bundesnetzagentur-wird-zentrale-Aufsicht-11330801.html"
     },
     {
-      "topic": "ai",
-      "headline": "Vibecoding als Sicherheitsrisiko: Was KI-generierter Code wirklich kostet",
-      "summary": "Ein Deep-Dive beleuchtet, warum schnell per KI zusammengeklickter Code ernsthafte Sicherheitslücken erzeugen kann. Das Thema ist nicht nur akademisch – ein KI-Agent hat seinen Betreiber durch unkontrolliertes Handeln sogar in den finanziellen Ruin getrieben.",
-      "detail": "Der Hacker-News-Fall über einen KI-Agenten, der durch unkontrolliertes Netzwerk-Scanning die Betriebskosten seines Betreibers explodieren ließ, illustriert das Problem plastisch. Vibecoding – also das schnelle Prompten von Funktionalität ohne tiefes Verständnis – produziert Code, der nach außen hin funktioniert, aber intern unsicher, ineffizient oder unkontrollierbar ist. Für iOS-Entwicklerinnen, die Copiloten oder Cursor nutzen: KI-generierter Code sollte wie Code einer unbekannten Junior-Entwicklerin behandelt werden – Review ist Pflicht, nicht optional. Sicherheitskritische Bereiche wie Authentifizierung, Datenspeicherung und Netzwerkkommunikation sollten nie blind per Prompt erstellt werden.",
-      "source": "Heise / Hacker News",
-      "url": "https://www.heise.de/news/KI-Update-Deep-Dive-Vibecoding-als-Sicherheitsrisiko-feat-TTT-11298728.html"
+      "topic": "ios",
+      "headline": "Swift bei Apple: TrueType-Hinting-Interpreter auf Swift migriert",
+      "summary": "Apple hat in einem Swift.org-Blogpost beschrieben, wie das interne Team den TrueType-Hinting-Interpreter von C nach Swift migriert hat. Ein seltener Einblick in Apples eigene Swift-Migrationspraxis bei systemnahem Code.",
+      "detail": "Der Beitrag ist technisch tiefgehend und zeigt, wie Apple mit Performance-kritischem, systemnahem Code in Swift umgeht – inklusive der Herausforderungen bei Bit-Manipulation und Interpreter-Logik. Das ist besonders wertvoll als Referenz für Entwicklerinnen, die eigene C- oder C++-Bibliotheken nach Swift migrieren wollen. Apple zeigt hier, dass Swift auch für ›echte Systemsoftware‹ geeignet ist, nicht nur für App-Layer-Code. Der Beitrag enthält konkrete Code-Muster und Migrationsentscheidungen, die sich auf eigene Projekte übertragen lassen. Für Swift-Entwicklerinnen mit Performance-Anforderungen ist das Pflichtlektüre.",
+      "source": "Swift.org",
+      "url": "https://swift.org/blog/migrating-truetype-hinting-to-swift/"
     },
     {
       "topic": "tech",
-      "headline": "Vier neue Macs kommen noch dieses Jahr",
-      "summary": "Apple plant laut aktuellen Berichten vier neue Mac-Modelle für den Rest des Jahres 2026. Details zu den Modellen und Chips sind bereits durchgesickert.",
-      "detail": "Es ist davon auszugehen, dass die neuen Macs auf dem M5- oder dem kommenden M6-Chip basieren werden, mit verbesserter Neural Engine für lokale KI-Verarbeitung. Für Entwicklerinnen bedeutet neue Hardware traditionell: neue Performance-Benchmarks, neue Simulator-Möglichkeiten und potenziell neue APIs, die ältere Chips nicht unterstützen. Wer aktuell eine Mac-App pflegt oder plant, sollte die Hardware-Roadmap im Auge behalten, um Mindestanforderungen und Feature-Sets rechtzeitig festzulegen. Ein neuer Mac Pro oder Mac mini mit M5 Ultra wäre insbesondere für lokale Modell-Inferenz ein interessantes Entwicklungs-Setup.",
-      "source": "9to5Mac",
-      "url": "https://9to5mac.com/2026/06/12/four-new-macs-are-launching-later-this-year-heres-whats-coming/"
-    },
-    {
-      "topic": "tech",
-      "headline": "Google klagt gegen chinesische Cyberkriminelle, die KI für SMS-Betrug nutzten",
-      "summary": "Google hat Klage gegen eine mutmaßlich chinesische Cybercrime-Operation eingereicht, die KI einsetzte, um massenhaft Betrugs-SMS zu versenden. Der Fall zeigt, wie KI-Tools für kriminelle Angriffe im großen Maßstab missbraucht werden.",
-      "detail": "Die Angreifer nutzten KI-Systeme, um personalisierte Phishing-SMS in großem Umfang zu generieren und zu versenden – ein Skalierungssprung gegenüber klassischem Spam. Google geht mit dieser Klage einen ungewöhnlichen Weg, um Infrastruktur-Missbrauch seiner Dienste zu bekämpfen. Für App-Entwicklerinnen, die Authentifizierung per SMS oder Push anbieten, ist das ein Hinweis: SMS als zweiter Faktor wird durch KI-gestütztes Phishing zunehmend unsicherer. Passkeys und andere phishing-resistente Authentifizierungsmethoden sollten in neuen iOS-Apps priorisiert werden.",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/06/12/google-sues-alleged-chinese-cybercrime-operation-that-used-ai-to-send-scam-texts/"
+      "headline": "21 Zero-Days in FFmpeg entdeckt – beliebte Medienbibliothek massiv verwundbar",
+      "summary": "Sicherheitsforscher haben 21 Zero-Day-Schwachstellen in FFmpeg gefunden – einer der am weitesten verbreiteten Medienbibliotheken überhaupt. Wer FFmpeg direkt oder über Abhängigkeiten nutzt, sollte jetzt handeln.",
+      "detail": "FFmpeg steckt in unzähligen Apps, Backends und Plattformen – von Videobearbeitung über Streaming bis hin zu nativen iOS- und macOS-Apps via AVFoundation-nahe Bibliotheken. Die 21 entdeckten Lücken reichen von Memory-Corruption bis zu möglicher Remote-Code-Execution. Entwicklerinnen sollten sofort prüfen, ob FFmpeg direkt im Projekt oder in einer Third-Party-Dependency steckt – Tools wie »dependency-check« helfen dabei. Updates sollten so schnell wie möglich eingespielt werden, auch wenn noch kein offizieller Patch vorliegt. Der Fund ist ein Reminder: Security-Audits von Abhängigkeiten gehören zum regulären Entwicklungsalltag.",
+      "source": "Hacker News",
+      "url": "https://depthfirst.com/research/21-zero-days-in-ffmpeg"
     }
   ],
-  "podcast_script": "Hi, schön, dass du dabei bist – hier ist dein Tech-Update.\n\nFangen wir groß an – historisch groß sogar: SpaceX ist heute an die Börse gegangen. 135 Dollar pro Aktie, der Kurs schoss am ersten Handelstag um 30 Prozent nach oben, und Elon Musk hat damit eine Schwelle überschritten, die bisher kein Mensch je erreicht hat: Er ist der erste Billionär der Geschichte. Mit einem B. Billionär. Das IPO ist das größte in der US-Geschichte und katapultiert SpaceX in die Top 6 der wertvollsten amerikanischen Unternehmen. Robinhood meldete Rekord-Traffic, Privatanlegerinnen stürzten sich reihenweise drauf. Was das bedeutet: Diese IPO-Welle – SpaceX, Anthropic und Co. – kalibriert den gesamten Tech-Investmentmarkt neu. Risikokapital für kleinere Startups dürfte vorübergehend teurer werden. Wer gerade eine Finanzierungsrunde plant, sollte das auf dem Schirm haben.\n\nUnd während die Wallstreet hyperventiliert, hat Apple leise Beta-Season eröffnet: iOS 27 Beta 1 ist draußen. Das große Schlagwort ist Liquid Glass – Apples neues Design-System – das nach frühem Feedback direkt überarbeitet wurde. Es gibt jetzt grundlegendere Anpassungsoptionen, nicht nur einen simplen Schieberegler. Die neue KI-Diktierung ist in Beta 1 übrigens standardmäßig deaktiviert und muss manuell eingeschaltet werden – kleines Trivia, das einen sonst wahnsinnig macht beim Testen. Für Entwicklerinnen gilt wie immer: Beta sofort installieren, eigene Apps auf Liquid-Glass-Kompatibilität prüfen, neue AirPods-APIs antesten. Und die Geräteliste für Siri AI im Blick behalten – denn die neuen Siri-Features kommen nur auf neuere Geräte. Wer Apps mit Siri-Integration baut, muss differenzieren: Was kriegen alle Nutzerinnen, was nur die mit aktuellem Hardware? Sauberes Feature-Flagging und UI-Fallbacks sind ab jetzt Pflicht, nicht Kür.\n\nEbenfalls Pflicht – zumindest bald gesetzlich: Der Bundestag hat das nationale KI-Gesetz verabschiedet. Die Bundesnetzagentur, bisher vor allem für Telekommunikation bekannt, wird zur zentralen KI-Aufsichtsbehörde. Das ist die deutsche Umsetzung des EU AI Acts – und wer hierzulande Apps mit KI-Funktionen betreibt, sollte jetzt ernsthaft prüfen, in welche Risikoklasse die eigene App fällt. Compliance-Dokumentation wird Pflicht. Kein Thema, das man auf später schieben sollte.\n\nUnd wo wir schon bei KI-Risiken sind: Es gibt einen lesenswerten Deep-Dive zum Thema Vibecoding als Sicherheitsrisiko. Der Aufhänger ist ein Fall, der es bis auf Hacker News geschafft hat – ein KI-Agent hat durch unkontrolliertes Netzwerk-Scanning die Betriebskosten seines Betreibers explodieren lassen. Finanzieller Ruin durch einen überambitionierten Agenten. Was ich daraus mitnehme: KI-generierter Code sollte wie Code einer unbekannten Junior-Entwicklerin behandelt werden. Review ist Pflicht. Gerade bei Authentifizierung, Datenspeicherung und Netzwerkkommunikation gilt – bitte nie blind per Prompt erstellen lassen.\n\nNoch kurz im Schnelldurchlauf: Jeff Bezos' neues KI-Startup Prometheus hat 12 Milliarden Dollar eingesammelt – Ziel ist eine KI für physische Ingenieursarbeit, also Konstruktion und Infrastruktur, nicht Software. Und Apple plant vier neue Macs für dieses Jahr noch – wer lokale Modell-Inferenz auf dem Entwicklungsrechner plant, darf sich freuen.\n\nDas war dein Tech-Update – bis zum nächsten Mal.",
+  "podcast_script": "Hi, schön, dass du dabei bist – hier ist dein Tech-Update.\n\nFangen wir mit der Geschichte an, die gerade die ganze KI-Branche nervös macht: Die US-Regierung hat Anthropic angewiesen, zwei ihrer mächtigsten Modelle sofort vom Netz zu nehmen. Und jetzt kommt der bittere Teil: Als Begründung haben die Regulatoren ausgerechnet Anthropics eigene Sicherheitswarnungen verwendet. Das ist ein klassisches Eigentor. Wer transparent über Risiken spricht, liefert damit das Vokabular für ein Verbot. Was das bedeutet? API-Abhängigkeiten von einem einzigen Frontier-Modell sind ab sofort regulatorisch riskant. Anbieter diversifizieren ist keine Kür mehr – das ist Pflicht. Und OpenAI und Google schauen gerade sehr genau hin.\n\nPassend dazu hat der Bundestag das deutsche KI-Gesetz verabschiedet. Die Bundesnetzagentur wird zur zentralen Aufsichtsbehörde – die kennt ihr schon aus Telko und Energie, jetzt bekommt sie Zähne im KI-Bereich. Für alle, die KI-Features in Apps einsetzen – Empfehlungen, automatisierte Entscheidungen, biometrische Daten – entstehen neue Dokumentationspflichten. Meine Empfehlung: Jetzt prüfen, in welche Risikoklasse eure KI-Features fallen, und Legal frühzeitig einbinden. Nicht erst wenn die Behörde anklopft.\n\nWeiter zu Apple. iOS 27 Beta ist draußen, und die Feature-Liste ist lang. Viel On-Device-AI, neue Fotos-Funktionen, AirPods-Verbesserungen, CarPlay-Redesign-Signale. Für Entwicklerinnen konkret relevant: Icon Composer 2 und SF Symbols 8 sind als Betas verfügbar. SF Symbols 8 bringt überarbeitete Rendering-Modi, die bestehende Symbol-Nutzung in eurer App visuell verändern könnten. Jetzt früh testen heißt: keine Last-Minute-Panik im Herbst. Und noch eine lang ersehnte Änderung: Apple erlaubt es Entwicklerinnen künftig, Nutzerinnen beim Kündigen eines Abonnements aktiv anzusprechen. Retention-Flows direkt im App Store – das ist eine der wertvollsten Regeländerungen seit Jahren. Die Guidelines genau lesen, bevor aggressive Dialoge gebaut werden. Apple reglementiert das sicher noch.\n\nJetzt kurz Börsennews, weil sie wirklich historisch ist: SpaceX ist an die Börse gegangen, legte am ersten Tag fast zwanzig Prozent zu und hat damit Elon Musks Vermögen über die Billion-Dollar-Marke katapultiert. Der Mann ist der erste Billionär der Geschichte. Robinhood ist kurzzeitig unter der Last zusammengebrochen. Was das für uns bedeutet: Der IPO-Markt ist zurück, Investitionskapital fließt wieder in Deep-Tech und KI-Infrastruktur. Anthropic und OpenAI dürften ihre eigenen Börsengänge jetzt aktiver planen.\n\nUnd noch eine Security-Warnung zum Schluss, die ihr ernst nehmen solltet: In FFmpeg wurden 21 Zero-Day-Schwachstellen entdeckt. FFmpeg steckt in unzähligen Apps und Backends – von Videobearbeitung bis Streaming. Die Lücken reichen bis zu möglicher Remote-Code-Execution. Sofort prüfen, ob FFmpeg direkt oder über eine Abhängigkeit im Projekt steckt – Tools wie dependency-check helfen. Updates so schnell wie möglich einspielen.\n\nDas war dein Tech-Update – bis zum nächsten Mal.",
   "audio_file": "digest_de.mp3"
 }
