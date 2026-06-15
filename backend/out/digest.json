@@ -1,81 +1,81 @@
 {
-  "date": "2026-06-14",
-  "greeting": "Heute dreht sich alles um Anthropics erzwungenen Modell-Stopp, Apples iOS-27-Neuerungen und die Frage, ob der App Store im Vibe-Coding-Chaos versinkt.",
-  "podcast_title": "Anthropic gesperrt – wer profitiert?",
+  "date": "2026-06-15",
+  "greeting": "Heute dreht sich alles um drei heiße Themen: China soll Zugang zu einem geheimen Anthropic-Modell gehabt haben, iOS 27 bekommt noch mehr unangekündigte Features – und die KI-Entlassungswelle wird zum Pulverfass.",
+  "podcast_title": "China, Anthropic und das gestohlene Modell",
   "items": [
     {
       "topic": "ai",
-      "headline": "US-Regierung sperrt Anthropics neue Modelle – Amazon-CEO löste Lawine aus",
-      "summary": "Anthropic hat den Zugang zu Fable 5 und Mythos 5 nach einer Regierungsanordnung aus nationalen Sicherheitsgründen gesperrt. Laut Berichten hat Amazon-CEO Andy Jassy die Bedenken vorab mit US-Behörden geteilt – und damit die Maßnahme mit ausgelöst.",
-      "detail": "Der Vorfall ist beispiellos: Ein Investor-Unternehmen (Amazon) eskaliert intern Sicherheitsbedenken zu Regierungsstellen, woraufhin Modelle des eigenen Portfolio-Unternehmens vom Markt genommen werden. India debattiert derweil, ob das eigene KI-Ökosystem von solchen geopolitischen Abhängigkeiten abgekoppelt werden sollte. Für Entwicklerinnen, die Anthropic-APIs in ihre Apps integriert haben, ist das ein Warnschuss: API-Abhängigkeiten von einem einzigen Anbieter können über Nacht wegbrechen – nicht durch technische Fehler, sondern per Regierungsdekret. Ein Fallback auf alternative Modelle (OpenAI, Google, lokale LLMs) sollte architektonisch eingeplant sein. Apropos OpenAI: Der Konzern sieht sich gerade zusätzlich mit Ermittlungen von US-Staatsanwälten konfrontiert.",
-      "source": "The Verge / TechCrunch",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/949553/anthropic-fable-5-mythos-5-government-national-security"
-    },
-    {
-      "topic": "ios",
-      "headline": "iOS 27: Neue App auf dem Home Screen, Apple Pay-Upgrade und KI-Foto-Bearbeitung",
-      "summary": "iOS 27 bringt eine brandneue App direkt auf den iPhone-Startbildschirm und macht das Wechseln zwischen Apple-Pay-Karten deutlich komfortabler. Dazu integriert Apple KI-gestützte Fotobearbeitung tiefer ins System.",
-      "detail": "Die neue App auf dem Home Screen ist ein deutliches Signal, dass Apple seine eigene App-Plattform zunehmend mit Bordmitteln ausbaut – was für Third-Party-Entwicklerinnen Chancen und Konkurrenz zugleich bedeutet. Die Apple-Pay-Verbesserung klingt klein, ist aber UX-relevant: Wer Wallet-Funktionen in eigenen Apps nutzt, sollte testen, ob das neue Verhalten die eigene Integration beeinflusst. Die KI-Fotobearbeitung dürfte direkt mit Core Image und dem Photos-Framework interagieren – spannend für alle, die Foto-Apps bauen. Die AirPods Pro 3 erhalten ebenfalls neue iOS-27-Features, was zeigt, wie eng Hardware-Software-Integration bei Apple inzwischen getaktet ist. Kurz: iOS 27 ist kein Wartungs-Release, sondern ein strategischer Schritt Richtung KI-nativer Plattform.",
-      "source": "9to5Mac",
-      "url": "https://9to5mac.com/2026/06/13/ios-27-adds-an-all-new-app-to-your-iphones-home-screen/"
-    },
-    {
-      "topic": "ios",
-      "headline": "App-Store-Flut durch Vibe Coding: So würde 9to5Mac das Problem lösen",
-      "summary": "Der App Store verzeichnet angeblich über 1.000 KI-generierte App-Einreichungen pro Woche – und die Qualitätskontrolle kommt kaum hinterher. 9to5Mac skizziert konkrete Lösungsansätze, wie Apple die Review-Flut eindämmen könnte.",
-      "detail": "Vibe Coding – also das Erstellen von Apps nahezu ohne klassisches Programmieren via KI-Prompts – senkt die Einstiegshürde dramatisch, produziert aber massenhaft Low-Quality-Submissions. Für professionelle iOS-Entwicklerinnen ist das ein zweischneidiges Schwert: einerseits mehr Konkurrenz im Store, andererseits Chancen für qualitativ hochwertige Apps, die aus dem Rauschen herausstechen. Apple könnte mit strengeren technischen Mindestanforderungen, automatisierten Qualitäts-Scores oder erhöhten Developer-Account-Hürden reagieren. Der Artikel schlägt u.a. ein gestuftes Review-System vor. Wer Apps professionell entwickelt, sollte das Thema im Blick behalten – Apples Reaktion darauf wird die Spielregeln für alle verändern.",
-      "source": "9to5Mac",
-      "url": "https://9to5mac.com/2026/06/13/app-store-1000-submissions-a-week-how-id-fix/"
-    },
-    {
-      "topic": "ai",
-      "headline": "Siri KI auf dem Mac: Erster 24-Stunden-Erfahrungsbericht mit macOS 27",
-      "summary": "The Verge hat einen ganzen Tag mit der neuen, KI-gestärkten Siri unter macOS 27 verbracht und berichtet von echten Verbesserungen – aber auch klaren Grenzen. Apple Intelligence scheint auf dem Desktop endlich erwachsener zu werden.",
-      "detail": "Nach Jahren des Spöttelns über Siris Schwäche ist das ein bemerkenswerter Schritt: Die neue Siri soll kontextsensibler sein, längere Konversationen halten und tiefer in macOS-Apps eingreifen können. Für Entwicklerinnen ist relevant, welche neuen Siri-APIs und App-Intent-Erweiterungen mit macOS 27 kommen – tiefere Siri-Integration könnte ein Differenzierungsmerkmal für Mac-Apps werden. Apple Intelligence als Plattform-Feature schafft außerdem einen Vorteil gegenüber generischen Web-KI-Tools: on-device, datenschutzfreundlich, systemintegriert. Der Bericht deutet an, dass die Erfahrung noch nicht perfekt ist, aber die Richtung stimmt. Wer Mac-Apps entwickelt, sollte jetzt die Apple-Intelligence-Dokumentation im Blick haben.",
+      "headline": "China soll Zugang zu Anthropics Geheim-Modell »Mythos« gehabt haben",
+      "summary": "Laut einem Bericht soll China sich Zugang zu »Mythos« verschafft haben – einem internen, noch nicht veröffentlichten Modell von Anthropic. Der Vorfall schlägt Wellen bis ins Weiße Haus.",
+      "detail": "»Mythos« soll ein leistungsfähigeres Modell sein, das Anthropic noch nicht öffentlich zugänglich gemacht hat. Der mutmaßliche Zugriff durch chinesische Akteure wirft massive Fragen zur Sicherheit von KI-Modellen auf, die sich noch in der Entwicklung befinden. Für Entwicklerinnen, die mit Anthropic-APIs arbeiten, ist das ein Weckruf: Supply-Chain-Sicherheit gilt nicht nur für eigenen Code, sondern auch für die KI-Dienste, auf die man sich verlässt. Der Vorfall dürfte regulatorischen Druck auf KI-Unternehmen weiter erhöhen und könnte mittelfristig Auswirkungen auf API-Verfügbarkeit und Nutzungsbedingungen haben.",
       "source": "The Verge",
-      "url": "https://www.theverge.com/tech/949502/apple-macos-27-golden-gate-siri-ai-apple-intelligence"
+      "url": "https://www.theverge.com/ai-artificial-intelligence/949644/china-white-house-anthropic-mythos"
+    },
+    {
+      "topic": "ios",
+      "headline": "iOS 27: Drei große unangekündigte Features noch in der Pipeline",
+      "summary": "Apple hat zur WWDC noch nicht alle Karten auf den Tisch gelegt – ein Bericht nennt drei weitere, bislang geheime iOS-27-Features, die noch kommen sollen. Details sind rar, die Spannung hoch.",
+      "detail": "Schon die angekündigten iOS-27-Features sorgten für Gesprächsstoff, doch offenbar hat Apple intern noch mehr auf Lager. Solche nachgezogenen Ankündigungen sind für Entwicklerinnen besonders relevant, weil sie die Planungsgrundlage für App-Updates kurzfristig verschieben können. Wer schon jetzt mit iOS 27 Betas arbeitet, sollte die API-Changelogs in den kommenden Wochen besonders im Blick behalten. Erfahrungsgemäß betreffen spät angekündigte Features häufig Kernbereiche wie Notifications, Background Processing oder Health – alles Bereiche mit potenziell breaking Changes.",
+      "source": "9to5Mac",
+      "url": "https://9to5mac.com/2026/06/14/three-major-unannounced-ios-27-features-coming-soon/"
     },
     {
       "topic": "ai",
-      "headline": "KPMG zieht KI-Studie zurück – Halluzinationen in eigenem Report entdeckt",
-      "summary": "KPMG hat einen offiziell veröffentlichten Report über KI-Nutzung wieder zurückgezogen, weil darin offenbar KI-generierte Fehler und Halluzinationen enthalten waren. Ein peinlicher Moment für eine der großen Vier Wirtschaftsprüfungsgesellschaften.",
-      "detail": "Der Vorfall illustriert das Kernproblem bei LLM-generierten Inhalten: Selbst erfahrene Organisationen übersehen Halluzinationen, wenn kein rigoroses Review-Prozess dahintersteht. Für Entwicklerinnen, die KI-Outputs in Apps ausgeben, ist das ein Pflichtbeispiel für die Notwendigkeit von Ground-Truth-Validierung und User-Facing-Disclaimern. Es zeigt auch, dass ‚KI hat es gesagt' als Quelle nicht ausreicht – weder im Enterprise-Kontext noch in Consumer-Apps. Der Reputationsschaden für KPMG ist beträchtlich; für die Branche ist es ein weiteres Argument für KI-Governance-Frameworks. Als Entwicklerin: Baue immer Mechanismen ein, die KI-Outputs kennzeichnen und Nutzern ermöglichen, diese zu hinterfragen.",
+      "headline": "KI-Entlassungswelle: Das Pulverfass brodelt",
+      "summary": "TechCrunch analysiert, wie die durch KI ausgelöste Entlassungswelle an Dynamik gewinnt und soziale sowie politische Sprengkraft entwickelt. Die Stimmung in der Branche kippt.",
+      "detail": "Immer mehr Unternehmen rechtfertigen Stellenabbau offen mit KI-Automatisierung – was bisher meist vertuscht wurde, wird jetzt als Effizienzgewinn vermarktet. Das erzeugt gesellschaftlichen Gegendruck, der sich bereits in politischen Initiativen wie dem britischen Social-Media-Bann für Minderjährige spiegelt: Tech-Konzerne geraten generell unter Regulierungsdruck. Für iOS-Entwicklerinnen ist das relevant, weil KI-getriebene Automatisierung auch QA, Testautomatisierung und Low-Code-Bereiche erfasst, die traditionell Einstiegspositionen waren. Wer heute KI-Tools aktiv in den eigenen Workflow integriert, ist besser positioniert als wer auf Abstand bleibt.",
       "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/06/13/kpmg-pulls-report-on-ai-usage-due-to-apparent-hallucinations/"
+      "url": "https://techcrunch.com/2026/06/15/the-ai-layoff-wave-is-becoming-a-powder-keg/"
     },
     {
-      "topic": "ai",
-      "headline": "Meta bricht 2-Milliarden-Deal mit Manus ab – auf Druck aus Peking",
-      "summary": "Meta soll dabei sein, die geplante 2-Milliarden-Dollar-Akquisition des KI-Agenten-Startups Manus rückabzuwickeln – angeblich weil die chinesische Regierung Druck auf die Manus-Gründer ausgeübt hat. Ein seltener Einblick in geopolitische KI-Deal-Dynamiken.",
-      "detail": "Manus hatte als autonomer KI-Agent-Service international Aufsehen erregt; ein Meta-Deal hätte die Technologie direkt in Metas Plattformen gespült. Dass Peking hier offenbar interveniert, zeigt: KI-Talent und KI-Technologie sind längst geopolitische Assets. Für die Tech-Branche ist das ein Signal, dass grenzüberschreitende KI-M&A immer komplexer wird. Für Entwicklerinnen, die auf KI-Agenten-Frameworks setzen, lohnt es sich zu fragen, wessen Infrastruktur man eigentlich nutzt – und welche Abhängigkeiten damit verbunden sind. Der Deal-Rückzug lässt Manus in einer unsicheren Lage und könnte die Plattform-Stabilität des Dienstes beeinflussen.",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/06/13/meta-reportedly-moves-to-unwind-2b-manus-deal-after-beijings-demand/"
-    },
-    {
-      "topic": "tech",
-      "headline": "Microsoft schließt Xbox-Ausgliederung nicht aus",
-      "summary": "Microsoft bestätigt laut Berichten, dass eine Ausgliederung der Xbox-Sparte ernsthaft geprüft wird – ein möglicher Strategieschwenk beim Gaming-Riesen. Der Konzern hält sich alle Optionen offen.",
-      "detail": "Eine eigenständige Xbox würde bedeuten, dass Microsofts Gaming-Strategie unabhängig von Cloud- und Enterprise-Zielen operieren könnte – oder müsste. Für die Spielebranche wäre das ein Erdbeben: Xbox Game Pass, die Activision-Blizzard-Integration und der PC-Gaming-Markt würden neu verhandelt. Für Entwicklerinnen, die Games für Xbox oder über Microsofts Plattformen vertreiben, bringen Unternehmensumstrukturierungen typischerweise Unsicherheit bei Partnerprogrammen und SDK-Roadmaps. Kurzfristig ändert sich vermutlich nichts, aber es lohnt sich, die Meldungen zu verfolgen. Interessant auch im Kontext: Microsoft investiert massiv in KI (Copilot, Azure OpenAI) – Gaming könnte als ‚Nicht-Kerngeschäft' neu klassifiziert worden sein.",
-      "source": "Heise / The Verge",
-      "url": "https://www.theverge.com/games/949584/microsoft-spinning-off-xbox"
-    },
-    {
-      "topic": "ai",
-      "headline": "OpenAI öffnet Codex für Open-Source-Projekte",
-      "summary": "OpenAI macht sein Codex-Programm für Open-Source-Entwicklerinnen zugänglich – ein direktes Angebot an die Developer-Community. Wer an OSS-Projekten arbeitet, kann sich jetzt bewerben.",
-      "detail": "Codex, OpenAIs Code-fokussiertes KI-Modell, war bislang vor allem über die API und GitHub Copilot verfügbar; die direkte OSS-Initiative ist ein strategischer Schachzug, um Entwickler-Goodwill zu gewinnen. Für iOS-Entwicklerinnen, die Open-Source-Libraries pflegen oder beitragen, könnte das ein interessantes Tooling-Upgrade sein. Gleichzeitig ist es ein Wettbewerbszug gegen GitHub Copilot, Cursor und andere Code-KI-Tools. Die Qualität von Codex für Swift und iOS-spezifischen Code ist erfahrungsgemäß ausbaufähig – aber kostenloser Zugang für OSS bedeutet: ausprobieren kostet nichts. Der Link führt direkt zum Bewerbungsformular.",
-      "source": "Hacker News / OpenAI",
-      "url": "https://openai.com/form/codex-for-oss/"
-    },
-    {
-      "topic": "tech",
-      "headline": "Bundesrat fordert schärfere KI-Überwachung und biometrische Rasterfahndung",
-      "summary": "Der deutsche Bundesrat drängt auf erweiterte KI-gestützte Überwachungsbefugnisse für das BKA, inklusive biometrischer Rasterfahndung und Quick-Freeze-Regelungen. Datenschützer laufen Sturm.",
-      "detail": "Der Vorstoß kommt zu einem Zeitpunkt, da die EU-KI-Verordnung noch nicht vollständig greift, und könnte nationale Präzedenzfälle schaffen, die weit über Deutschland hinauswirken. Für App-Entwicklerinnen, die biometrische Daten (Face ID, Fingerabdruck, Stimmerkennung) verarbeiten, verschärft sich das regulatorische Umfeld: Was heute als Privacy-Feature gilt, könnte morgen in regulatorische Grauzonen geraten. Quick Freeze bedeutet, dass Behörden Kommunikationsdaten auf Vorrat einfrieren lassen können – relevant für alle, die Messaging- oder Kommunikations-Apps entwickeln. DSGVO-Compliance allein reicht künftig möglicherweise nicht mehr; die nationale Sicherheitsgesetzgebung entwickelt sich schnell. Ein Thema, das in der Rechtsberatung für Tech-Produkte mit EU-Nutzern auf die Agenda gehört.",
+      "topic": "ios",
+      "headline": "Apple Maps bekommt in iOS 27 ein Innenleben-Upgrade",
+      "summary": "Apple Maps erhält in iOS 27 und macOS 27 nicht nur neue Features, sondern auch einen internen Architektur-Umbau. Das könnte die Karten-Performance spürbar verbessern.",
+      "detail": "Der Bericht deutet darauf hin, dass Apple die interne Datenstruktur von Maps grundlegend überarbeitet – das ist keine Kosmetik, sondern Fundament-Arbeit. Für Entwicklerinnen, die MapKit nutzen, könnten sich dadurch neue API-Möglichkeiten ergeben, aber auch Verhaltensänderungen bei bestehenden Implementierungen. Besonders interessant: Neue Features sollen die Navigation und Ortsdarstellung deutlich verbessern, was Apps mit Standortfunktionen zugute kommt. Es lohnt sich, die MapKit-Release-Notes für iOS 27 Beta frühzeitig zu prüfen, um Regressionen auszuschließen.",
       "source": "Heise",
-      "url": "https://www.heise.de/news/Biometrische-Rasterfahndung-Bundesrat-will-noch-schaerfere-KI-Ueberwachung-11331325.html"
+      "url": "https://www.heise.de/news/Apple-Maps-Interner-Umbau-und-neue-Funktionen-in-iOS-27-macOS-27-und-Co-11330243.html"
+    },
+    {
+      "topic": "ios",
+      "headline": "macOS 26.5: Desktop-Macs lassen sich jetzt ferngesteuert starten",
+      "summary": "Ab macOS 26.5 können bestimmte Desktop-Macs per Remote Wake-on-LAN oder Netzwerk-Befehl hochgefahren werden. Das war bisher nur mit Zusatzhardware oder Tricks möglich.",
+      "detail": "Konkret betroffen sind mehrere aktuelle Desktop-Mac-Modelle – Apple hat die Funktion offenbar auf Betriebssystemebene implementiert, ohne externe Geräte. Für Entwicklerinnen, die mit CI/CD auf lokalen Macs oder in kleinen Studios mit Mac-Buildmaschinen arbeiten, ist das ein echter Komfortgewinn. Remote-Build-Pipelines lassen sich damit effizienter gestalten: Maschinen können bei Bedarf hochgefahren, genutzt und wieder heruntergefahren werden. Wer macOS-Server-Setups betreibt, sollte die Sicherheitsimplikationen (Netzwerk-Exposition) sorgfältig prüfen.",
+      "source": "Heise",
+      "url": "https://www.heise.de/news/Ab-macOS-26-5-Verschiedene-Desktop-Macs-starten-ferngesteuert-11330905.html"
+    },
+    {
+      "topic": "ai",
+      "headline": "Apple Foundation Models jetzt als offizielles SDK dokumentiert",
+      "summary": "Apples On-Device-KI-Framework taucht nun in der offiziellen SDK-Dokumentation auf – ein klares Signal, dass Foundation Models für Drittentwicklerinnen zugänglich werden. Hacker News diskutiert die Implikationen intensiv.",
+      "detail": "Apple Foundation Models ermöglichen es, KI-Inferenz direkt auf dem Gerät laufen zu lassen – ohne Cloud-Anbindung, mit voller Privacy. Die SDK-Dokumentation listet Schnittstellen für Text-Tasks, womit sich Funktionen wie Zusammenfassung, Klassifikation oder Schreibassistenz nativ in Apps einbauen lassen. Für iOS-Entwicklerinnen ist das eine der spannendsten Entwicklungen des Jahres: kein API-Key, keine Serverkosten, keine Datenschutzbedenken beim Nutzer. Wer jetzt mit den Betas experimentiert, verschafft sich einen Vorsprung gegenüber dem App-Store-Launch im Herbst.",
+      "source": "Hacker News",
+      "url": "https://platform.claude.com/docs/en/cli-sdks-libraries/libraries/apple-foundation-models"
+    },
+    {
+      "topic": "ai",
+      "headline": "OpenAI startet Partner-Netzwerk für Unternehmensintegrationen",
+      "summary": "OpenAI launcht ein offizielles Partner-Netzwerk, das Unternehmen beim Einbinden von OpenAI-Technologien unterstützen soll. Damit professionalisiert OpenAI sein Enterprise-Ökosystem deutlich.",
+      "detail": "Das Partner-Netzwerk richtet sich vor allem an Systemintegratoren, Beratungsunternehmen und spezialisierte Entwicklungsagenturen. Für Freelance-Entwicklerinnen oder kleinere Studios, die KI-Features in iOS-Apps einbauen, könnte das mittelfristig Zertifizierungsmöglichkeiten und bevorzugten API-Zugang bedeuten. Es ist auch ein Zeichen, dass OpenAI den Markt zunehmend mit strukturierten Vertriebskanälen bearbeitet – ähnlich wie Apple mit dem MFi-Programm. Wer plant, OpenAI-Dienste in B2B-iOS-Lösungen einzusetzen, sollte die Partnerkonditionen früh evaluieren.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/introducing-openai-partner-network"
+    },
+    {
+      "topic": "tech",
+      "headline": "UK verbietet Social Media für Unter-16-Jährige",
+      "summary": "Die britische Regierung hat ein Verbot von Social-Media-Nutzung für Kinder unter 16 Jahren angekündigt. Plattformbetreiber sollen aktiv für die Durchsetzung verantwortlich gemacht werden.",
+      "detail": "Das Gesetz würde Plattformen wie Instagram, TikTok und X zwingen, Altersverifikation ernsthaft umzusetzen – mit empfindlichen Strafen bei Verstößen. Für App-Entwicklerinnen, die Social-Features oder UGC-Funktionen bauen, ist das ein Vorgeschmack auf mögliche EU-ähnliche Regulierung: Age-Gating könnte bald Pflicht werden. Apples App-Store-Altersklassifizierung könnte dabei als Durchsetzungsschicht an Bedeutung gewinnen. Wer Apps für jüngere Zielgruppen entwickelt, sollte COPPA, DSGVO und nun auch britische Regulierung von Anfang an in die Architektur einplanen.",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/policy/949679/uk-under-16-social-media-ban-announcement"
+    },
+    {
+      "topic": "tech",
+      "headline": "curl nimmt im Juli keine Bug-Reports an – Developer-Auszeit auf Systemebene",
+      "summary": "curl-Maintainer Daniel Stenberg kündigt einen »Sommer der Glückseligkeit« an: Der gesamte Juli 2026 ist bug-report-frei. Ein bemerkenswertes Statement zur Nachhaltigkeit in Open-Source-Projekten.",
+      "detail": "curl steckt in quasi jedem Netzwerk-Stack der Welt – auch in iOS und macOS unter der Haube. Dass der Haupt-Maintainer eine Pause von Vulnerability-Reports einlegt, ist mutig und wirft Fragen zur Gesundheit kritischer Open-Source-Infrastruktur auf. Für iOS-Entwicklerinnen, die libcurl direkt einbinden oder Netzwerk-Libraries nutzen, die darauf aufbauen: Im Juli eingereichte Sicherheitslücken werden erst im August bearbeitet. Das Thema berührt auch die breitere Diskussion, wie die Industrie Open-Source-Maintainer besser unterstützen kann – Stichwort: nicht alles umsonst erwarten.",
+      "source": "Heise",
+      "url": "https://www.heise.de/news/Sommer-der-Glueckseligkeit-curl-nimmt-einen-Monat-lang-keine-Bug-Reports-an-11332339.html"
     }
   ],
-  "podcast_script": "Hi, schön, dass du dabei bist – hier ist dein Tech-Update.\n\nFangen wir mit einem echten Knaller an: Die US-Regierung hat Anthropics neue Modelle gesperrt. Einfach so, über Nacht. Was passiert ist: Amazon-CEO Andy Jassy hat offenbar intern Sicherheitsbedenken an US-Behörden weitergegeben – und damit eine Lawine ausgelöst, die das eigene Portfolio-Unternehmen trifft. Das ist beispiellos. Ein Investor eskaliert Bedenken zur Regierung, und das KI-Startup verliert über Nacht den Zugang zu seinen eigenen Modellen. Was das für dich bedeutet, wenn du mit Anthropic-APIs arbeitest: Das ist ein Warnschuss. API-Abhängigkeiten von einem einzigen Anbieter können nicht durch technische Fehler wegbrechen – sondern per Regierungsdekret. Einen Fallback auf OpenAI, Google oder lokale LLMs solltest du architektonisch einplanen. Apropos OpenAI: Die stecken gerade selbst in staatsanwaltschaftlichen Ermittlungen. KI-Politik ist 2026 Geopolitik.\n\nPassend dazu: Meta wollte zwei Milliarden Dollar für das KI-Agenten-Startup Manus hinblättern – und zieht den Deal jetzt zurück. Warum? Peking hat Druck auf die Manus-Gründer ausgeübt. KI-Talent ist längst ein geopolitisches Asset, und grenzüberschreitende Deals werden immer komplizierter. Für alle, die KI-Agenten-Frameworks nutzen: Es lohnt sich zu fragen, wessen Infrastruktur man eigentlich nutzt – und welche Abhängigkeiten daran hängen.\n\nBleiben wir kurz in der Kategorie „KI und peinliche Momente\": KPMG hat einen offiziell veröffentlichten Report über KI-Nutzung wieder zurückgezogen. Grund: Halluzinationen im eigenen Dokument. Eine der größten Wirtschaftsprüfungsgesellschaften der Welt. Das ist kein Zufall, das ist ein Systemproblem. Wenn selbst erfahrene Organisationen KI-Output nicht rigoros reviewen, passiert genau das. Als Entwicklerin gilt: Baue immer Mechanismen ein, die KI-Outputs kennzeichnen und Nutzern erlauben, sie zu hinterfragen. „Die KI hat es gesagt\" ist keine Quelle.\n\nWechseln wir zu Apple – denn da ist einiges los. iOS 27 bringt eine neue App direkt auf den Home Screen, verbessert Apple Pay und integriert KI-Fotobearbeitung tiefer ins System. Das klingt nach Feature-Liste, ist aber ein strategisches Signal: Apple baut seine Plattform mit Bordmitteln aus. Für Foto-Apps wird die Interaktion mit Core Image spannend, für Wallet-Integrationen gibt es möglicherweise neue Verhaltensänderungen zu testen. Und Siri? Macht auf dem Mac laut ersten Erfahrungsberichten mit macOS 27 einen echten Schritt nach vorn – kontextsensibler, tiefer in Apps integriert, on-device. Noch nicht perfekt, aber die Richtung stimmt endlich. Wer Mac-Apps baut: jetzt die Apple Intelligence Dokumentation aufmachen.\n\nUnd dann ist da noch der App Store. Über tausend KI-generierte Einreichungen pro Woche – Vibe Coding macht es möglich, Apps per Prompt zu bauen, ohne wirklich zu programmieren. Die Qualitätskontrolle kommt kaum hinterher. Für professionelle Entwicklerinnen ist das ein zweischneidiges Schwert: mehr Rauschen im Store, aber auch mehr Chance, durch Qualität herauszustechen. Apple wird reagieren müssen – und das wird die Spielregeln für alle verändern.\n\nGanz kurz noch: Der deutsche Bundesrat drängt auf KI-gestützte biometrische Rasterfahndung und Quick-Freeze-Regelungen. Für alle, die Kommunikations- oder Biometrie-Apps entwickeln: Das regulatorische Umfeld zieht gerade deutlich an. DSGVO allein reicht bald möglicherweise nicht mehr.\n\nDas war dein Tech-Update – bis zum nächsten Mal.",
+  "podcast_script": "Hi, schön, dass du dabei bist – hier ist dein Tech-Update.\n\nFangen wir direkt mit dem Kracher an: China soll Zugang zu einem internen, noch nicht veröffentlichten Anthropic-Modell namens „Mythos\" gehabt haben. Das ist kein kleiner Datenleck – das schlägt Wellen bis ins Weiße Haus. Was das bedeutet? Für alle, die mit Anthropic-APIs arbeiten: Supply-Chain-Sicherheit endet nicht bei deinem eigenen Code. Die KI-Dienste, auf die du dich verlässt, sind genauso Teil deiner Angriffsfläche. Und regulatorisch wird dieser Vorfall Druck auf die gesamte KI-Branche erhöhen – API-Bedingungen könnten sich schneller ändern, als uns lieb ist.\n\nWeiter zu Apple: iOS 27 ist noch nicht fertig erzählt. Obwohl die WWDC schon hinter uns liegt, sollen noch drei größere, bislang geheime Features folgen. Apple hält also noch Karten zurück – typisch. Was das für dich als Entwicklerin heißt: Die Beta-Changelogs der nächsten Wochen werden spannend. Erfahrungsgemäß betreffen solche Nachzügler-Features oft Notifications, Background Processing oder Health – alles Bereiche mit echtem Breaking-Change-Potenzial. Augen auf.\n\nUnd noch was aus der Apple-Welt, das mich wirklich freut: macOS 26.5 bekommt natives Remote-Wake. Desktop-Macs lassen sich ab sofort per Netzwerkbefehl hochfahren – ohne Zusatzhardware, direkt vom Betriebssystem. Für alle, die lokale Mac-Buildmaschinen in CI/CD-Pipelines betreiben, ist das ein echter Komfortgewinn. Maschinen bei Bedarf starten, Job durchlaufen lassen, wieder herunterfahren. Energie sparen, Nerven sparen. Nur die Sicherheitsimplikationen solltest du prüfen – eine Maschine, die aufs Netzwerk lauscht, will gut abgesichert sein.\n\nJetzt zu etwas, das die Branche gerade unangenehm berührt: Die KI-Entlassungswelle gewinnt an Dynamik – und was früher diskret als „Restrukturierung\" verbucht wurde, wird inzwischen offen als KI-Effizienzgewinn vermarktet. Das erzeugt gesellschaftlichen Gegendruck, der sich auch politisch entlädt. Großbritannien hat gerade angekündigt, Social Media für Unter-16-Jährige zu verbieten – Plattformen sollen Altersverifikation ernst nehmen, mit empfindlichen Strafen. Für App-Entwicklerinnen mit Social-Features oder User-Generated-Content ist das ein Vorgeschmack: Age-Gating könnte bald Pflicht werden, auch jenseits der Insel.\n\nUnd dann noch eine Meldung, die ich einfach schön finde: curl – ja, das curl, das in quasi jedem Netzwerk-Stack der Welt steckt, auch tief in iOS und macOS – nimmt im gesamten Juli keine Bug-Reports an. Maintainer Daniel Stenberg gönnt sich einen Monat Pause. Mutig, und eigentlich ein längst überfälliges Statement. Wer libcurl direkt einbindet: Im Juli gemeldete Sicherheitslücken werden erst im August bearbeitet. Einplanen. Und vielleicht kurz innehalten und darüber nachdenken, wie viel kritische Infrastruktur auf einer einzigen Person lastet, die das umsonst macht.\n\nZum Abschluss noch schnell: Apple Foundation Models tauchen jetzt in der offiziellen SDK-Dokumentation auf – On-Device-KI, kein API-Key, keine Serverkosten, keine Datenschutz-Bauchschmerzen. Wer jetzt mit den Betas experimentiert, hat im Herbst einen Vorsprung. Und OpenAI launcht ein Partner-Netzwerk für Enterprise-Integrationen – interessant für alle, die B2B-Lösungen bauen.\n\nDas war dein Tech-Update – bis zum nächsten Mal.",
   "audio_file": "digest_de.mp3"
 }
