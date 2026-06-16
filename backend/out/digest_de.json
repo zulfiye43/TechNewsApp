@@ -1,81 +1,81 @@
 {
-  "date": "2026-06-15",
-  "greeting": "Heute dreht sich alles um drei heiße Themen: China soll Zugang zu einem geheimen Anthropic-Modell gehabt haben, iOS 27 bekommt noch mehr unangekündigte Features – und die KI-Entlassungswelle wird zum Pulverfass.",
-  "podcast_title": "China, Anthropic und das gestohlene Modell",
+  "date": "2026-06-16",
+  "greeting": "Heute dominiert ein politischer AI-Kracher: Die US-Regierung hat Anthropics mächtigste Modelle verbannt – und damit eine Debatte über souveräne KI losgetreten, die die ganze Branche aufwühlt.",
+  "podcast_title": "Anthropic verbannt – wer profitiert?",
   "items": [
     {
       "topic": "ai",
-      "headline": "China soll Zugang zu Anthropics Geheim-Modell »Mythos« gehabt haben",
-      "summary": "Laut einem Bericht soll China sich Zugang zu »Mythos« verschafft haben – einem internen, noch nicht veröffentlichten Modell von Anthropic. Der Vorfall schlägt Wellen bis ins Weiße Haus.",
-      "detail": "»Mythos« soll ein leistungsfähigeres Modell sein, das Anthropic noch nicht öffentlich zugänglich gemacht hat. Der mutmaßliche Zugriff durch chinesische Akteure wirft massive Fragen zur Sicherheit von KI-Modellen auf, die sich noch in der Entwicklung befinden. Für Entwicklerinnen, die mit Anthropic-APIs arbeiten, ist das ein Weckruf: Supply-Chain-Sicherheit gilt nicht nur für eigenen Code, sondern auch für die KI-Dienste, auf die man sich verlässt. Der Vorfall dürfte regulatorischen Druck auf KI-Unternehmen weiter erhöhen und könnte mittelfristig Auswirkungen auf API-Verfügbarkeit und Nutzungsbedingungen haben.",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/949644/china-white-house-anthropic-mythos"
+      "headline": "USA verbieten Anthropics stärkste Modelle – und stärken damit Non-US-KI",
+      "summary": "Die Trump-Administration hat Anthropics Modelle »Fable« und »Mythos 5« per Exportkontrolle gesperrt – und Cybersecurity-Experten laufen Sturm dagegen. Das Verbot hat wenig mit einem AI-Jailbreak zu tun, sondern ist politisch motiviert.",
+      "detail": "Hinter dem Verbot steckt laut TechCrunch kein technisches Sicherheitsproblem, sondern ein handfester Politstreit zwischen Anthropic und der White-House-Administration. Anthropic hat sogar ein »Claude Corps«-Programm gestartet, das zeigt, wie sehr das Unternehmen um sein Image kämpft. Cybersecurity-Veteranen warnen öffentlich, das Verbot gefährde die US-Sicherheitsinfrastruktur, die auf diese Modelle setzt. Für Entwicklerinnen bedeutet das: Wer produktionskritische Features auf Claude-Modelle aufgebaut hat, sollte jetzt Fallback-Strategien prüfen. Langfristig könnte der Vorfall europäische und indische AI-Alternativen – Stichwort Sarvam-Unicorn oder Cohere – ernsthaft attraktiver machen.",
+      "source": "The Verge / TechCrunch",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/950026/anthropic-fable-mythos-ban-ai-shutdown"
     },
     {
       "topic": "ios",
-      "headline": "iOS 27: Drei große unangekündigte Features noch in der Pipeline",
-      "summary": "Apple hat zur WWDC noch nicht alle Karten auf den Tisch gelegt – ein Bericht nennt drei weitere, bislang geheime iOS-27-Features, die noch kommen sollen. Details sind rar, die Spannung hoch.",
-      "detail": "Schon die angekündigten iOS-27-Features sorgten für Gesprächsstoff, doch offenbar hat Apple intern noch mehr auf Lager. Solche nachgezogenen Ankündigungen sind für Entwicklerinnen besonders relevant, weil sie die Planungsgrundlage für App-Updates kurzfristig verschieben können. Wer schon jetzt mit iOS 27 Betas arbeitet, sollte die API-Changelogs in den kommenden Wochen besonders im Blick behalten. Erfahrungsgemäß betreffen spät angekündigte Features häufig Kernbereiche wie Notifications, Background Processing oder Health – alles Bereiche mit potenziell breaking Changes.",
+      "headline": "iOS 27: Siri-Rundumerneuerung, Messages-Fixes und Gym-Features",
+      "summary": "Apple erklärt, warum Siris Überarbeitung in iOS 27 so lange dauerte – und liefert gleichzeitig eine Flut praktischer Neuerungen: drei nervige Messages-Bugs verschwinden, und iPhone plus AirPods werden zur Gym-Combo.",
+      "detail": "Apple hat in einem seltenen Einblick erläutert, dass Siris Architektur von Grund auf neu gebaut wurde, was die lange Entwicklungszeit erklärt. Für Entwicklerinnen relevant: iOS 27 erweitert außerdem Querformat-Unterstützung in weiteren System-Apps, was als starkes Indiz für ein kommendes Foldable-iPhone gilt. Die neuen Messages-Fixes betreffen u.a. Tipp-Indikatoren und Reaktions-Syncing – Bugs, die viele User-Reported-Issues in eigenen Chat-Apps indirekt beeinflusst haben. Das Gym-Feature nutzt iPhone-Sensoren und AirPods-Bewegungsdaten zusammen, was neue Möglichkeiten für HealthKit- und CoreMotion-Integrationen öffnet. Dazu gibt es RC-Builds für macOS Sonoma und Sequoia – Updateplanung für Testgeräte lohnt sich jetzt.",
       "source": "9to5Mac",
-      "url": "https://9to5mac.com/2026/06/14/three-major-unannounced-ios-27-features-coming-soon/"
+      "url": "https://9to5mac.com/2026/06/15/apple-explains-why-siris-major-ios-27-overhaul-took-so-long/"
     },
     {
-      "topic": "ai",
-      "headline": "KI-Entlassungswelle: Das Pulverfass brodelt",
-      "summary": "TechCrunch analysiert, wie die durch KI ausgelöste Entlassungswelle an Dynamik gewinnt und soziale sowie politische Sprengkraft entwickelt. Die Stimmung in der Branche kippt.",
-      "detail": "Immer mehr Unternehmen rechtfertigen Stellenabbau offen mit KI-Automatisierung – was bisher meist vertuscht wurde, wird jetzt als Effizienzgewinn vermarktet. Das erzeugt gesellschaftlichen Gegendruck, der sich bereits in politischen Initiativen wie dem britischen Social-Media-Bann für Minderjährige spiegelt: Tech-Konzerne geraten generell unter Regulierungsdruck. Für iOS-Entwicklerinnen ist das relevant, weil KI-getriebene Automatisierung auch QA, Testautomatisierung und Low-Code-Bereiche erfasst, die traditionell Einstiegspositionen waren. Wer heute KI-Tools aktiv in den eigenen Workflow integriert, ist besser positioniert als wer auf Abstand bleibt.",
+      "topic": "tech",
+      "headline": "SpaceX-IPO explodiert auf 85,7 Milliarden – größter Börsengang aller Zeiten",
+      "summary": "SpaceX ist jetzt börsennotiert und hat beim IPO satte 85,7 Milliarden Dollar eingesammelt – ein historischer Rekord. Was das für die Tech-Finanzierungslandschaft bedeutet, ist noch nicht absehbar.",
+      "detail": "Der SpaceX-IPO übertrifft alle bisherigen Börsengänge und setzt einen neuen Maßstab dafür, was ein Deep-Tech-Unternehmen an den Märkten wert sein kann. Für die Startup-Szene sendet das ein klares Signal: Geduld zahlt sich aus – SpaceX hat rund 24 Jahre gebraucht, um an die Börse zu gehen. Für Entwicklerinnen im Space-Tech- oder IoT-Bereich öffnet ein gelistetes SpaceX potenziell neue API- und Starlink-Partnerschaften, da das Unternehmen nun Quartalsdruck hat, seine Plattformen zu monetarisieren. Gleichzeitig könnte der Erfolg Kapital aus anderen Sektoren – darunter AI-Infrastruktur – abziehen. Ein Moment, den man im Auge behalten sollte.",
       "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/06/15/the-ai-layoff-wave-is-becoming-a-powder-keg/"
-    },
-    {
-      "topic": "ios",
-      "headline": "Apple Maps bekommt in iOS 27 ein Innenleben-Upgrade",
-      "summary": "Apple Maps erhält in iOS 27 und macOS 27 nicht nur neue Features, sondern auch einen internen Architektur-Umbau. Das könnte die Karten-Performance spürbar verbessern.",
-      "detail": "Der Bericht deutet darauf hin, dass Apple die interne Datenstruktur von Maps grundlegend überarbeitet – das ist keine Kosmetik, sondern Fundament-Arbeit. Für Entwicklerinnen, die MapKit nutzen, könnten sich dadurch neue API-Möglichkeiten ergeben, aber auch Verhaltensänderungen bei bestehenden Implementierungen. Besonders interessant: Neue Features sollen die Navigation und Ortsdarstellung deutlich verbessern, was Apps mit Standortfunktionen zugute kommt. Es lohnt sich, die MapKit-Release-Notes für iOS 27 Beta frühzeitig zu prüfen, um Regressionen auszuschließen.",
-      "source": "Heise",
-      "url": "https://www.heise.de/news/Apple-Maps-Interner-Umbau-und-neue-Funktionen-in-iOS-27-macOS-27-und-Co-11330243.html"
-    },
-    {
-      "topic": "ios",
-      "headline": "macOS 26.5: Desktop-Macs lassen sich jetzt ferngesteuert starten",
-      "summary": "Ab macOS 26.5 können bestimmte Desktop-Macs per Remote Wake-on-LAN oder Netzwerk-Befehl hochgefahren werden. Das war bisher nur mit Zusatzhardware oder Tricks möglich.",
-      "detail": "Konkret betroffen sind mehrere aktuelle Desktop-Mac-Modelle – Apple hat die Funktion offenbar auf Betriebssystemebene implementiert, ohne externe Geräte. Für Entwicklerinnen, die mit CI/CD auf lokalen Macs oder in kleinen Studios mit Mac-Buildmaschinen arbeiten, ist das ein echter Komfortgewinn. Remote-Build-Pipelines lassen sich damit effizienter gestalten: Maschinen können bei Bedarf hochgefahren, genutzt und wieder heruntergefahren werden. Wer macOS-Server-Setups betreibt, sollte die Sicherheitsimplikationen (Netzwerk-Exposition) sorgfältig prüfen.",
-      "source": "Heise",
-      "url": "https://www.heise.de/news/Ab-macOS-26-5-Verschiedene-Desktop-Macs-starten-ferngesteuert-11330905.html"
-    },
-    {
-      "topic": "ai",
-      "headline": "Apple Foundation Models jetzt als offizielles SDK dokumentiert",
-      "summary": "Apples On-Device-KI-Framework taucht nun in der offiziellen SDK-Dokumentation auf – ein klares Signal, dass Foundation Models für Drittentwicklerinnen zugänglich werden. Hacker News diskutiert die Implikationen intensiv.",
-      "detail": "Apple Foundation Models ermöglichen es, KI-Inferenz direkt auf dem Gerät laufen zu lassen – ohne Cloud-Anbindung, mit voller Privacy. Die SDK-Dokumentation listet Schnittstellen für Text-Tasks, womit sich Funktionen wie Zusammenfassung, Klassifikation oder Schreibassistenz nativ in Apps einbauen lassen. Für iOS-Entwicklerinnen ist das eine der spannendsten Entwicklungen des Jahres: kein API-Key, keine Serverkosten, keine Datenschutzbedenken beim Nutzer. Wer jetzt mit den Betas experimentiert, verschafft sich einen Vorsprung gegenüber dem App-Store-Launch im Herbst.",
-      "source": "Hacker News",
-      "url": "https://platform.claude.com/docs/en/cli-sdks-libraries/libraries/apple-foundation-models"
-    },
-    {
-      "topic": "ai",
-      "headline": "OpenAI startet Partner-Netzwerk für Unternehmensintegrationen",
-      "summary": "OpenAI launcht ein offizielles Partner-Netzwerk, das Unternehmen beim Einbinden von OpenAI-Technologien unterstützen soll. Damit professionalisiert OpenAI sein Enterprise-Ökosystem deutlich.",
-      "detail": "Das Partner-Netzwerk richtet sich vor allem an Systemintegratoren, Beratungsunternehmen und spezialisierte Entwicklungsagenturen. Für Freelance-Entwicklerinnen oder kleinere Studios, die KI-Features in iOS-Apps einbauen, könnte das mittelfristig Zertifizierungsmöglichkeiten und bevorzugten API-Zugang bedeuten. Es ist auch ein Zeichen, dass OpenAI den Markt zunehmend mit strukturierten Vertriebskanälen bearbeitet – ähnlich wie Apple mit dem MFi-Programm. Wer plant, OpenAI-Dienste in B2B-iOS-Lösungen einzusetzen, sollte die Partnerkonditionen früh evaluieren.",
-      "source": "OpenAI",
-      "url": "https://openai.com/index/introducing-openai-partner-network"
+      "url": "https://techcrunch.com/2026/06/15/spacexs-biggest-ever-ipo-just-grew-to-85-7-billion-raised/"
     },
     {
       "topic": "tech",
-      "headline": "UK verbietet Social Media für Unter-16-Jährige",
-      "summary": "Die britische Regierung hat ein Verbot von Social-Media-Nutzung für Kinder unter 16 Jahren angekündigt. Plattformbetreiber sollen aktiv für die Durchsetzung verantwortlich gemacht werden.",
-      "detail": "Das Gesetz würde Plattformen wie Instagram, TikTok und X zwingen, Altersverifikation ernsthaft umzusetzen – mit empfindlichen Strafen bei Verstößen. Für App-Entwicklerinnen, die Social-Features oder UGC-Funktionen bauen, ist das ein Vorgeschmack auf mögliche EU-ähnliche Regulierung: Age-Gating könnte bald Pflicht werden. Apples App-Store-Altersklassifizierung könnte dabei als Durchsetzungsschicht an Bedeutung gewinnen. Wer Apps für jüngere Zielgruppen entwickelt, sollte COPPA, DSGVO und nun auch britische Regulierung von Anfang an in die Architektur einplanen.",
+      "headline": "Fox kauft Roku für 22 Milliarden – Streaming-Landschaft verschiebt sich",
+      "summary": "Fox übernimmt Roku in einem 22-Milliarden-Deal und sichert sich damit direkten Zugang zu Millionen Smart-TV-Haushalten. Das dürfte die Streaming-Plattformwelt kräftig durcheinander wirbeln.",
+      "detail": "Roku ist mit über 80 Millionen aktiven Accounts eine der meistgenutzten TV-Plattformen in den USA – Fox bekommt damit nicht nur Reichweite, sondern auch wertvolle First-Party-Nutzungsdaten. Für Entwicklerinnen mit Roku-Channel-Apps oder TVML-Projekten stellt sich die Frage, wie sich Foxs redaktionelle Kontrolle auf die Plattformpolitik auswirkt. Apple TV und Fire TV dürften als Alternative profitieren, falls Roku unter Fox-Ägide restriktiver wird. Der Deal zeigt außerdem, dass klassische Medienkonzerne aggressiv in Hardware-Plattformen investieren, um dem wachsenden Einfluss von Apple und Google entgegenzuwirken. Eine Entwicklung, die die gesamte Connected-TV-Entwicklung neu kalibrieren könnte.",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/06/15/fox-to-acquire-roku-in-22-billion-deal/"
+    },
+    {
+      "topic": "ai",
+      "headline": "Salesforce kauft AI-Kundenservice-Plattform Fin für 3,6 Milliarden",
+      "summary": "Salesforce schluckt Fin (ehemals Intercom) für 3,6 Milliarden Dollar und setzt damit ein klares Zeichen: AI-gestützte Customer-Service-Agents sind der nächste große Battleground im Enterprise-Markt.",
+      "detail": "Fin hatte sich als eigenständige AI-Agent-Plattform für Support-Automatisierung einen Namen gemacht – die Übernahme durch Salesforce bedeutet, dass diese Fähigkeiten tief in die Einstein-AI-Suite integriert werden. Für Entwicklerinnen, die Salesforce-APIs oder CRM-Integrationen bauen, eröffnet das neue Möglichkeiten rund um automatisierte Ticket-Bearbeitung und Konversations-AI. Gleichzeitig ist das ein Signal, dass unabhängige AI-Agent-Startups zunehmend als Übernahmeziele gesehen werden – Bewertungen steigen entsprechend. Der Deal passt zur generellen Welle: NewCore hat gerade 66 Millionen eingesammelt, um AI-Agents »Identitäten« zu geben. AI-Agents als First-Class-Employees ist kein Hype mehr, sondern wird aktiv mit Milliarden unterlegt.",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/06/15/salesforce-acquires-ai-customer-service-platform-fin-for-3-6b/"
+    },
+    {
+      "topic": "ios",
+      "headline": "Sign in with Apple bekommt neue gemeinsame E-Mail-Domain für Hide My Email",
+      "summary": "Apple ändert die geteilte Domain für »Sign in with Apple« und »Hide My Email« – kleine Änderung, aber relevant für alle, die mit Apple-ID-Logins arbeiten.",
+      "detail": "Bisher wurden zufällige Weiterleitungsadressen unter privaterelay.appleid.com ausgeliefert – die neue gemeinsame Domain vereinheitlicht das und könnte die Erkennbarkeit für Mail-Server und SPF-Prüfungen verändern. Für Entwicklerinnen, die Sign-in-with-Apple in ihren Apps implementiert haben, lohnt ein Check, ob Backend-Validierungslogik hart auf die alte Domain-Struktur verdrahtet ist. Apple hat die Migration still ausgerollt, also kein offizielles Breaking-Change-Warning. Außerdem gut zu wissen: macOS könnte Terminal-Prompts jetzt in bestimmten Situationen blockieren – Apple hat den Grund erklärt, was vor allem für Entwickler-Workflows mit Skripten und Automatisierung relevant ist. Beide Änderungen sind typische »small print«-Updates, die im Alltag trotzdem beißen können.",
+      "source": "9to5Mac",
+      "url": "https://9to5mac.com/2026/06/15/sign-in-with-apple-and-hide-my-email-are-getting-a-new-shared-email-domain/"
+    },
+    {
+      "topic": "ai",
+      "headline": "Google Chrome schließt letzte Schlupflöcher für alte Ad-Blocker",
+      "summary": "Google zieht die Daumenschrauben bei Manifest V2 an und schließt die letzten Umgehungsmöglichkeiten, die populäre Ad-Blocker wie uBlock Origin noch am Leben hielten.",
+      "detail": "Mit dem endgültigen Aus für MV2-Schlupflöcher verlieren Millionen Chrome-Nutzer ihre bisherigen Blocker – Alternativen wie Firefox oder Brave dürften Zulauf bekommen. Für iOS-Entwicklerinnen ist der Safari-Content-Blocker-API-Ansatz (der auf MV3-ähnlichen Prinzipien basiert) hier klar im Vorteil, da Apple nie auf die alten Webextension-Mechanismen gesetzt hat. Wer Web-Views in Apps nutzt und dabei auf Tracking-Schutz oder Content-Filtering angewiesen ist, sollte prüfen, ob WKWebView-basierte Lösungen ausreichen – oder ob eine native Filterlösung nötig wird. Der Schritt befeuert auch die Debatte um Browser-Monopole und könnte regulatorischen Druck in der EU verstärken. Ein weiteres Argument für In-App-Browser mit eigener Privacy-Logik.",
       "source": "The Verge",
-      "url": "https://www.theverge.com/policy/949679/uk-under-16-social-media-ban-announcement"
+      "url": "https://www.theverge.com/tech/950005/google-chrome-removing-ad-blocker-loopholes"
     },
     {
       "topic": "tech",
-      "headline": "curl nimmt im Juli keine Bug-Reports an – Developer-Auszeit auf Systemebene",
-      "summary": "curl-Maintainer Daniel Stenberg kündigt einen »Sommer der Glückseligkeit« an: Der gesamte Juli 2026 ist bug-report-frei. Ein bemerkenswertes Statement zur Nachhaltigkeit in Open-Source-Projekten.",
-      "detail": "curl steckt in quasi jedem Netzwerk-Stack der Welt – auch in iOS und macOS unter der Haube. Dass der Haupt-Maintainer eine Pause von Vulnerability-Reports einlegt, ist mutig und wirft Fragen zur Gesundheit kritischer Open-Source-Infrastruktur auf. Für iOS-Entwicklerinnen, die libcurl direkt einbinden oder Netzwerk-Libraries nutzen, die darauf aufbauen: Im Juli eingereichte Sicherheitslücken werden erst im August bearbeitet. Das Thema berührt auch die breitere Diskussion, wie die Industrie Open-Source-Maintainer besser unterstützen kann – Stichwort: nicht alles umsonst erwarten.",
-      "source": "Heise",
-      "url": "https://www.heise.de/news/Sommer-der-Glueckseligkeit-curl-nimmt-einen-Monat-lang-keine-Bug-Reports-an-11332339.html"
+      "headline": "UK verbietet Social Media für unter 16-Jährige – weitreichendste Regelung Europas",
+      "summary": "Großbritannien verabschiedet ein umfassendes Social-Media-Verbot für Minderjährige unter 16 – und setzt damit einen neuen europäischen Standard, dem andere Länder folgen könnten.",
+      "detail": "Das UK-Gesetz ist schärfer als vergleichbare Regelungen in Australien oder Frankreich und verlangt von Plattformen aktive Altersverifikation statt bloßer Selbstauskunft. Für App-Entwicklerinnen, die Social Features, UGC oder Community-Funktionen anbieten, wird Age-Gating zur Pflichtdisziplin – nicht nur für UK-Stores, sondern als Präzedenz für den gesamten europäischen Markt. Apple und Google werden wahrscheinlich ihre App-Store-Richtlinien anpassen müssen, um Compliance sicherzustellen. Wer heute schon mit StoreKit und App-Store-Altersratings arbeitet, ist im Vorteil – aber echte Verifikation geht tiefer als ein Rating-Flag. Ein Thema, das 2026/27 in jedem App-Review auftauchen dürfte.",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/06/15/uk-unveils-sweeping-social-media-ban-for-users-under-16/"
+    },
+    {
+      "topic": "tech",
+      "headline": "Backdoor in LinkedIn-Jobangebot: Social-Engineering-Angriff auf Entwickler",
+      "summary": "Ein Entwickler berichtet, wie er über ein gefälschtes LinkedIn-Jobangebot fast eine Backdoor auf seinem Rechner installiert hätte – ein erschreckend professionell gemachter Angriff.",
+      "detail": "Der Angriff nutzte ein täuschend echtes Recruiting-Szenario mit einem ›Take-Home-Test‹, dessen Code eine versteckte Backdoor enthielt – klassisches Supply-Chain-Targeting gegen Einzelpersonen. Für Entwicklerinnen ist das eine wichtige Erinnerung: Code aus Recruiting-Aufgaben niemals auf dem Hauptrechner ausführen, sondern immer in einer isolierten VM oder einem Container. Besonders iOS-Entwickler sind ein attraktives Ziel, weil sie oft Zugang zu Signing-Zertifikaten, internen Repos und TestFlight-Builds haben. Das Hacker-News-Posting hat hohe Aufmerksamkeit bekommen – die Community diskutiert konkrete Abwehrmaßnahmen. Einen Blick wert, auch als Argument für das nächste Team-Security-Briefing.",
+      "source": "Hacker News / roman.pt",
+      "url": "https://roman.pt/posts/linkedin-backdoor/"
     }
   ],
-  "podcast_script": "Hi, schön, dass du dabei bist – hier ist dein Tech-Update.\n\nFangen wir direkt mit dem Kracher an: China soll Zugang zu einem internen, noch nicht veröffentlichten Anthropic-Modell namens „Mythos\" gehabt haben. Das ist kein kleiner Datenleck – das schlägt Wellen bis ins Weiße Haus. Was das bedeutet? Für alle, die mit Anthropic-APIs arbeiten: Supply-Chain-Sicherheit endet nicht bei deinem eigenen Code. Die KI-Dienste, auf die du dich verlässt, sind genauso Teil deiner Angriffsfläche. Und regulatorisch wird dieser Vorfall Druck auf die gesamte KI-Branche erhöhen – API-Bedingungen könnten sich schneller ändern, als uns lieb ist.\n\nWeiter zu Apple: iOS 27 ist noch nicht fertig erzählt. Obwohl die WWDC schon hinter uns liegt, sollen noch drei größere, bislang geheime Features folgen. Apple hält also noch Karten zurück – typisch. Was das für dich als Entwicklerin heißt: Die Beta-Changelogs der nächsten Wochen werden spannend. Erfahrungsgemäß betreffen solche Nachzügler-Features oft Notifications, Background Processing oder Health – alles Bereiche mit echtem Breaking-Change-Potenzial. Augen auf.\n\nUnd noch was aus der Apple-Welt, das mich wirklich freut: macOS 26.5 bekommt natives Remote-Wake. Desktop-Macs lassen sich ab sofort per Netzwerkbefehl hochfahren – ohne Zusatzhardware, direkt vom Betriebssystem. Für alle, die lokale Mac-Buildmaschinen in CI/CD-Pipelines betreiben, ist das ein echter Komfortgewinn. Maschinen bei Bedarf starten, Job durchlaufen lassen, wieder herunterfahren. Energie sparen, Nerven sparen. Nur die Sicherheitsimplikationen solltest du prüfen – eine Maschine, die aufs Netzwerk lauscht, will gut abgesichert sein.\n\nJetzt zu etwas, das die Branche gerade unangenehm berührt: Die KI-Entlassungswelle gewinnt an Dynamik – und was früher diskret als „Restrukturierung\" verbucht wurde, wird inzwischen offen als KI-Effizienzgewinn vermarktet. Das erzeugt gesellschaftlichen Gegendruck, der sich auch politisch entlädt. Großbritannien hat gerade angekündigt, Social Media für Unter-16-Jährige zu verbieten – Plattformen sollen Altersverifikation ernst nehmen, mit empfindlichen Strafen. Für App-Entwicklerinnen mit Social-Features oder User-Generated-Content ist das ein Vorgeschmack: Age-Gating könnte bald Pflicht werden, auch jenseits der Insel.\n\nUnd dann noch eine Meldung, die ich einfach schön finde: curl – ja, das curl, das in quasi jedem Netzwerk-Stack der Welt steckt, auch tief in iOS und macOS – nimmt im gesamten Juli keine Bug-Reports an. Maintainer Daniel Stenberg gönnt sich einen Monat Pause. Mutig, und eigentlich ein längst überfälliges Statement. Wer libcurl direkt einbindet: Im Juli gemeldete Sicherheitslücken werden erst im August bearbeitet. Einplanen. Und vielleicht kurz innehalten und darüber nachdenken, wie viel kritische Infrastruktur auf einer einzigen Person lastet, die das umsonst macht.\n\nZum Abschluss noch schnell: Apple Foundation Models tauchen jetzt in der offiziellen SDK-Dokumentation auf – On-Device-KI, kein API-Key, keine Serverkosten, keine Datenschutz-Bauchschmerzen. Wer jetzt mit den Betas experimentiert, hat im Herbst einen Vorsprung. Und OpenAI launcht ein Partner-Netzwerk für Enterprise-Integrationen – interessant für alle, die B2B-Lösungen bauen.\n\nDas war dein Tech-Update – bis zum nächsten Mal.",
+  "podcast_script": "Hi, schön, dass du dabei bist – hier ist dein Tech-Update.\n\nFangen wir mit dem Kracher an: Die Trump-Administration hat Anthropics Modelle „Fable\" und „Mythos 5\" per Exportkontrolle verbannt. Und jetzt kommt's – das hat nichts mit einem Sicherheitsproblem in den Modellen selbst zu tun. Das ist ein handfester Politstreit zwischen Anthropic und dem Weißen Haus. Cybersecurity-Veteranen laufen Sturm dagegen, weil echte Sicherheitsinfrastruktur auf diese Modelle aufgebaut ist. Was das für dich bedeutet: Wenn du produktionskritische Features auf Claude gebaut hast, solltest du jetzt Fallback-Strategien prüfen. Und langfristig? Europäische und indische KI-Alternativen werden durch so einen Schritt plötzlich sehr viel attraktiver. Politische Entscheidungen formen den KI-Markt – ob wir wollen oder nicht.\n\nWeiter zu Apple. iOS 27 bringt eine komplett neu gebaute Siri-Architektur – Apple hat jetzt erstmals erklärt, warum das so lange gedauert hat. Kurzversion: von Grund auf neu. Interessant für Entwicklerinnen ist etwas anderes: iOS 27 erweitert die Querformat-Unterstützung in System-Apps deutlich. Das klingt unspektakulär – ist aber ein starkes Indiz für ein kommendes Foldable-iPhone. Außerdem öffnet das neue Gym-Feature, das iPhone-Sensoren und AirPods-Bewegungsdaten kombiniert, echte neue Möglichkeiten für HealthKit- und CoreMotion-Integrationen. RC-Builds für macOS sind ebenfalls draußen – Updateplanung für Testgeräte lohnt sich jetzt.\n\nDann SpaceX. Börsengang. 85,7 Milliarden Dollar eingesammelt – der größte IPO aller Zeiten. Elon Musk schreibt also Börsengeschichte, 24 Jahre nach Gründung. Das Signal an die Startup-Szene ist klar: Geduld zahlt sich aus. Und für alle im Space-Tech- oder IoT-Bereich: Ein börsennotiertes SpaceX hat jetzt Quartalsdruck – und wird seine Starlink-Plattform aktiv monetarisieren wollen. Neue Partnerschaften werden folgen.\n\nApropos große Deals: Fox kauft Roku für 22 Milliarden Dollar. Roku hat über 80 Millionen aktive Accounts – Fox bekommt damit Reichweite und wertvolle Nutzungsdaten. Wenn du Roku-Channel-Apps entwickelst, solltest du im Auge behalten, wie sich Foxs redaktionelle Kontrolle auf die Plattformpolitik auswirkt. Apple TV und Fire TV dürften profitieren, falls Roku restriktiver wird.\n\nUnd dann noch eine Security-Geschichte, die ich unbedingt erwähnen möchte – weil sie so erschreckend professionell ist. Ein Entwickler hat beschrieben, wie er über ein gefälschtes LinkedIn-Jobangebot fast eine Backdoor auf seinem Rechner installiert hätte. Der Angriff lief über einen klassischen Take-Home-Test – mit verseuchtem Code drin. Die Lektion ist simpel und wichtig: Code aus Recruiting-Aufgaben niemals auf dem Hauptrechner ausführen. Immer in einer isolierten VM oder einem Container. Entwicklerinnen sind ein besonders attraktives Ziel, weil sie oft Zugang zu Signing-Zertifikaten, internen Repos und TestFlight-Builds haben. Einen Blick wert – und ein gutes Argument fürs nächste Team-Security-Briefing.\n\nNoch kurz am Rand: Salesforce kauft die AI-Kundenservice-Plattform Fin für 3,6 Milliarden, das UK verbietet Social Media für unter 16-Jährige mit echter Altersverifikationspflicht – Age-Gating wird zur Pflichtdisziplin für App-Entwicklerinnen – und Google Chrome schließt die letzten Schlupflöcher für alte Ad-Blocker. uBlock Origin, wir kannten dich.\n\nDas war dein Tech-Update – bis zum nächsten Mal.",
   "audio_file": "digest_de.mp3"
 }
