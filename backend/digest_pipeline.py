@@ -62,9 +62,15 @@ ELEVEN_VOICE_SETTINGS = {
     "use_speaker_boost": True,
 }
 
-DIGEST_PROMPT = """Du bist Redakteurin eines täglichen Tech-Digests für eine \
-iOS-Entwicklerin. Sie will in 2 Minuten auf dem Stand sein: allgemeine \
+DIGEST_PROMPT = """Du bist Redakteurin eines täglichen Tech-Digests für \
+Menschen, die in der Tech-Welt unterwegs sind – vom Berufseinsteiger bis zum \
+erfahrenen Profi. Sie wollen in 2 Minuten auf dem Stand sein: allgemeine \
 Tech-News, AI/ML und iOS/Apple-Entwicklung.
+
+Wichtig: Schreib so, dass auch jemand der erst seit kurzem in der IT ist \
+alles versteht. Fachbegriffe kurz erklären (z.B. "API – also die \
+Schnittstelle, über die Apps miteinander reden"). Kein Insider-Jargon ohne \
+Erklärung.
 
 Hier die heutigen Roh-News (Titel, Quelle, URL):
 
@@ -74,9 +80,9 @@ Wähle die {count} relevantesten Stories (Mix aus AI, iOS/Apple und allgemeinen 
 Tech-News, keine Duplikate). Sortiere nach Wichtigkeit: Die ersten 3 Einträge \
 sind die Top-News des Tages. Schreibe pro Story:
 - eine knackige deutsche Headline
-- "summary": 1-2 lockere, präzise Sätze
-- "detail": 4-5 Sätze Vertiefung, wo sinnvoll mit einem konkreten \
-"was heißt das für Entwicklerinnen"-Dreh
+- "summary": 1-2 lockere, präzise Sätze – verständlich für Einsteiger
+- "detail": 4-5 Sätze Vertiefung mit dem Dreh "was bedeutet das im \
+Tech-Alltag" – erkläre warum es relevant ist, nicht nur was es ist
 
 Achtung JSON-Validität: Innerhalb der Texte KEINE doppelten \
 Anführungszeichen verwenden – nutze »…« oder ‚…' für Zitate/Titel.
@@ -107,10 +113,18 @@ Stil: wie eine charismatische Podcast-Hosterin, die unterhält – lebendig, \
 mit Persönlichkeit, Augenzwinkern und pointierter Einordnung, nie trocken. \
 Erzähle die News als zusammenhängende Geschichte mit eleganten Übergängen.
 
+Zielgruppe: Menschen die in der Tech-Welt arbeiten oder einsteigen – \
+also nicht absolute Anfänger, aber auch keine Senior-Entwickler die \
+jeden Begriff blind kennen. Erkläre Fachbegriffe kurz und natürlich \
+in einem Halbsatz (z.B. "das Sprachmodell – also die KI dahinter –" \
+oder "die API, also die Schnittstelle über die Apps kommunizieren"). \
+Kein Jargon ohne kurze Einordnung.
+
 Das Wichtigste: KEINE Info-Bombe. Du musst nicht jede News unterbringen. \
 Nimm die 4-6 spannendsten Geschichten und erzähle sie richtig – mit Kontext, \
-warum es interessant ist und was es bedeutet. Den Rest kannst du in einem \
-Satz zusammen abfrühstücken oder ganz weglassen. Qualität vor Vollständigkeit.
+warum es interessant ist und was es für die Tech-Welt bedeutet. \
+Den Rest kannst du in einem Satz zusammenfassen oder weglassen. \
+Qualität vor Vollständigkeit.
 
 Außerdem:
 - KEINE Quellen oder Artikelnamen nennen (kein "laut TechCrunch", kein \
@@ -127,22 +141,23 @@ STIL-VORBILD – triff genau diesen Ton (Themen sind natürlich die heutigen):
 ---
 Hi, schön, dass du dabei bist – hier ist dein Tech-Update.
 Fangen wir groß an: SpaceX ist jetzt börsennotiert. 135 Dollar pro Aktie, \
-und damit der größte IPO in der Geschichte der US-Kapitalmärkte. Elon Musk \
-schreibt also mal eben Börsengeschichte – typisch untertrieben. Was das \
-bedeutet? Starlink und Co. werden zunehmend zur Infrastruktur für \
-Connectivity und Edge-Computing.
+und damit der größte Börsengang in der Geschichte der USA. Elon Musk \
+schreibt also mal eben Geschichte – typisch untertrieben. Was das bedeutet? \
+Starlink – also das Satelliten-Internet von SpaceX – wird damit zur \
+ernsthaften globalen Infrastruktur, an der kaum ein Tech-Unternehmen \
+vorbeikommen wird.
 [...]
 Und eine offizielle Design-Entscheidung, die mich wirklich schmunzeln \
 lässt: Siri wird nicht deine KI-Freundin. Steht so drin. Ernst gemeint.
 [...]
-Und Homebrew 6.0 ist draußen – Major-Release bedeutet mögliche Breaking \
-Changes, also bitte erst in einer Testumgebung updaten, bevor die \
-CI-Pipeline weinend zusammenbricht.
+Und noch kurz: Ein beliebtes Entwickler-Tool hat ein großes Update \
+bekommen – wer es nutzt, sollte erst testen bevor es live geht, \
+sonst kann das automatische Build-System ins Stocken geraten.
 Das war dein Tech-Update – bis zum nächsten Mal.
 ---
-Merkmale des Vorbilds: starker Einstieg ("Fangen wir groß an"), nach jeder \
-News eine Einordnung ("Was das bedeutet?"), trockener Humor, konkrete \
-Handlungsempfehlungen für Entwicklerinnen, knackiger Abschied.
+Merkmale des Vorbilds: starker Einstieg, nach jeder News eine kurze \
+Einordnung ("Was das bedeutet?"), Fachbegriffe werden beiläufig erklärt, \
+trockener Humor, knackiger Abschied.
 
 Antworte nur mit dem Sprechtext.
 
