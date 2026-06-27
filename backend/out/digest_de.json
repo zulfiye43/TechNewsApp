@@ -1,81 +1,81 @@
 {
-  "date": "2026-06-26",
-  "greeting": "Heute dreht sich alles ums Geld: Apple, Xbox und die RAM-Krise lassen Technik-Preise explodieren – und OpenAI bremst auf Geheiß des Weißen Hauses.",
-  "podcast_title": "Preisschock: Apple, RAM & KI",
+  "date": "2026-06-27",
+  "greeting": "Heute dreht sich alles um KI-Macht: Wer darf die stärksten Modelle überhaupt nutzen – und wer entscheidet das?",
+  "podcast_title": "KI unter Regierungskontrolle",
   "items": [
     {
-      "topic": "ios",
-      "headline": "Apple erhöht Preise – und es könnten noch mehr kommen",
-      "summary": "Apple hat die Preise für MacBooks und iPads spürbar angehoben – und deutet an, dass weitere Erhöhungen folgen könnten. Grund ist eine weltweite Speicherchip-Knappheit, die den RAM (also den Arbeitsspeicher in Geräten) drastisch verteuert.",
-      "detail": "Der Hintergrund ist die sogenannte ‚RAMageddon'-Krise: Arbeitsspeicher (RAM) ist der kurzfristige Datenspeicher in jedem Gerät – ohne ihn läuft nichts. Laut einem Micron-Manager hat Apple durch aggressives Aufkaufen von Speicherchips selbst dazu beigetragen, dass dieser Rohstoff knapp wurde. Xbox zieht übrigens nach und erhöht ebenfalls die Preise. Für Entwicklerinnen und Entwickler, die regelmäßig neue Hardware kaufen müssen, wird das spürbar teurer – ein neues MacBook Pro könnte bald deutlich mehr kosten als gewohnt. Wer in naher Zukunft ein Gerät plant, sollte nicht allzu lange warten.",
-      "source": "9to5Mac / Reuters",
-      "url": "https://9to5mac.com/2026/06/26/9to5mac-daily-june-26-2026-apple-announces-significant-price-increases/"
+      "topic": "ai",
+      "headline": "US-Regierung entscheidet, wer GPT-5.6 nutzen darf",
+      "summary": "OpenAIs neuestes Modell GPT-5.6 ist so leistungsstark, dass die US-Regierung mitbestimmt, wer Zugang bekommt. OpenAI sagt selbst, das solle kein Dauerzustand werden.",
+      "detail": "GPT-5.6 ist OpenAIs aktuell stärkstes KI-Modell – und offenbar stark genug, dass die US-Regierung ein Wörtchen mitreden will, wer es einsetzen darf. Das ist ein ziemlich ungewöhnlicher Schritt: Normalerweise entscheiden Unternehmen selbst über ihre Zugangspolitik. Für Entwicklerinnen und Entwickler bedeutet das konkret: Wer das Modell über die API – also die Schnittstelle, über die Apps und Dienste auf KI zugreifen – nutzen will, muss offenbar durch ein Prüfverfahren. OpenAI betont, das sei eine Ausnahme, keine neue Regel. Trotzdem zeigt es, wohin die Reise geht: Je mächtiger KI-Modelle werden, desto mehr politischen Einfluss zieht das nach sich – auch für alle, die KI-Tools in ihrem Berufsalltag nutzen.",
+      "source": "Washington Post / Hacker News",
+      "url": "https://www.washingtonpost.com/technology/2026/06/26/openai-says-us-government-will-vet-users-its-latest-ai-model/"
     },
     {
       "topic": "ai",
-      "headline": "Weißes Haus stoppt neues OpenAI-Modell GPT-5.6",
-      "summary": "Die US-Regierung hat OpenAI gebeten, die Veröffentlichung des neuen KI-Modells GPT-5.6 vorerst zu verzögern – aus Sicherheitsbedenken. OpenAI folgt der Bitte, ein konkreter neuer Termin ist noch nicht bekannt.",
-      "detail": "Das ist ein ungewöhnlicher Vorgang: Normalerweise entscheiden Tech-Unternehmen selbst, wann sie neue Produkte veröffentlichen. Dass eine Regierung eingreift und ein KI-Unternehmen bremst, zeigt wie politisch das Thema künstliche Intelligenz inzwischen ist. GPT-5.6 wäre die nächste Ausbaustufe von ChatGPT – also dem KI-Assistenten, den viele täglich nutzen. Für Entwicklerinnen und Entwickler, die auf neue Modell-Funktionen (etwa über die API – die Schnittstelle, über die Apps auf OpenAI zugreifen) warten, bedeutet das eine unfreiwillige Pause. Die Debatte zeigt: KI-Regulierung ist kein Zukunftsthema mehr, sondern greift schon heute in den Tech-Alltag ein.",
-      "source": "The Verge / TechCrunch",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/957372/openai-will-delay-gpt-5-6-after-trump-administration-request"
+      "headline": "Anthropics Claude Mythos 5 freigegeben – für ausgewählte US-Firmen",
+      "summary": "Die US-Regierung hat grünes Licht gegeben: Über 100 US-Unternehmen und Behörden dürfen jetzt Anthropics mächtiges KI-Modell Claude Mythos 5 einsetzen. Eine breite Veröffentlichung gibt es (noch) nicht.",
+      "detail": "Anthropic – einer der größten Konkurrenten von OpenAI – hat mit Claude Mythos 5 ein Modell im Rennen, das als besonders leistungsstark gilt. Die US-Regierung hat jetzt entschieden, wer es nutzen darf: zunächst nur ‚vertrauenswürdige' Organisationen, also Firmen und Behörden, die vorab geprüft wurden. Das klingt nach einem exklusiven Club – und ist es auch. Für den Tech-Alltag bedeutet das: Wer in einer großen US-Organisation arbeitet, könnte bald Zugang zu einem der stärksten KI-Werkzeuge überhaupt bekommen. Gleichzeitig macht diese Entwicklung deutlich, dass KI nicht mehr nur ein Produkt ist, das man einfach kauft – sondern zunehmend ein geopolitisch reguliertes Gut. Die Frage, ob Europa ähnliche Kontrollmechanismen einführt, dürfte bald lauter werden.",
+      "source": "9to5Mac / TechCrunch",
+      "url": "https://9to5mac.com/2026/06/26/anthropic-cleared-to-release-claude-mythos-5-to-over-100-us-institutions/"
     },
     {
       "topic": "ios",
-      "headline": "Apple überspringt M6 Pro & Max – springt direkt zum M7",
-      "summary": "Einem Bloomberg-Bericht zufolge wird Apple die Hochleistungsvarianten des M6-Chips (M6 Pro und M6 Max) überspringen und direkt zur M7-Generation wechseln. Der Fokus soll dabei auf KI-Funktionen liegen.",
-      "detail": "Apple-Chips stecken in MacBooks und Mac-Desktops und bestimmen, wie schnell diese Geräte sind. Bisher erschienen immer eine Basis-, eine Pro- und eine Max-Variante jeder Generation. Diesen Schritt zu überspringen ist ungewöhnlich und deutet darauf hin, dass Apple den M7 deutlich auf KI-Aufgaben (also das lokale Ausführen von KI-Modellen direkt auf dem Gerät) optimieren will. Für Entwicklerinnen und Entwickler, die auf neue Hardware für KI-nahe Anwendungen warten, könnte das ein größerer Sprung sein als erwartet. Wer gerade überlegt, ein neues MacBook Pro zu kaufen, sollte diese Nachricht im Hinterkopf behalten.",
-      "source": "9to5Mac / Bloomberg",
-      "url": "https://9to5mac.com/2026/06/25/apple-will-skip-m6-pro-and-m6-max-chips-new-report-says/"
-    },
-    {
-      "topic": "ios",
-      "headline": "Xcode 26.6 bekommt Google Gemini als KI-Coding-Assistent",
-      "summary": "Apple integriert Googles KI-Modell Gemini als Programmierhilfe direkt in Xcode – das ist die Entwicklungsumgebung, in der iOS- und Mac-Apps gebaut werden. Damit haben Entwicklerinnen und Entwickler beim Coden eine weitere KI-Option neben Apples eigenem System.",
-      "detail": "Eine Entwicklungsumgebung (kurz: IDE) ist das Programm, in dem Code geschrieben und getestet wird – so wie Word für Text, nur für Software. KI-Coding-Assistenten helfen dabei, Code zu vervollständigen, Fehler zu finden oder ganze Funktionen vorzuschlagen. Dass Apple ausgerechnet Googles Gemini einbindet, ist bemerkenswert – die beiden Konzerne sind eigentlich Konkurrenten. Für iOS-Entwicklerinnen und -Entwickler bedeutet das: mehr Auswahl beim KI-Assistenten direkt im Workflow, ohne extra Tools installieren zu müssen. Das zeigt auch, wie sehr KI-gestütztes Programmieren zum Standard wird.",
+      "headline": "Riesiger Apple-Herbst: 15+ neue Produkte angekündigt – inkl. MacBook Ultra",
+      "summary": "Apple plant für den Herbst 2026 einen der größten Produkt-Launches seit Jahren: Über 15 neue Geräte sollen kommen, darunter ein neues MacBook Pro und erstmals ein MacBook Ultra.",
+      "detail": "Ein MacBook Ultra – also ein MacBook mit Apples stärkstem Chip, dem M-Ultra-Prozessor – gab es bisher noch nie. Bislang gab es den Ultra-Chip nur im Mac Studio und Mac Pro, also den großen Standgeräten. Wenn er jetzt ins MacBook wandert, wäre das ein echter Gamechanger für alle, die unterwegs Höchstleistung brauchen – etwa Video-Editors, 3D-Artists oder KI-Entwickler. Dazu kommen weitere neue MacBook-Pro-Modelle und vermutlich neue iPhones, iPads und mehr. Für alle, die gerade überlegen, ein Apple-Gerät zu kaufen: Abwarten könnte sich lohnen. Und für iOS- und macOS-Entwicklerinnen bedeutet ein Hardware-Schub auch immer neue Möglichkeiten – neue Chips erlauben neue Software-Features, die auf älteren Geräten nicht laufen.",
       "source": "9to5Mac",
-      "url": "https://9to5mac.com/2026/06/25/apple-adds-google-gemini-coding-assistant-in-xcode-26-6-update/"
+      "url": "https://9to5mac.com/2026/06/26/apple-will-launch-15-new-products-this-fall-heres-whats-coming/"
     },
     {
-      "topic": "ai",
-      "headline": "Anthropics Claude holt ChatGPT unter zahlenden Nutzern auf",
-      "summary": "Laut neuen Daten gewinnt Anthropics KI-Assistent Claude immer mehr zahlende Nutzerinnen und Nutzer – einem Bereich, der bisher fest in der Hand von OpenAIs ChatGPT war. Claude gilt als besonders zuverlässig und präzise bei komplexen Aufgaben.",
-      "detail": "Anthropic ist ein KI-Unternehmen, das von ehemaligen OpenAI-Mitarbeitenden gegründet wurde – Claude ist deren Antwort auf ChatGPT. Im kostenlosen Segment führt ChatGPT noch klar, aber wer bezahlt, wählt zunehmend Claude. Das ist wichtig, weil zahlende Nutzerinnen und Nutzer meist Profis oder Unternehmen sind, die KI intensiv einsetzen. Für Entwicklerinnen und Entwickler bedeutet das: Claude wird als ernstzunehmende Alternative bei Coding-, Analyse- und Schreibaufgaben wahrgenommen. Der Wettbewerb zwischen den großen KI-Modellen wird intensiver – was langfristig zu besseren Produkten für alle führt.",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/06/25/anthropics-claude-is-winning-over-paid-consumers-a-market-owned-by-chatgpt/"
-    },
-    {
-      "topic": "ai",
-      "headline": "Notion Mail stellt Betrieb ein – KI-Agenten verdrängen E-Mail-Clients",
-      "summary": "Notion schaltet seinen KI-gestützten E-Mail-Client ab – auch die Mac- und iOS-Apps werden eingestellt. Als Grund nennt das Unternehmen den Wandel hin zu sogenannten ‚KI-Agenten', die Aufgaben selbstständig erledigen.",
-      "detail": "Notion Mail war ein E-Mail-Programm mit KI-Funktionen – also etwa automatisches Sortieren oder Zusammenfassen von Nachrichten. KI-Agenten sind Programme, die nicht nur helfen, sondern eigenständig Aufgaben durchführen, zum Beispiel E-Mails beantworten ohne manuellen Input. Dass Notion diesen Schritt macht, zeigt einen Trend: Klassische Apps werden durch autonomere KI-Systeme ersetzt. Wer Notion Mail genutzt hat – vor allem auf iPhone oder Mac – muss jetzt auf andere Lösungen wechseln. Es ist ein frühes Zeichen dafür, wie KI-Agenten bestehende Software-Kategorien grundlegend verändern könnten.",
-      "source": "TechCrunch / 9to5Mac",
-      "url": "https://techcrunch.com/2026/06/25/notion-mail-shuts-down-amid-agent-takeover/"
-    },
-    {
-      "topic": "tech",
-      "headline": "IBM präsentiert ersten Sub-1-Nanometer-Chip der Welt",
-      "summary": "IBM hat eine Chip-Technologie vorgestellt, die kleiner als ein Nanometer ist – das ist ein Tausendstel eines menschlichen Haares und ein historischer Meilenstein in der Chip-Entwicklung. Je kleiner die Strukturen auf einem Chip, desto schneller und energieeffizienter kann er arbeiten.",
-      "detail": "Chips bestehen aus winzigen Schaltern (Transistoren), die Daten verarbeiten. Je kleiner diese Schalter sind, desto mehr passen auf einen Chip – und desto leistungsfähiger wird er. Bisher galt die 1-Nanometer-Grenze als nahezu unüberwindbare physikalische Hürde. IBMs Durchbruch könnte langfristig bedeuten, dass KI-Modelle noch schneller und mit weniger Stromverbrauch laufen – was angesichts des riesigen Energiehungers heutiger KI-Systeme ein wichtiger Schritt wäre. Bis solche Chips in Alltagsgeräten landen, dauert es aber noch einige Jahre.",
-      "source": "IBM / Hacker News",
-      "url": "https://newsroom.ibm.com/2026-06-25-ibm-debuts-worlds-first-sub-1-nanometer-chip-technology"
-    },
-    {
-      "topic": "tech",
-      "headline": "Chrome bekommt zwei Sicherheitsupdates in einer Woche",
-      "summary": "Google hat innerhalb einer Woche gleich zwei Updates für seinen Browser Chrome herausgegeben – ein ungewöhnlich schneller Takt, der auf kritische Sicherheitslücken hindeutet. Wer Chrome nutzt, sollte prüfen, ob die aktuelle Version installiert ist.",
-      "detail": "Browser-Updates sind oft Sicherheits-Patches – also Korrekturen für Schwachstellen, über die Angreifer theoretisch Schadcode einschleusen könnten. Zwei Updates in einer Woche bedeuten, dass die erste Korrektur offenbar nicht ausgereicht hat oder eine neue Lücke entdeckt wurde. Chrome ist weltweit der meistgenutzte Browser, weshalb solche Lücken besonders attraktive Angriffsziele sind. Im Chrome-Menü unter ‚Hilfe → Über Google Chrome' lässt sich die Version prüfen und ggf. aktualisieren – das dauert weniger als eine Minute. Für Entwicklerinnen und Entwickler gilt: Auch im Team und auf Testgeräten sollten Browser immer aktuell sein.",
+      "topic": "ios",
+      "headline": "Google Gemini zieht in Apples Entwicklungsumgebung Xcode ein",
+      "summary": "In Xcode 26.6 – dem Programm, mit dem iPhone-Apps gebaut werden – kann man jetzt Google Gemini als KI-Assistenten nutzen. Apple öffnet damit seine Entwicklungsumgebung für externe KI-Modelle.",
+      "detail": "Xcode ist die Werkzeugbox für alle, die Apps für iPhone, iPad oder Mac bauen. Bisher gab es dort Apples eigene KI-Hilfe. Neu ist: Jetzt kann man auch Googles KI-Modell Gemini als Programmierassistenten einschalten. Das ist bemerkenswert, weil Apple und Google sonst eher Rivalen sind – aber offenbar setzt Apple auf Offenheit, um Entwicklerinnen und Entwickler anzulocken. Für Einsteiger in die App-Entwicklung bedeutet das: KI kann beim Schreiben von Code helfen, Fehler erklären und Vorschläge machen – direkt in der Umgebung, in der man ohnehin arbeitet. Dass Apple jetzt mehrere KI-Anbieter zulässt, könnte der Beginn einer neuen Ära sein, in der KI-Assistenten so selbstverständlich sind wie Rechtschreibkorrektur.",
       "source": "Heise",
-      "url": "https://www.heise.de/news/Chrome-Zwei-Updates-in-einer-Woche-11345455.html"
+      "url": "https://www.heise.de/news/Xcode-26-6-Google-Gemini-zieht-als-Programmierassistent-in-Apples-IDE-ein-11346467.html"
+    },
+    {
+      "topic": "ai",
+      "headline": "Google unter Druck: Konzern soll Verlage zu KI-Lizenzen drängen",
+      "summary": "Google soll Verlage unter Druck setzen, ihre Inhalte für KI-Training zu lizenzieren – also quasi zu erlauben, dass KI-Modelle aus ihren Artikeln lernen. Wer nicht mitmacht, riskiert offenbar Nachteile.",
+      "detail": "Wenn eine KI wie Googles Gemini auf Fragen antwortet, hat sie das Wissen dafür irgendwo hergelernt – oft aus Millionen von Artikeln, Blogs und Nachrichtenseiten. Verlage wollen dafür bezahlt werden, ähnlich wie Musiker Tantiemen für gestreamte Songs bekommen. Jetzt berichten mehrere Quellen, dass Google dabei nicht zimperlich vorgeht und Druck ausübt. Das ist eine grundsätzliche Machtfrage: Wer profitiert vom Wissen im Internet? Für die Tech-Welt bedeutet das, dass das Thema »faire KI-Datenlizenzierung« in den nächsten Jahren einer der größten Rechtskämpfe werden dürfte – mit Auswirkungen darauf, wie KI-Modelle trainiert werden und was sie kosten.",
+      "source": "Heise",
+      "url": "https://www.heise.de/news/Google-setzt-Verlage-bei-KI-Lizenzen-offenbar-unter-Druck-11346411.html"
+    },
+    {
+      "topic": "ai",
+      "headline": "KI-Fehler, wer haftet? EU will Suchmaschinen in die Pflicht nehmen",
+      "summary": "Wenn eine KI in der Google-Suche falsche Infos liefert und jemand dadurch Schaden nimmt, soll künftig Google dafür haften. Die EU arbeitet an entsprechenden Regeln.",
+      "detail": "KI-Antworten in Suchmaschinen – sogenannte »AI Overviews« – klingen oft überzeugend, können aber falsch sein. Bisher war unklar, wer in so einem Fall die Verantwortung trägt. Die EU will das ändern und Anbieter wie Google haftbar machen. Das klingt nach trockenem Recht, hat aber große praktische Konsequenzen: Wenn Google für Fehler zahlen muss, wird es KI-Antworten vorsichtiger formulieren oder mehr auf Quellen hinweisen. Für alle, die täglich mit KI-Tools arbeiten, ist das ein wichtiges Signal: Blind vertrauen sollte man KI-Antworten nie – aber regulatorischer Druck könnte sie zuverlässiger machen. Entwicklerinnen, die KI in eigene Produkte einbauen, sollten das Thema Haftung schon jetzt auf dem Radar haben.",
+      "source": "Heise",
+      "url": "https://www.heise.de/news/Schoene-neue-Suchwelt-Warum-Google-und-Co-bald-fuer-KI-Fehler-haften-sollen-11346415.html"
+    },
+    {
+      "topic": "tech",
+      "headline": "Russische Hacker stahlen 2,5 Milliarden Dollar von Jaguar Land Rover",
+      "summary": "Ein massiver Hackerangriff auf den Autobauer Jaguar Land Rover soll russischen Hackern zuzurechnen sein – mit einem Schaden von satten 2,5 Milliarden Dollar.",
+      "detail": "2,5 Milliarden Dollar – das ist kein Tippfehler. Dieser Hack zählt zu den größten bekannten Cyberangriffen auf ein einzelnes Unternehmen. Jaguar Land Rover ist kein Tech-Konzern, sondern ein klassischer Autobauer – was zeigt, dass Cyberangriffe längst keine reine IT-Branche-Gefahr mehr sind. Für alle in der Tech-Welt ist das eine Erinnerung: Sicherheit (»Cybersecurity«) ist kein optionales Extra, sondern Grundvoraussetzung. Besonders brisant: Wenn Hacker Zugriff auf vernetzte Fahrzeuge, Produktionssysteme oder Kundendaten bekommen, können die Folgen weit über finanzielle Schäden hinausgehen. Unternehmen jeder Größe sollten ihre Angriffsfläche – also alle Stellen, über die Hacker eindringen könnten – regelmäßig prüfen lassen.",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/06/26/russian-hackers-were-behind-2-5-billion-hack-of-jaguar-land-rover-report/"
+    },
+    {
+      "topic": "tech",
+      "headline": "EU-Chatkontrolle: Freiwillig statt Pflicht – aber das Ziel bleibt dasselbe",
+      "summary": "Die umstrittene EU-Chatkontrolle – also das automatische Durchsuchen privater Nachrichten nach illegalen Inhalten – soll nun »freiwillig« kommen. Kritiker sagen: Das ändert kaum etwas.",
+      "detail": "Die Chatkontrolle ist seit Jahren eines der heißesten Datenschutz-Themen in Europa. Die Idee: Nachrichten-Apps wie WhatsApp oder Signal sollen automatisch nach verbotenem Material scannen. Das Problem: Dafür müsste die Ende-zu-Ende-Verschlüsselung – also der Schutz, der dafür sorgt, dass nur Sender und Empfänger eine Nachricht lesen können – ausgehebelt werden. Nun soll es »freiwillig« werden, aber Kritiker aus der Tech-Szene und Datenschutzorganisationen warnen: Wer nicht mitmacht, könnte trotzdem unter Druck geraten. Für Entwicklerinnen von Messaging-Apps ist das hochrelevant: Je nachdem, wie die Regeln ausfallen, müssten sie ihre gesamte Architektur umbauen. Und für alle Nutzer gilt: Dieses Thema berührt direkt, wie privat digitale Kommunikation in Europa künftig sein darf.",
+      "source": "Heise",
+      "url": "https://www.heise.de/news/Freiwillig-statt-Zwang-Das-doppelte-Spiel-um-die-EU-Chatkontrolle-11346573.html"
     },
     {
       "topic": "ios",
-      "headline": "watchOS 27 Beta 2 ist da – auch für Apple Watch Ultra 3",
-      "summary": "Apple hat die zweite Testversion von watchOS 27 veröffentlicht – inklusive Unterstützung für die Apple Watch Ultra 3. Beta-Versionen sind Vorab-Releases für Entwicklerinnen und Entwickler, die neue Funktionen testen wollen, bevor sie für alle erscheinen.",
-      "detail": "Eine Beta ist eine noch nicht fertige Software-Version, die zum Testen freigegeben wird – sie kann Bugs (also Fehler) enthalten und ist nicht für den Alltag gedacht. Die zweite Beta ist ein Zeichen, dass die Entwicklung planmäßig vorangeht. Für App-Entwicklerinnen und -Entwickler ist das relevant, weil sie ihre Watch-Apps jetzt auf Kompatibilität mit dem neuen System testen können, bevor es offiziell erscheint. Die Einbeziehung der Ultra 3 deutet darauf hin, dass Apple das neue Spitzenmodell ebenfalls rechtzeitig mit der finalen Version versorgen will. Wer keine App entwickelt, sollte mit der Beta noch warten.",
+      "headline": "KI-Fälschungen von Journalistin Joanna Sterns Buch tauchen auf Apple Books auf",
+      "summary": "Im Apple Books Store tauchen immer wieder gefälschte Versionen eines Buches der bekannten Tech-Journalistin Joanna Stern auf – generiert von KI. Apple bekommt das Problem nicht in den Griff.",
+      "detail": "KI kann in Minuten einen Text schreiben, der wie ein echtes Buch aussieht – und genau das passiert hier. Unbekannte erstellen KI-generierte Kopien von Sterns Buch und stellen sie im Apple Books Store ein. Das ist nicht nur für die Autorin ein Problem, sondern für das gesamte digitale Publishing: Wer kann noch sicher sein, dass ein Buch echt ist? Für Entwicklerinnen und Entwickler, die Content-Plattformen bauen, ist das ein Weckruf: Ohne robuste Prüfmechanismen werden Plattformen schnell mit KI-Müll geflutet. Apple steht hier unter Druck, bessere Verifikationssysteme einzuführen – ähnlich wie App-Stores schon heute gefälschte Apps herausfiltern müssen. Das Thema »KI-generierter Fake-Content auf großen Plattformen« wird uns noch lange begleiten.",
       "source": "9to5Mac",
-      "url": "https://9to5mac.com/2026/06/25/watchos-27-beta-2-available-now-for-apple-watch/"
+      "url": "https://9to5mac.com/2026/06/26/ai-generated-knockoffs-of-joanna-sterns-book-keep-appearing-on-apple-books/"
     }
   ],
-  "podcast_script": "Hi, schön, dass du dabei bist – hier ist dein Tech-Update.\n\nUnd der Einstieg heute ist direkt eine Preiswarnung: Apple hat die Preise für MacBooks und iPads angehoben – und deutet an, dass das noch nicht das Ende ist. Der Grund hat einen Namen, der so klingt wie ein Horrorfilm: RAMageddon. RAM, also der Arbeitsspeicher in deinen Geräten, ist weltweit knapp geworden. Ohne RAM läuft buchstäblich nichts. Pikant dabei: Laut einem Insider bei Micron, einem der großen Chiphersteller, hat Apple selbst durch aggressives Aufkaufen dazu beigetragen, dass dieser Rohstoff so teuer wurde. Xbox zieht übrigens nach und erhöht ebenfalls. Was das für dich bedeutet? Wer gerade über ein neues MacBook Pro nachdenkt – nicht zu lange warten.\n\nUnd wo wir gerade bei Apple sind: Es gibt einen unerwarteten Chip-Twist. Apple überspringt angeblich die Pro- und Max-Varianten des M6-Chips komplett und springt direkt zur M7-Generation. Das ist ungewöhnlich, denn normalerweise erscheinen diese Varianten brav in Reihe. Der Grund soll ein starker Fokus auf KI-Aufgaben sein – also das lokale Ausführen von KI-Modellen direkt auf dem Gerät, ohne Serverumweg. Für alle, die auf neue Hardware für KI-nahe Entwicklung warten: Das könnte ein größerer Sprung werden als erwartet.\n\nJetzt zum vielleicht politisch brisantesten Thema der Woche: Das Weiße Haus hat OpenAI gebeten, das neue Modell GPT-5.6 vorerst nicht zu veröffentlichen – aus Sicherheitsbedenken. OpenAI folgt der Bitte. Kein neuer Termin bekannt. Das ist bemerkenswert, weil Technologieunternehmen normalerweise selbst entscheiden, wann sie neue Produkte rausbringen. Dass eine Regierung da eingreift und ein KI-Unternehmen aktiv bremst, zeigt: KI-Regulierung ist kein Zukunftsszenario mehr. Für Entwicklerinnen und Entwickler, die über die API – also die Schnittstelle, über die Apps auf OpenAI zugreifen – auf neue Funktionen warten, bedeutet das erstmal: Pause. Unfreiwillig.\n\nWährend OpenAI bremst, holt die Konkurrenz auf: Anthropics KI-Assistent Claude gewinnt zunehmend zahlende Nutzerinnen und Nutzer – also genau die Profis und Unternehmen, die KI intensiv einsetzen. Im kostenlosen Bereich führt ChatGPT noch klar, aber wer bezahlt, schaut sich offenbar um. Claude gilt als besonders zuverlässig bei komplexen Aufgaben. Der Wettbewerb zwischen den großen Modellen wird schärfer – was langfristig für alle bedeutet: bessere Tools, mehr Auswahl.\n\nNoch kurz zwei Dinge, die du auf dem Schirm haben solltest: Google hat innerhalb einer Woche gleich zweimal Chrome aktualisiert – das deutet auf kritische Sicherheitslücken hin. Einfach im Menü unter \"Über Google Chrome\" nachschauen, ob du auf dem aktuellen Stand bist. Dauert eine Minute. Und IBM hat einen historischen Chip-Durchbruch verkündet: einen Prozessor kleiner als ein Nanometer – das ist ein Tausendstel eines menschlichen Haares. Bis das in deinem Laptop landet, dauert es noch ein paar Jahre, aber als Meilenstein für die KI-Infrastruktur der Zukunft ist das keine Kleinigkeit.\n\nDas war dein Tech-Update – bis zum nächsten Mal.",
+  "podcast_script": "Hi, schön, dass du dabei bist – hier ist dein Tech-Update.\n\nUnd heute haben wir ein Thema, das sich wie ein roter Faden durch fast alles zieht: Wer hat eigentlich die Kontrolle über KI – und wer sollte sie haben?\n\nFangen wir direkt damit an. OpenAIs neues Modell GPT-5.6 ist offenbar so leistungsstark, dass die US-Regierung mitentscheidet, wer es überhaupt benutzen darf. Das ist ungewöhnlich – normalerweise bestimmt ein Unternehmen selbst, wer seine Produkte kaufen kann. Wer GPT-5.6 über die API nutzen will – also über die Schnittstelle, über die Apps und Dienste auf KI zugreifen – muss durch ein Prüfverfahren. OpenAI sagt, das sei eine Ausnahme. Aber die Richtung ist klar: Je mächtiger Modelle werden, desto mehr zieht das politischen Einfluss nach sich. Und fast zeitgleich hat die US-Regierung auch Anthropics Claude Mythos 5 freigegeben – allerdings nur für ausgewählte Unternehmen und Behörden. KI ist also nicht mehr einfach ein Produkt, das man kauft. Es wird zum geopolitisch regulierten Gut. Ob Europa ähnliche Kontrollmechanismen einführt? Diese Frage dürfte bald lauter werden.\n\nUnd während Regierungen über Zugänge verhandeln, streiten sich andere ums Geld. Google soll Verlage unter Druck setzen, ihre Inhalte für das KI-Training zu lizenzieren – also zu erlauben, dass KI-Modelle aus ihren Artikeln lernen. Wer nicht mitmacht, riskiert offenbar Nachteile. Das ist eine grundsätzliche Machtfrage: Wer profitiert vom Wissen im Internet? Für uns alle bedeutet das, dass das Thema faire KI-Datenlizenzierung einer der größten Rechtskämpfe der nächsten Jahre wird.\n\nJetzt kurz raus aus der großen Politik, rein in den Entwickleralltag – und da hat Apple gerade etwas überraschend Offenes getan. In Xcode, der Werkzeugbox für alle die Apps für iPhone und Mac bauen, kann man jetzt Googles KI-Modell Gemini als Programmierassistenten einschalten. Apple und Google, Schulter an Schulter in derselben App – das hätte man vor ein paar Jahren noch nicht erwartet. Für Einsteiger in die App-Entwicklung ist das besonders interessant: KI hilft beim Code schreiben, erklärt Fehler, macht Vorschläge – direkt da, wo man ohnehin arbeitet.\n\nUnd Apple hat noch mehr vor: Im Herbst soll einer der größten Produkt-Launches seit Jahren kommen, über fünfzehn neue Geräte. Das Highlight für mich: Ein MacBook Ultra. Bisher gab es Apples stärksten Chip nur in den großen Standgeräten. Wenn er jetzt ins Laptop wandert, ist das ein echter Gamechanger für alle, die unterwegs Höchstleistung brauchen. Wer gerade überlegt, ein Apple-Gerät zu kaufen – vielleicht erst abwarten.\n\nUnd noch zwei Dinge, die ich kurz auf dem Radar haben sollte. Erstens: Die EU-Chatkontrolle, also die Idee, private Nachrichten automatisch nach illegalen Inhalten zu durchsuchen, kommt jetzt angeblich als freiwillige Lösung. Kritiker sagen: Das ändert kaum etwas – und für alle die Messaging-Apps bauen, bleibt das Thema hochrelevant. Zweitens: Ein Hack bei Jaguar Land Rover mit einem Schaden von 2,5 Milliarden Dollar erinnert daran, dass Cybersicherheit keine reine IT-Branche-Gefahr ist. Jedes vernetzte Unternehmen ist ein Ziel.\n\nDas war dein Tech-Update – bis zum nächsten Mal.",
   "audio_file": "digest_de.mp3"
 }
