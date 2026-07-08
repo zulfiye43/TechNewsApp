@@ -1,81 +1,81 @@
 {
-  "date": "2026-07-07",
-  "greeting": "Heute dreht sich alles um KI, die Jobs kostet, Systeme schützt – und sogar Siri eine neue Stimme verleiht.",
-  "podcast_title": "5.000 Jobs weg – KI übernimmt Xbox",
+  "date": "2026-07-08",
+  "greeting": "Heute dreht sich alles um KI, die ins Büro einzieht, smarte Brillen mit mehr Datenschutz – und ein iPhone 18 Pro, das überraschen soll.",
+  "podcast_title": "KI übernimmt das Büro",
   "items": [
     {
-      "topic": "tech",
-      "headline": "Microsoft entlässt 5.000 Mitarbeiter – Xbox wird radikal umgebaut",
-      "summary": "Microsoft streicht fast 5.000 Stellen, vor allem im Xbox-Bereich und im Vertrieb. Vier Spielestudios werden verkauft oder abgewickelt – und KI wird als Hauptgrund genannt.",
-      "detail": "Der Konzern baut seinen Gaming-Bereich massiv um: Studios wie Double Fine und Compulsion Games, die bislang zu Xbox gehörten, werden in die Unabhängigkeit entlassen und dürfen ihre Spiele behalten. Gleichzeitig streicht Microsoft Tausende Jobs in der kommerziellen Sparte – also dem Bereich, der Unternehmen mit Software und Cloud-Diensten versorgt. In offiziellen Stellungnahmen taucht KI als Begründung auf: Automatisierung übernimmt Aufgaben, die bisher Menschen erledigten. Das ist ein Warnsignal für die gesamte Branche – nicht nur für Gamer, sondern für alle, die in Tech-Unternehmen arbeiten. Die Frage »Welche Aufgaben übernimmt KI als nächstes?« ist längst kein Zukunftsszenario mehr, sondern Gegenwart.",
-      "source": "TechCrunch / The Verge",
-      "url": "https://techcrunch.com/2026/07/06/microsoft-lays-off-nearly-5000-employees-across-xbox-commercial-sales/"
+      "topic": "ai",
+      "headline": "Claude Cowork jetzt im Web und auf dem Smartphone",
+      "summary": "Anthropics KI-Assistent Claude bekommt eine Büro-Variante namens »Cowork«, die ab sofort im Browser und als App nutzbar ist. Damit wird KI-gestütztes gemeinsames Arbeiten deutlich zugänglicher.",
+      "detail": "Bisher war Claude Cowork – also die Version von Claude, die wie ein digitaler Kollege beim Arbeiten hilft – nur eingeschränkt verfügbar. Jetzt kann sie jeder im Browser oder auf dem Smartphone nutzen, ohne spezielle Software zu installieren. Das ist wichtig, weil damit KI nicht mehr nur ein Werkzeug für Entwicklerinnen und Entwickler ist, sondern für alle im Team – vom Marketing bis zur Buchhaltung. Anthropic (das Unternehmen hinter Claude) konkurriert damit direkt mit ChatGPT von OpenAI und Gemini von Google. Wer KI bisher noch nicht im Arbeitsalltag ausprobiert hat, bekommt hier eine niedrigschwellige Einstiegsmöglichkeit.",
+      "source": "Heise / The Verge / TechCrunch",
+      "url": "https://www.heise.de/news/Claude-Cowork-kommt-ins-Web-und-aufs-Smartphone-11357349.html"
     },
     {
       "topic": "ai",
-      "headline": "Erster KI-gesteuerter Ransomware-Angriff – doch ein Mensch war trotzdem dabei",
-      "summary": "Sicherheitsforscher dokumentieren den angeblich ersten Ransomware-Angriff, der weitgehend von einer KI gesteuert wurde. Aber: Komplett autonom lief er nicht – ein Mensch musste an entscheidender Stelle eingreifen.",
-      "detail": "Ransomware ist Erpressungs-Software: Sie verschlüsselt die Daten eines Opfers und fordert Lösegeld für die Freigabe. Dass KI diesen Prozess jetzt weitgehend selbst steuern kann – also Ziele auswählt, Schwachstellen findet und den Angriff koordiniert – ist eine neue Qualität der Bedrohung. Gut zu wissen: Die KI war noch nicht vollständig autonom, ein menschlicher Angreifer musste zumindest einmal eingreifen. Das zeigt, wo wir heute stehen – aber auch, wie schnell sich das ändern kann. Für IT-Teams bedeutet das: Klassische Abwehrmechanismen reichen nicht mehr, KI-gestützte Angriffsmuster erkennen zu können wird zur Pflicht. Auch für Berufseinsteiger in der IT-Sicherheit ist das ein klares Signal, dieses Thema ernst zu nehmen.",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/07/06/the-first-ai-run-ransomware-attack-still-needed-a-human/"
-    },
-    {
-      "topic": "ios",
-      "headline": "iOS 27 Beta 3: Siri bekommt eine neue Stimme – und du steuerst sie selbst",
-      "summary": "Apple erlaubt es in der neuesten Testversion von iOS 27, Siris Sprechtempo und Ausdrucksstärke selbst einzustellen. Damit klingt der Sprachassistent persönlicher – und nützlicher.",
-      "detail": "Beta bedeutet: Das ist eine Vorab-Version für Entwicklerinnen und Entwickler, noch nicht die finale Software für alle. Dass Apple ausgerechnet die Stimme von Siri anpassbar macht, ist kein Zufall – Sprachassistenten werden durch KI gerade neu erfunden, und Nutzbarkeit ist dabei ein riesiger Faktor. Wer Siri bisher als zu roboterhaft empfunden hat, könnte bald angenehm überrascht sein. Parallel dazu wird Siri auch auf der Apple Watch mit einer eigenen App und verbesserter KI ausgestattet. Für iOS-Entwicklerinnen und -Entwickler lohnt sich ein Blick in die Beta, um frühzeitig zu verstehen, wie sich Siri-Integrationen in eigenen Apps verändern könnten.",
-      "source": "TechCrunch / 9to5Mac",
-      "url": "https://techcrunch.com/2026/07/06/you-can-now-customize-siris-pace-and-expressivity-in-the-latest-ios-27-beta/"
-    },
-    {
-      "topic": "ai",
-      "headline": "Jedes zweite Rathaus nutzt KI – Deutschland digitalisiert die Verwaltung",
-      "summary": "Eine aktuelle Umfrage zeigt: 50 Prozent der deutschen Rathäuser setzen KI bereits ein oder testen sie gerade. Das ist mehr als viele erwartet hätten.",
-      "detail": "Lange galt die öffentliche Verwaltung als digitales Schlusslicht – doch das Bild ändert sich. KI hilft Ämtern zum Beispiel dabei, Anfragen schneller zu bearbeiten, Dokumente zu sortieren oder Bürgeranfragen vorab zu beantworten. Für die Bürgerinnen und Bürger könnte das kürzere Wartezeiten bedeuten – für die Verwaltungen selbst bedeutet es Veränderung in Abläufen und Jobprofilen. Wer als Entwicklerin oder Entwickler an Lösungen für den öffentlichen Sektor arbeitet oder arbeiten möchte, findet hier einen wachsenden Markt. Das zeigt auch: KI ist längst kein Silicon-Valley-Thema mehr, sondern mitten in der deutschen Gesellschaft angekommen.",
-      "source": "Heise",
-      "url": "https://www.heise.de/news/Umfrage-Jedes-zweite-Rathaus-nutzt-oder-testet-KI-11355911.html"
-    },
-    {
-      "topic": "ai",
-      "headline": "KI entlarvt ihre eigenen Deepfakes – BSI und Fraunhofer liefern Lösung",
-      "summary": "Deutschlands IT-Sicherheitsbehörde BSI und das Fraunhofer-Institut haben gemeinsam Software entwickelt, die KI-generierte Fake-Videos – sogenannte Deepfakes – automatisch erkennt. KI gegen KI sozusagen.",
-      "detail": "Deepfakes sind täuschend echte Videos oder Bilder, bei denen Gesichter oder Stimmen per KI ausgetauscht werden – ein wachsendes Problem für Sicherheit und Vertrauen im Netz. Die neue Software analysiert, ob ein Video typische Spuren einer KI-Generierung trägt, ähnlich wie ein digitaler Fingerabdruck. Dass staatliche Stellen wie das BSI – das Bundesamt für Sicherheit in der Informationstechnik – hier aktiv werden, zeigt wie ernst die Lage ist. Für alle, die mit Medieninhalten arbeiten, Kommunikation verantworten oder einfach Nachrichten konsumieren: Solche Tools werden künftig zum Standardwerkzeug gehören. Und für KI-Interessierte ist das Prinzip faszinierend: Ein Modell lernt, die Schwächen anderer Modelle zu erkennen.",
-      "source": "Heise",
-      "url": "https://www.heise.de/news/Software-vom-BSI-und-Fraunhofer-Wie-KI-ihre-eigenen-Deepfakes-entlarvt-11355899.html"
-    },
-    {
-      "topic": "ios",
-      "headline": "Apple überholt RAW-Fotoverarbeitung komplett mit iOS 27",
-      "summary": "iOS 27 bringt eine grundlegend neue Engine – also einen neuen Verarbeitungskern – für RAW-Fotos. Apple zeigt erste Vergleichsbilder, und die Unterschiede sind deutlich.",
-      "detail": "RAW ist ein Dateiformat für Fotos, das alle Bildinformationen ohne Komprimierung speichert – quasi das Negativ der digitalen Fotografie. Bisher war die RAW-Verarbeitung auf dem iPhone im Vergleich zu Desktop-Software wie Lightroom eher Mittelmaß. Mit der neuen Engine soll sich das ändern: Mehr Details, bessere Farben, weniger Rauschen – direkt auf dem Gerät. Für Entwicklerinnen und Entwickler von Foto-Apps bedeutet das, dass die zugrunde liegenden Systemfunktionen – also die APIs, über die Apps auf Kamera und Bildverarbeitung zugreifen – sich verändern werden. Wer eine Kamera-App oder einen Bildeditor entwickelt, sollte die Beta-Dokumentation im Auge behalten.",
-      "source": "9to5Mac",
-      "url": "https://9to5mac.com/2026/07/06/apple-overhauls-raw-photo-processing-with-ios-27-showcases-impressive-results/"
+      "headline": "Meta startet KI-Bildgenerator »Muse« – und erntet sofort Kritik",
+      "summary": "Meta hat ein neues KI-Tool zum Erstellen von Bildern gestartet, das auch Instagram-Fotos anderer Nutzer als Vorlage nutzen kann. Das sorgt für heftigen Gegenwind – viele fragen sich, ob ihre eigenen Bilder ohne Zustimmung verwendet werden.",
+      "detail": "»Muse Image« ist Metas neues Werkzeug, das auf Knopfdruck Bilder erzeugt – ähnlich wie Midjourney oder DALL-E. Der Haken: Das Modell kann auch öffentliche Instagram-Bilder anderer Nutzerinnen und Nutzer einbeziehen, um neue Bilder zu generieren. Das wirft ernsthafte Datenschutz- und Urheberrechtsfragen auf – denn niemand hat dafür explizit zugestimmt. Im Tech-Alltag bedeutet das: Wer Fotos öffentlich auf Instagram teilt, könnte ungewollt zum Trainings- oder Gestaltungsmaterial für KI werden. Meta steht damit in einer langen Reihe von Unternehmen, die KI auf Basis von Nutzerdaten trainieren – der gesellschaftliche Streit darüber, was erlaubt ist, wird lauter.",
+      "source": "The Verge / TechCrunch",
+      "url": "https://www.theverge.com/tech/962485/meta-muse-image-ai-model-instagram"
     },
     {
       "topic": "tech",
-      "headline": "Nintendo stellt Original-Switch ein – eine Ära geht zu Ende",
-      "summary": "Nintendo beendet den Verkauf der ersten Switch-Konsole in Europa – voraussichtlich Anfang 2027. Die Konsole, die 2017 erschien, war eine der erfolgreichsten der Geschichte.",
-      "detail": "Die Nintendo Switch hat bewiesen, dass eine Konsole gleichzeitig zuhause am Fernseher und unterwegs funktionieren kann – das war damals neu und hat die Spielebranche beeinflusst. Fast zehn Jahre Lebensdauer sind für eine Spielekonsole außergewöhnlich lang. Der Nachfolger, Switch 2, ist bereits auf dem Markt und soll die Fackel übernehmen. Für Spieleentwicklerinnen und -entwickler bedeutet das: Wer noch für die ursprüngliche Switch entwickelt, sollte die Zielgruppe neu bewerten. Und für Sammlerinnen und Sammler könnte die Original-Switch bald ein begehrtes Stück Technikgeschichte werden.",
+      "headline": "Smarte Brillen: Dünner, leichter – und Datenschutz endlich ernst genommen",
+      "summary": "Neue Smart Glasses – also Brillen mit eingebauter Technik wie Kamera oder Lautsprecher – werden nicht nur schicker, sondern sollen auch besser mit Privatsphäre umgehen. Meta etwa schaltet die Kamera automatisch ab, wenn jemand das Datenschutzlicht abklebt.",
+      "detail": "Smart Glasses sind Brillen, die aussehen wie normale Brillen, aber Technik wie Kameras, Mikrofone oder kleine Displays eingebaut haben. Ein großes Problem bisher: Umstehende wissen oft nicht, ob sie gerade gefilmt werden. Meta reagiert nun mit einem Software-Update: Wer das kleine Licht, das die aktive Kamera signalisiert, abdeckt oder manipuliert, setzt die Kamera automatisch außer Betrieb. Das klingt nach einem kleinen Detail, ist aber ein wichtiges Signal – denn Vertrauen ist der Schlüssel zur Akzeptanz dieser Geräte im Alltag. Für Entwicklerinnen und Entwickler, die Apps für solche Brillen bauen wollen, wird Datenschutz damit zur technischen Pflichtanforderung, nicht mehr zur Option.",
       "source": "Heise / The Verge",
-      "url": "https://www.heise.de/news/Nintendo-beendet-Verkauf-der-ersten-Switch-im-Februar-2027-11355687.html"
+      "url": "https://www.heise.de/news/Smart-Glasses-werden-immer-duenner-und-leichter-und-setzen-auf-mehr-Privatsphaere-11357307.html"
     },
     {
-      "topic": "tech",
-      "headline": "Google nutzt deine Suchdaten für KI-Training – so schaltest du es ab",
-      "summary": "Wer Google nutzt, trainiert automatisch dessen KI-Modelle mit. TechCrunch erklärt, wie man das in den Einstellungen deaktivieren kann.",
-      "detail": "Viele große Tech-Dienste nutzen das Verhalten ihrer Nutzerinnen und Nutzer – also Suchanfragen, Klicks, Texte – um ihre KI-Systeme zu verbessern. Das ist oft in den Nutzungsbedingungen versteckt und vielen nicht bewusst. Datenschutz ist gerade im KI-Zeitalter ein heißes Thema, und das Recht auf informationelle Selbstbestimmung – also selbst zu entscheiden, welche Daten man teilt – wird immer wichtiger. Für alle, die beruflich oder privat mit sensiblen Daten arbeiten, ist das kein akademisches Problem. Der Tipp ist simpel: Einstellungen checken, Opt-out aktivieren – der Artikel erklärt Schritt für Schritt, wie es geht.",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/07/06/if-you-use-google-youre-training-its-ai-heres-how-to-opt-out/"
+      "topic": "ai",
+      "headline": "OpenAI kündigt GPT-5.6 »Sol«, »Terra« und »Luna« für Donnerstag an",
+      "summary": "OpenAI will noch diese Woche gleich drei neue KI-Modelle veröffentlichen: GPT-5.6 Sol, Terra und Luna. Was genau hinter den Namen steckt, ist noch nicht bekannt – aber die KI-Welt hält die Luft an.",
+      "detail": "Modelle sind bei KI-Systemen wie das »Gehirn« hinter dem Chatbot – je neuer und größer, desto leistungsfähiger. OpenAI, das Unternehmen hinter ChatGPT, hat angekündigt, drei neue Versionen auf einmal herauszubringen, was ungewöhnlich ist. Die Namen Sol, Terra und Luna legen nahe, dass es sich um spezialisierte Varianten handeln könnte – etwa für bestimmte Aufgaben wie Analyse, kreatives Schreiben oder Programmierung. Für alle, die KI beruflich nutzen oder entwickeln, könnten diese Modelle neue Möglichkeiten bringen – oder die Konkurrenz zu Anthropics Claude und Googles Gemini weiter verschärfen. Es lohnt sich, Donnerstag im Blick zu behalten.",
+      "source": "Hacker News / OpenAI",
+      "url": "https://twitter.com/OpenAI/status/2074704958419792299"
     },
     {
       "topic": "ios",
-      "headline": "Apple zeigt neuen Datenschutz-Hinweis: Wenn KI-Daten zu Google gehen",
-      "summary": "iOS zeigt künftig einen Pop-up-Hinweis, wenn KI-Funktionen Daten an Google Cloud senden. Mehr Transparenz – aber auch mehr Fragen.",
-      "detail": "Apple arbeitet für bestimmte KI-Funktionen mit Google zusammen und verarbeitet dabei Daten in der Cloud – also auf externen Servern, nicht nur auf dem eigenen Gerät. Der neue Hinweis informiert Nutzerinnen und Nutzer genau dann, wenn das passiert. Das klingt gut, wirft aber auch Fragen auf: Wie viel wird übertragen? Welche Daten? Und was passiert damit bei Google? Für Entwicklerinnen und Entwickler ist das ein wichtiger Hinweis, dass Apple mehr Wert auf Transparenz bei Cloud-Verarbeitung legt – das könnte zukünftig auch Anforderungen an eigene Apps stellen. Wer Apps mit KI-Funktionen baut, sollte solche Datenschutzpflichten von Anfang an einplanen.",
+      "headline": "iPhone 18 Pro soll überraschend dünn werden – laut Leak",
+      "summary": "Ein bekannter Leaker aus China behauptet, die Dicke des iPhone 18 Pro werde »überraschend« sein – was Gerüchte über ein besonders schlankes Design anheizt. Ob das stimmt, wird sich zeigen.",
+      "detail": "Leaks sind vorab durchgesickerte Informationen, oft von Insidern aus der Lieferkette in Asien. Der hier zitierte Weibo-Nutzer (Weibo ist das chinesische Pendant zu X, früher Twitter) hat in der Vergangenheit öfter korrekt gelegen. Ein deutlich dünneres iPhone wäre ein echtes Designstatement – Apple hat das Thema Formfaktor zuletzt beim iPhone 17 Air angetestet. Für iOS-Entwicklerinnen und -Entwickler ist das relevant, weil ein neues Formfaktor-Design oft bedeutet, dass Apps und ihre Oberflächen (UI – also das, was Nutzer sehen und anfassen) angepasst werden müssen. Bis zur Keynote im Herbst sind solche Gerüchte natürlich mit Vorsicht zu genießen.",
       "source": "9to5Mac",
-      "url": "https://9to5mac.com/2026/07/06/apple-adds-new-popup-for-ai-features-that-send-data-to-google-cloud/"
+      "url": "https://9to5mac.com/2026/07/07/weibo-leaker-says-iphone-18-pro-thickness-will-be-surprising/"
+    },
+    {
+      "topic": "ios",
+      "headline": "Notion launcht »Agents«-App für iPhone – KI erledigt Aufgaben selbstständig",
+      "summary": "Das beliebte Organisations-Tool Notion hat eine neue iPhone-App namens »Agents« veröffentlicht, bei der KI-Agenten – also selbstständig handelnde Programme – Aufgaben für einen erledigen. Das geht über einfache Chatbots hinaus.",
+      "detail": "Ein KI-Agent ist mehr als ein Chatbot, der nur antwortet: Er kann selbstständig Schritte ausführen, zum Beispiel Informationen zusammensuchen, Einträge erstellen oder Aufgaben abhaken – ohne dass man jeden Schritt selbst anstoßen muss. Notion ist unter Wissensarbeiterinnen und -arbeitern sehr beliebt für Notizen, Projekte und Datenbanken. Mit der »Agents«-App bewegt sich Notion in einen Bereich, den bisher vor allem spezialisierte Entwickler-Tools belegt haben – und macht KI-Automatisierung für den normalen Büroalltag greifbar. Für iOS-Entwickler ist das ein Hinweis, wohin die Reise geht: Apps, die nicht nur reagieren, sondern vorausdenken und handeln.",
+      "source": "9to5Mac",
+      "url": "https://9to5mac.com/2026/07/07/notion-just-launched-a-brand-new-iphone-app-called-agents/"
+    },
+    {
+      "topic": "tech",
+      "headline": "Discord räumt ein: KI-Filter hat unschuldige Nutzer gesperrt",
+      "summary": "Discord, die bei Gamern und Tech-Communities beliebte Chat-Plattform, gibt zu, dass ein Fehler im KI-gestützten Moderationssystem Menschen für harmlose Bilder zu Unrecht gesperrt hat. Ein Mahnzeichen für automatisierte Moderation.",
+      "detail": "Automatische Moderation bedeutet: Nicht Menschen, sondern Algorithmen (also selbstlernende Programme) entscheiden, ob Inhalte gegen Regeln verstoßen. Das spart Zeit und Geld – kann aber fatale Fehler machen, wie dieser Fall zeigt. Betroffene wurden gesperrt, obwohl sie nichts falsch gemacht hatten, und hatten zunächst keine einfache Möglichkeit, dagegen vorzugehen. Das ist ein bekanntes Problem bei KI-Systemen: Sie können gut im Durchschnitt sein, versagen aber bei Grenzfällen – mit echten Konsequenzen für echte Menschen. Für alle, die KI in eigene Produkte einbauen wollen, ist das eine wichtige Lektion: Automatisierung braucht immer einen menschlichen Kontrollmechanismus als Rückfallebene.",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/07/07/discord-admits-ai-moderation-bug-wrongfully-banned-users-over-harmless-images/"
+    },
+    {
+      "topic": "tech",
+      "headline": "Google bestätigt: Pixel-11-Event am 12. August",
+      "summary": "Google hat offiziell den 12. August als Termin für die Vorstellung der neuen Pixel-11-Smartphones bestätigt. Damit zeichnet sich der Herbst als heiße Phase für neue Hardware ab.",
+      "detail": "Die Pixel-Reihe ist Googles eigene Smartphone-Linie – vergleichbar mit Apples iPhone, nur dass Google hier Android direkt kontrolliert und oft als Erstes neue Android-Features zeigt. Das Event am 12. August dürfte nicht nur neue Hardware zeigen, sondern auch einen Blick auf neue KI-Funktionen in Android geben – Google nennt das »Gemini«-Integration. Für Entwicklerinnen und Entwickler, die Android-Apps bauen, ist das ein wichtiger Termin: Neue Hardware bedeutet oft neue Bildschirmgrößen, Kameras oder Sensoren, auf die Apps vorbereitet sein müssen. Und: Wer wissen will, wohin sich Android in den nächsten Monaten entwickelt, bekommt beim Pixel-Event die deutlichsten Hinweise.",
+      "source": "The Verge / TechCrunch",
+      "url": "https://www.theverge.com/tech/962313/made-by-google-pixel-11-launch-event"
+    },
+    {
+      "topic": "tech",
+      "headline": "Figma kauft Team hinter »Vibe-Coding«-App",
+      "summary": "Figma – das Design-Tool, das fast jedes Produktteam kennt – hat das Team hinter einer App übernommen, die auf sogenanntes »Vibe-Coding« setzt: KI schreibt den Code, der Mensch gibt die Richtung vor. Ein Zeichen, wohin Design-Tools gehen.",
+      "detail": "»Vibe-Coding« ist ein relativ neuer Begriff für eine Art zu entwickeln, bei der man der KI grob sagt, was man will – und die KI schreibt dann den eigentlichen Programmcode. Figma ist das De-facto-Standard-Tool, mit dem UX/UI-Designer (also Menschen, die App-Oberflächen gestalten) arbeiten. Wenn Figma jetzt ein Team mit Vibe-Coding-Expertise einkauft, deutet das darauf hin, dass in Figma bald KI-Funktionen landen, die aus Designs direkt funktionierenden Code machen – ohne händisches Programmieren. Das ist eine große Verschiebung: Die Grenze zwischen Designen und Entwickeln wird weicher. Für Einsteiger heißt das: Wer heute Figma lernt, könnte morgen schon Apps bauen – ganz ohne klassischen Coding-Hintergrund.",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/07/07/figma-acquires-team-behind-a-vibe-coding-app/"
     }
   ],
-  "podcast_script": "Hi, schön, dass du dabei bist – hier ist dein Tech-Update.\n\nFangen wir direkt mit der großen Nachricht an: Microsoft entlässt fast 5.000 Mitarbeiterinnen und Mitarbeiter. Besonders hart trifft es den Xbox-Bereich – und das ist mehr als eine Umstrukturierung. Vier Spielestudios werden verkauft oder in die Unabhängigkeit entlassen. Was als Begründung in offiziellen Statements auftaucht? KI. Automatisierung übernimmt Aufgaben, die bisher Menschen erledigt haben. Das ist kein Zukunftsszenario mehr – das ist Gegenwart. Und die Frage, welche Jobs als nächstes dran sind, stellen sich gerade nicht nur Gamerinnen und Gamer, sondern alle, die in der Tech-Branche arbeiten.\n\nUnd damit direkt zur nächsten Geschichte, die zeigt: KI verändert nicht nur, wie wir arbeiten – sondern auch, wie wir angegriffen werden. Sicherheitsforscher haben den ersten Ransomware-Angriff dokumentiert, der weitgehend von einer KI gesteuert wurde. Ransomware ist Erpressungs-Software – sie verschlüsselt Daten und fordert Lösegeld. Dass eine KI diesen Prozess jetzt selbst koordinieren kann, Ziele auswählt und Schwachstellen findet, ist eine neue Qualität der Bedrohung. Der kleine Trost: Komplett autonom lief es noch nicht, ein Mensch musste einmal eingreifen. Aber der Trend ist klar. Für alle, die in Richtung IT-Sicherheit wollen: Dieses Thema wird in den nächsten Jahren explodieren.\n\nUnd weil KI auch gegen sich selbst kämpfen kann – eine echte David-gegen-Goliath-Story aus Deutschland. Das BSI, also das Bundesamt für Sicherheit in der Informationstechnik, hat gemeinsam mit dem Fraunhofer-Institut Software entwickelt, die Deepfakes automatisch erkennt. Deepfakes sind täuschend echte KI-generierte Videos, bei denen Gesichter oder Stimmen ausgetauscht werden. Das Prinzip dahinter ist faszinierend: Ein KI-Modell lernt, die typischen Schwächen anderer Modelle zu erkennen – wie ein digitaler Fingerabdruck. KI gegen KI, sozusagen. Und dass staatliche Stellen hier aktiv werden, zeigt, wie ernst die Lage ist.\n\nKurzer Schwenk zu etwas, das mich ehrlich überrascht hat: Jedes zweite deutsche Rathaus nutzt KI oder testet sie gerade. Die öffentliche Verwaltung – lange das digitale Schlusslicht – holt auf. KI hilft Ämtern dabei, Anfragen schneller zu bearbeiten, Dokumente zu sortieren, Bürgeranfragen vorab zu beantworten. Für alle, die als Entwicklerinnen oder Entwickler an Lösungen für den öffentlichen Sektor denken: Das ist ein wachsender Markt. Und ein Signal, dass KI längst kein Silicon-Valley-Thema mehr ist.\n\nNoch ein kurzer Hinweis, der sich lohnt zu wissen: Wer Google nutzt, trainiert automatisch dessen KI-Modelle mit – Suchanfragen inklusive. Das lässt sich in den Einstellungen deaktivieren. Einfach Opt-out suchen und aktivieren. Gerade wer beruflich mit sensiblen Daten arbeitet, sollte das auf dem Schirm haben.\n\nUnd zum Abschluss etwas Nostalgisches: Nintendo stellt den Verkauf der ersten Switch in Europa ein – voraussichtlich Anfang 2027. Fast zehn Jahre, eine der erfolgreichsten Konsolen der Geschichte. Der Nachfolger ist bereits draußen. Eine Ära geht zu Ende – und irgendwie fühlt sich das wie ein Generationswechsel an. Nicht nur bei Nintendo.\n\nDas war dein Tech-Update – bis zum nächsten Mal.",
+  "podcast_script": "Hi, schön, dass du dabei bist – hier ist dein Tech-Update.\n\nFangen wir direkt an, denn heute ist richtig viel los.\n\nDas große Thema: KI zieht ins Büro ein – und zwar nicht mehr nur bei den Entwicklern. Anthropic, das Unternehmen hinter dem KI-Assistenten Claude, bringt eine neue Version namens Cowork jetzt ins Web und aufs Smartphone. Kein kompliziertes Setup, einfach Browser aufmachen und loslegen. Was das bedeutet? KI wird damit vom Entwickler-Werkzeug zum Teamtool – für Marketing, Buchhaltung, alle. Der Kampf zwischen Claude, ChatGPT und Googles Gemini wird gerade richtig interessant.\n\nUnd apropos OpenAI: Die haben für diese Woche gleich drei neue Modelle angekündigt – Sol, Terra und Luna. Modelle sind dabei quasi das Gehirn hinter dem Chatbot, und drei auf einmal ist ungewöhnlich. Die Namen legen spezialisierte Varianten nahe – vielleicht für Analyse, Kreatives oder Programmierung. Das ist ein klares Signal an die Konkurrenz: Wir sind noch nicht fertig.\n\nWechsel zu einer Geschichte, die mich wirklich beschäftigt: Notion hat eine neue iPhone-App namens Agents rausgebracht. Und hier geht es um mehr als einen Chatbot. Ein KI-Agent – also ein selbstständig handelndes Programm – erledigt Aufgaben für dich, ohne dass du jeden Schritt anstoßen musst. Notion ist unter Wissensarbeiterinnen und -arbeitern ohnehin schon beliebt für Notizen und Projekte. Mit dieser App zeigen sie: Die Zukunft sind keine Apps, die reagieren, sondern Apps, die vorausdenken. Das ist die Richtung, in die die ganze Branche läuft.\n\nJetzt zu einer Geschichte, die ein echtes Unbehagen hinterlässt: Meta hat einen neuen KI-Bildgenerator namens Muse gestartet – und der kann öffentliche Instagram-Fotos anderer Nutzerinnen als Vorlage nutzen. Niemand hat dafür explizit zugestimmt. Das wirft handfeste Datenschutz- und Urheberrechtsfragen auf. Für alle, die Fotos öffentlich teilen: Ihr könnte ungewollt zum Trainingsmaterial für KI werden. Der gesellschaftliche Streit darüber, was erlaubt ist, wird lauter – und das zu Recht.\n\nÄhnlich lehrreich: Discord, die Chat-Plattform vor allem bei Gaming- und Tech-Communities, hat eingeräumt, dass ihr KI-Moderationssystem – also ein Algorithmus, der automatisch Inhalte bewertet – unschuldige Nutzer für harmlose Bilder gesperrt hat. Kein Mensch hat das überprüft, bevor der Bann ausgesprochen wurde. Die Lektion für alle, die KI in eigene Produkte einbauen wollen: Automatisierung braucht immer einen menschlichen Kontrollmechanismus als Rückfallebene. Immer.\n\nUnd noch zwei kurze Hardware-News zum Abschluss: Google hat den 12. August als Termin für das Pixel-11-Event bestätigt – interessant vor allem für Android-Entwicklerinnen, weil Google dort meist zeigt, wohin sich das Betriebssystem entwickelt. Und Figma, das Design-Tool das fast jedes Produktteam kennt, hat ein Team mit Expertise in sogenanntem Vibe-Coding übernommen – einer Methode, bei der die KI auf Zuruf den Code schreibt. Die Grenze zwischen Designen und Entwickeln wird weicher. Wer heute Figma lernt, könnte morgen Apps bauen – ganz ohne klassischen Coding-Hintergrund. Spannende Zeiten.\n\nDas war dein Tech-Update – bis zum nächsten Mal.",
   "audio_file": "digest_de.mp3"
 }
